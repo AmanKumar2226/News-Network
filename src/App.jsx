@@ -7,6 +7,7 @@ import Home from './components/home'
 import AllNews from './components/all-news'
 import Contact from './components/contact-us'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Form from './components/form'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
+          <Route path="login-form" element={<Form />} />
+
         </Route>
         <Route path="/" element={<Footer/>}>
           <Route path="contact-us" element={<Contact />} />
