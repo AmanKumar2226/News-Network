@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#sign-up-container{
+    display: none;
+}
+
+#btn-sign-in{
+    display: none;
+}

@@ -14,6 +14,7 @@ export default function Navbar(){
                         <li><a className="text-base font-medium leading-none text-center" href="/">Home</a></li>
                         <li><a className="text-base font-medium leading-none text-center" href="/about">About</a></li>
                         <li><a className="text-base font-medium leading-none text-center" href="/all-news">All News</a></li>
+                        <li><a className="text-base font-medium leading-none text-center" href="/login-form">Sign-in/Sign-Up</a></li>
                     </ul>
                 </div>
                 <div className="hidden md:block" >
