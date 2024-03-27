@@ -1,6 +1,10 @@
 import React from "react";
 import '../component-styles/home.css'
+import { useLocation } from "react-router-dom";
 export default function Home() {
+  const location = useLocation()
+  console.log(location.pathname,        
+    "hhhh")
   return (
     <>
     <div className="py-10">

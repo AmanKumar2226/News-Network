@@ -8,29 +8,24 @@ import AllNews from './components/all-news'
 import Contact from './components/contact-us'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Form from './components/form'
+import Category from './components/category-navbar'
 
 
 function App() {
 
   return (
     <>
-     <BrowserRouter>
+    <Navbar />
+    <Category />
       <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<Home />} />
+          <Route path='/' element={<Form />} />
+          <Route path="home" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
           <Route path="login-form" element={<Form />} />
-
-        </Route>
-        <Route path="/" element={<Footer/>}>
-          <Route path="contact-us" element={<Contact />} />
-        </Route>
       </Routes>
-    </BrowserRouter>
+    
      <Footer />
-
-     {/* <Fetch /> */}
     </>
   )
 }
