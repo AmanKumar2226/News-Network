@@ -28,7 +28,7 @@ function Category() {
         </div>
         </div>  
         <div>
-          <a href="/login-in" className='border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</a>
+          <a href="/login-form" className='border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</a>
         </div>
       </nav>
     </div>
