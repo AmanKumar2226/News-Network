@@ -14,7 +14,6 @@ export default function Navbar(){
                         <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/home">Home</a></li>
                         <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/about">About</a></li>
                         <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/all-news">All News</a></li>
-                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/">Sign-in/Sign-Up</a></li>
                     </ul>
                 </div>
                 <div className="hidden md:block" >
