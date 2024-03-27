@@ -4,17 +4,17 @@ import "../component-styles/navbar.css"
 export default function Navbar(){
     return(
         <>
-        <div className="pt-5 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 sticky top-1 z-40 bg-white pb-5 border-solid border-2 border-black-500 shadow-md">
+        <div className="pt-5 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-5 border-solid border-2 border-black-500 shadow-md">
             <div>
                 <h1 className="text-xl font-black leading-tight">News India</h1>
             </div>
             <div className="flex flex-row md:items-center md:space-x-20">
                 <div className="hidden md:block">
                     <ul className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16 md:items-center">
-                        <li><a className="text-base font-medium leading-none text-center" href="/">Home</a></li>
-                        <li><a className="text-base font-medium leading-none text-center" href="/about">About</a></li>
-                        <li><a className="text-base font-medium leading-none text-center" href="/all-news">All News</a></li>
-                        <li><a className="text-base font-medium leading-none text-center" href="/login-form">Sign-in/Sign-Up</a></li>
+                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/home">Home</a></li>
+                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/about">About</a></li>
+                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/all-news">All News</a></li>
+                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/">Sign-in/Sign-Up</a></li>
                     </ul>
                 </div>
                 <div className="hidden md:block" >

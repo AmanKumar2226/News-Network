@@ -1,0 +1,8 @@
+a:active{
+    background-color: blue;
+}
+
+a:hover{
+    border-bottom: 2px solid red;
+    transition: 1s ease-in-out;
+}
