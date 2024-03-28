@@ -20,7 +20,7 @@ export default function AboutUs() {
                
             </div>
             <div className="mt-10 mx-5 bg-gray-900 p-10 py-20 rounded-2xl">
-                    <h1 className="text-white text-5xl text-base text-center font-semibold mb-5">Our mission</h1>
+                    <h1 className="text-white text-3xl text-base text-center font-semibold mb-5">Our mission</h1>
                     <p className="text-white ">At NNI, we understand the importance of staying informed in today's fast-paced world. Our team of experienced journalists, writers, and editors works tirelessly to bring you the latest developments and trends, ensuring that you're always up-to-date with what's happening both locally and internationally. What sets us apart is our commitment to journalistic integrity and objectivity. We strive to present diverse perspectives and foster meaningful conversations on issues that matter most. Whether it's uncovering groundbreaking stories or providing in-depth analysis, we aim to empower our readers with knowledge and understanding.
 
 In addition to news coverage, NNI also features opinion pieces, interviews, and multimedia content to offer a comprehensive view of the world around us. Our goal is not only to inform but also to inspire and engage our audience in meaningful dialogue.
