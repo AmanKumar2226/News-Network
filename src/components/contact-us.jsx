@@ -5,7 +5,8 @@ export default function Contact(){
         <>
         <div className="relative h-full">
              <img src="https://i.ibb.co/8sk93vs/Group-216-1.png" alt="Background image" className="" />
-             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54891.75795072595!2d76.68240660000001!3d30.6977349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1711604563092!5m2!1sen!2sin" width="600" height="450" allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <div className="container mx-auto w-full z-40  absolute bottom-0 right-0 lg:mb-32 mb-56 xl:w-3/12 lg:w-1/2 sm:w-8/12 w-11/12 lg:mr-20 md:mr-32">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54891.75795072595!2d76.68240660000001!3d30.6977349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1711604563092!5m2!1sen!2sin" width="600" height="450" allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>           
+              <div className="container mx-auto w-full z-30  absolute bottom-0 right-0 lg:mb-32 mb-56 xl:w-3/12 lg:w-1/2 sm:w-8/12 w-11/12 lg:mr-20 md:mr-32">
                 <div className=" flex justify-center lg:justify-end px-4">
                     <div className="bg-white shadow rounded-lg p-8 sm:p-12 w-full">
                         <h1 className="text-xl sm:text-2xl font-semibold leading-normal text-gray-800">How can we help?</h1>
