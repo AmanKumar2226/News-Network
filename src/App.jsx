@@ -6,7 +6,7 @@ import AboutUs from './components/about'
 import Home from './components/home'
 import AllNews from './components/all-news'
 import Contact from './components/contact-us'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 import Form from './components/form'
 import Category from './components/category-navbar'
 
