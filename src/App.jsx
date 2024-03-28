@@ -16,16 +16,19 @@ function App() {
   return (
     <>
     <Navbar />
-    <Category />
-      <Routes>
+    <Category /> 
+       <Routes>
           <Route path='/' element={<Form />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
           <Route path="login-form" element={<Form />} />
-      </Routes>
+          <Route path="contact-us" element={<Contact />}/>
+      </Routes> 
     
-     <Footer />
+      <Footer />
+
+     
     </>
   )
 }
