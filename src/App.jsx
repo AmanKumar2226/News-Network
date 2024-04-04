@@ -16,7 +16,7 @@ import Health from './components/health'
 import Science from './components/science'
 import Business from './components/business'
 import Technology from './components/technology'
-
+import Breadcrumb from "./components/breadcrumb";
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
     <>
     <Navbar />
     <Category /> 
+    <Breadcrumb/>
        <Routes>
           <Route path='/' element={<Form />} />
           <Route path="home" element={<Home />} />
