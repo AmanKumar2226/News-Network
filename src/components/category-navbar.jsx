@@ -9,22 +9,25 @@ function Category() {
       <nav className='flex flex-row justify-between '>
         <div className='flex flex-row items-center flex-wrap gap-10 justify-center'>
         <div>
-          <a className='text-white py-1 px-3' href="/">Sports</a>
+          <a href="/sports" className='text-white py-1 px-3'>Sports</a>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/">Entertainment</a>
+          <a className='text-white py-1 px-3' href="/entertainment">Entertainment</a>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/">Politics</a>
+          <a className='text-white py-1 px-3' href="/general">General</a>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/">Health</a>
+          <a className='text-white py-1 px-3' href="/health">Health</a>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/">Technology</a>
+          <a className='text-white py-1 px-3' href="/science">Science</a>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/">Weather</a>
+          <a className='text-white py-1 px-3' href="/business">Business</a>
+        </div>
+        <div>
+          <a className='text-white py-1 px-3' href="/technology">Technology</a>
         </div>
         </div>  
         <div>
