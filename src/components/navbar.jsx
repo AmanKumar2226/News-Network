@@ -4,9 +4,12 @@ import "../component-styles/navbar.css"
 export default function Navbar(){
     return(
         <>
-        <div className="pt-5 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-5 border-solid border-2 border-black-500 shadow-md">
-            <div>
-                <h1 className="text-xl font-black leading-tight">News India</h1>
+        <div className="pt-2 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md">
+            <div className="flex flex-row items-center text-xl gap-3 font-semibold">
+                <a href="/home"><img className="logo" src="./images/logo.jpg" alt="logo" /></a>
+               <a href="/home">
+               <h1>News Network India</h1>
+               </a> 
             </div>
             <div className="flex flex-row md:items-center md:space-x-20">
                 <div className="hidden md:block">
