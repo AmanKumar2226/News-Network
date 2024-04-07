@@ -14,7 +14,7 @@ export default function Navbar(){
             <div className="flex flex-row md:items-center md:space-x-20">
                 <div className="hidden md:block">
                     <ul className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16 md:items-center">
-                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/home">Home</a></li>
+                        <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/">Home</a></li>
                         <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/about">About</a></li>
                         <li><a className="text-base px-3 py-1 font-medium leading-none text-center" href="/all-news">All News</a></li>
                     </ul>

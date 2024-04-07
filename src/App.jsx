@@ -26,8 +26,8 @@ function App() {
     <Category /> 
     <Breadcrumb/>
        <Routes>
-          <Route path='/' element={<Form />} />
-          <Route path="home" element={<Home />} />
+          <Route path='form' element={<Form />} />
+          <Route path="/" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
           <Route path="login-form" element={<Form />} />
