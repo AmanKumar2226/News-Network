@@ -17,6 +17,8 @@ import Science from './components/science'
 import Business from './components/business'
 import Technology from './components/technology'
 import Breadcrumb from "./components/breadcrumb";
+import Headlines from './components/top-headlines'
+import Apple from './components/apple'
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
           <Route path="science" element={<Science />}/>
           <Route path="business" element={<Business />}/>
           <Route path="technology" element={<Technology />}/>
+          <Route path="headlines" element={<Headlines  />}/>
+          <Route path="apple-articles-from-yesterday" element={<Apple  />}/>
       </Routes> 
     
       <Footer />

@@ -1,12 +1,6 @@
-import React, { useEffect } from "react";
 import NewsCard from "./news-card";
 
-
-
 export default function AllNews(){
-    
-
-    
     return(
         <>
         
@@ -15,8 +9,6 @@ export default function AllNews(){
                 <div className="card-container  ">
                 <NewsCard />
                 </div>
-                
-
             </div>
         </>
     );
