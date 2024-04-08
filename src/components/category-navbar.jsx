@@ -29,6 +29,12 @@ function Category() {
         <div>
           <a className='text-white py-1 px-3' href="/technology">Technology</a>
         </div>
+        <div>
+          <a className='text-white py-1 px-3' href="/headlines">Top Headlines</a>
+        </div>
+        <div>
+          <a className='text-white py-1 px-3' href="/apple-articles-from-yesterday">Apple Articles from yesterday</a>
+        </div>
         </div>  
         <div>
           <a href="/login-form" className='border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</a>
