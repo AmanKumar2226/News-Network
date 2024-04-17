@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 import '../component-styles/form.css'
 
 export default function Form() {
@@ -22,12 +22,55 @@ export default function Form() {
   }
 
 
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: ""
+  })
+
+// const [visible, setVisible] = useState(false);
+
+
+const [signInUser, setSignInUser] = useState({
+  email: "",
+  password: "",
+});
+
+const onChangeSignInUser = (evt) => {
+  setSignInUser({ ...signInUser, [evt.target.name]: evt.target.value });
+};
+
+const onChangeUser = (evt) => {
+  setUser({ ...user, [evt.target.name]: evt.target.value });
+};
+
+const onSubmit = (e) => {
+  e.preventDefault();
+  if(validationPassword){
+    console.log(user);
+  }
+};
+
+const validationForm= () => {
+  if (user.password !== user.confirmPassword) {
+    document.getElementById('err').innerHTML="Password doesn't match";
+    document.getElementById('err').style.color="red";
+  }
+  else{
+    document.getElementById('err').innerHTML="Registered Successfully";
+    document.getElementById('err').style.color="green";
+  }
+};
+
   return (
     <>
       <div class="flex mx-96 my-40  flex-row shadow-2xl">
         <div id="main-container" className="flex flex-row w-full">
           <div id="sign-in-container" class="zsm:mx-auto sm:w-full sm:max-w-sm p-10 w-2/5">
-          <form class="space-y-6" action="#" method="POST">
+          <form class="space-y-6" action="#"   onSubmit={onSubmit}>
             <h1 className="text-2xl font-bold">Sign-In</h1>
             <div>
               <label
@@ -38,6 +81,8 @@ export default function Form() {
               </label>
               <div class="mt-2">
                 <input
+                  onChange={onChangeSignInUser}
+                  value={signInUser.email}
                   id="email"
                   name="email"
                   type="email"
@@ -67,6 +112,8 @@ export default function Form() {
               </div>
               <div class="mt-2">
                 <input
+                onChange={onChangeSignInUser}
+                value={signInUser.password}
                   id="password"
                   name="password"
                   type="password"
@@ -86,19 +133,10 @@ export default function Form() {
               </button>
             </div>
           </form>
-
-          <p class="mt-10 text-center text-sm text-gray-500">
-            Not a member?
-            <a
-              href="#"
-              class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-            >
-              Start a 14 day free trial
-            </a>
-          </p>
         </div>
         <div id="sign-up-container" className="zsm:mx-auto sm:w-full sm:max-w-sm p-10 w-2/5">
                 <h2 className="text-2xl font-semibold mb-5">Sign Up</h2>
+                <form onSubmit={onSubmit}>
                 <div>
               <label
                 for="first-name"
@@ -108,8 +146,10 @@ export default function Form() {
               </label>
               <div class="mt-2">
                 <input
+                onChange={onChangeUser}
+                value={user.firstName}
                   id="first-name"
-                  name="first-name"
+                  name="firstName"
                   type="first-name"
                   required
                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -126,8 +166,10 @@ export default function Form() {
               </label>
               <div class="mt-2">
                 <input
+                onChange={onChangeUser}
+                value={user.lastName}
                   id="last-name"
-                  name="last-name"
+                  name="lastName"
                   type="last-name"
                   required
                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -144,8 +186,10 @@ export default function Form() {
               </label>
               <div class="mt-2">
                 <input
+                onChange={onChangeUser}
+                value={user.email}
                   id="r-email"
-                  name="r-email"
+                  name="email"
                   type="email"
                   autocomplete="email"
                   required
@@ -165,8 +209,10 @@ export default function Form() {
               </div>
               <div class="mt-2">
                 <input
+                onChange={onChangeUser}
+                value={user.password}
                   id="r-password"
-                  name="r-password"
+                  name="password"
                   type="password"
                   autocomplete="current-password"
                   required
@@ -186,22 +232,30 @@ export default function Form() {
               </div>
               <div class="mt-2">
                 <input
+                onChange={onChangeUser}
+                value={user.confirmPassword}
                   id="confirm-password"
-                  name="confirm-password"
+                  name="confirmPassword"
                   type="confirm-password"
                   required
                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
+              <div className="my-2">
+                <p id="err"></p>
+              </div>
             </div>
             <div className="mt-5">
               <button
+                onClick={validationForm}
                 type="submit"
                 class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign up
               </button>
             </div>
+                </form>
+                
             </div>
         <div class="sm:mx-auto sm:w-full sm:max-w-sm w-2/5 p-10  flex justify-center items-center flex-col bg-fuchsia-900">  
           <h2 id="heading-form" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
