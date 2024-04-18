@@ -67,19 +67,19 @@ const validationForm= () => {
 
   return (
     <>
-      <div class="flex mx-96 my-40  flex-row shadow-2xl">
+      <div className="flex mx-96 my-40  flex-row shadow-2xl">
         <div id="main-container" className="flex flex-row w-full">
-          <div id="sign-in-container" class="zsm:mx-auto sm:w-full sm:max-w-sm p-10 w-2/5">
-          <form class="space-y-6" action="#"   onSubmit={onSubmit}>
-            <h1 className="text-2xl font-bold">Sign-In</h1>
+          <div id="sign-in-container" className="zsm:mx-auto sm:w-full sm:max-w-sm p-10 w-2/5">
+          <form className="space-y-6" action="#"   onSubmit={onSubmit}>
+            <h1 classNameName="text-2xl font-bold">Sign-In</h1>
             <div>
               <label
                 for="email"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Email address
               </label>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                   onChange={onChangeSignInUser}
                   value={signInUser.email}
@@ -88,29 +88,29 @@ const validationForm= () => {
                   type="email"
                   autocomplete="email"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div>
-              <div class="flex items-center justify-between">
+              <div className="flex items-center justify-between">
                 <label
                   for="password"
-                  class="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Password
                 </label>
-                <div class="text-sm">
+                <div className="text-sm">
                   <a
                     href="#"
-                    class="font-semibold text-indigo-600 hover:text-indigo-500"
+                    className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
                   </a>
                 </div>
               </div>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeSignInUser}
                 value={signInUser.password}
@@ -119,7 +119,7 @@ const validationForm= () => {
                   type="password"
                   autocomplete="current-password"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ const validationForm= () => {
             <div>
               <button
                 type="submit"
-                class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
               </button>
@@ -140,11 +140,11 @@ const validationForm= () => {
                 <div>
               <label
                 for="first-name"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 First Name
               </label>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeUser}
                 value={user.firstName}
@@ -152,7 +152,7 @@ const validationForm= () => {
                   name="firstName"
                   type="first-name"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -160,11 +160,11 @@ const validationForm= () => {
             <div>
               <label
                 for="last-name"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Last Name
               </label>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeUser}
                 value={user.lastName}
@@ -172,7 +172,7 @@ const validationForm= () => {
                   name="lastName"
                   type="last-name"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -180,11 +180,11 @@ const validationForm= () => {
             <div>
               <label
                 for="r-email"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Email address
               </label>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeUser}
                 value={user.email}
@@ -193,21 +193,21 @@ const validationForm= () => {
                   type="email"
                   autocomplete="email"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div>
-              <div class="flex items-center justify-between">
+              <div className="flex items-center justify-between">
                 <label
                   for="r-password"
-                  class="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Password
                 </label>
               </div>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeUser}
                 value={user.password}
@@ -216,21 +216,21 @@ const validationForm= () => {
                   type="password"
                   autocomplete="current-password"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div>
-              <div class="flex items-center justify-between">
+              <div className="flex items-center justify-between">
                 <label
                   for="confirm-password"
-                  class="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Confirm Password
                 </label>
               </div>
-              <div class="mt-2">
+              <div className="mt-2">
                 <input
                 onChange={onChangeUser}
                 value={user.confirmPassword}
@@ -238,7 +238,7 @@ const validationForm= () => {
                   name="confirmPassword"
                   type="confirm-password"
                   required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
               <div className="my-2">
@@ -249,7 +249,7 @@ const validationForm= () => {
               <button
                 onClick={validationForm}
                 type="submit"
-                class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign up
               </button>
@@ -257,8 +257,8 @@ const validationForm= () => {
                 </form>
                 
             </div>
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm w-2/5 p-10  flex justify-center items-center flex-col bg-fuchsia-900">  
-          <h2 id="heading-form" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm w-2/5 p-10  flex justify-center items-center flex-col bg-fuchsia-900">  
+          <h2 id="heading-form" className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
             Sign in to your account
           </h2>
           <p id="welcome-paragraph" className="text-white">To keep connected with us please login with your personal info</p>

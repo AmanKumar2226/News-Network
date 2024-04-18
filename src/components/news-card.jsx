@@ -52,11 +52,11 @@ function NewsCard() {
     <>
     <div className="flex flex-row align-middle justify-center mb-5">
         <nav aria-label="Page navigation">
-          <ul class="inline-flex -space-x-px text-base h-10">
+          <ul className="inline-flex -space-x-px text-base h-10">
             <li>
               <a
                 onClick={prePage}
-                class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 Previous
               </a>
@@ -77,7 +77,7 @@ function NewsCard() {
             <li>
               <a
                 onClick={nextPage}
-                class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 Next
               </a>
@@ -91,27 +91,27 @@ function NewsCard() {
             <div
             key={index}
               id={index}
-              class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mb-5 "
+              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow mb-5 "
             >
               <a href={dataObj.url}>
-                <img class="rounded-t-lg" src={dataObj.urlToImage} alt="" />
+                <img className="rounded-t-lg" src={dataObj.urlToImage} alt="" />
               </a>
-              <div class="p-5">
+              <div className="p-5">
                 <a href={dataObj.url}>
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     {dataObj.title}
                   </h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 ">
+                <p className="mb-3 font-normal text-gray-700 ">
                   {dataObj.description}
                 </p>
                 <a
                   href={dataObj.url}
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                 >
                   Read more
                   <svg
-                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -121,7 +121,7 @@ function NewsCard() {
                       stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
@@ -133,11 +133,11 @@ function NewsCard() {
       </div>
       <div className="flex flex-row align-middle justify-center">
         <nav aria-label="Page navigation">
-          <ul class="inline-flex -space-x-px text-base h-10">
+          <ul className="inline-flex -space-x-px text-base h-10">
             <li>
               <a
                 onClick={prePage}
-                class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 Previous
               </a>
@@ -158,7 +158,7 @@ function NewsCard() {
             <li>
               <a
                 onClick={nextPage}
-                class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 Next
               </a>

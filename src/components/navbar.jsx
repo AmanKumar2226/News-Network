@@ -20,7 +20,7 @@ export default function Navbar(){
                     </ul>
                 </div>
                 <div className="hidden md:block" >
-                    <a href="javascript:void(0)" className="text-base font-bold leading-none underline text-center  hover:text-indigo-700"> Let's work together </a>
+                    <a href="#" className="text-base font-bold leading-none underline text-center  hover:text-indigo-700"> Let's work together </a>
                 </div>
 
                 <div className="flex items-center md:hidden relative">
@@ -35,7 +35,7 @@ export default function Navbar(){
                     <ul className="p-2 w-40 border-r bg-white absolute rounded z-20 top-10 right-0 shadow hidden">
                         <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-400 focus:text-indigo-700 focus:outline-none">
                             <div className="flex items-center">
-                                <a href="javascript:void(0)" className="ml-2">Home</a>
+                                <a href="#" className="ml-2">Home</a>
                             </div>
                         </li>
                         <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
@@ -43,10 +43,10 @@ export default function Navbar(){
                          About Us</Link>
                         </li>
                         <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none bg-white">
-                            <a href="javascript:void(0)" className="ml-2">Projects</a>
+                            <a href="#" className="ml-2">Projects</a>
                         </li>
                         <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 ml-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none bg-white">
-                            <a href="javascript:void(0)" className="font-bold leading-none underline text-gray-900 hover:text-indigo-700"> Let's work together </a>
+                            <a href="#" className="font-bold leading-none underline text-gray-900 hover:text-indigo-700"> Let's work together </a>
                         </li>
                     </ul>
                 </div>
