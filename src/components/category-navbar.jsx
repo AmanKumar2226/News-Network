@@ -1,5 +1,6 @@
 import React from 'react'
-import '../component-styles/category-navbar.css'
+import '../component-styles/category-navbar.css'    
+import { NavLink } from 'react-router-dom'
 
 
 function Category() {
@@ -9,35 +10,35 @@ function Category() {
       <nav className='flex flex-row justify-between '>
         <div className='flex flex-row items-center flex-wrap gap-10 justify-center'>
         <div>
-          <a href="/sports" className='text-white py-1 px-3'>Sports</a>
+          <NavLink to="/sports" activeClassName="active-category" className='text-white py-1 px-3'>Sports</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/entertainment">Entertainment</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/entertainment">Entertainment</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/general">General</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/general">General</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/health">Health</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/health">Health</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/science">Science</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/science">Science</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/business">Business</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/business">Business</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/technology">Technology</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/technology">Technology</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/headlines">Top Headlines</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/headlines">Top Headlines</NavLink>
         </div>
         <div>
-          <a className='text-white py-1 px-3' href="/apple-articles-from-yesterday">Apple Articles from yesterday</a>
+          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/apple-articles-from-yesterday">Apple Articles from yesterday</NavLink>
         </div>
         </div>  
         <div>
-          <a href="/login-form" className='border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</a>
+          <NavLink to="/login-form" activeClassName="login-link-active" className='login-link border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</NavLink>
         </div>
       </nav>
     </div>
