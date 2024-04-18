@@ -1,39 +1,36 @@
 import React from "react";
 import '../component-styles/home.css'
-import { useLocation } from "react-router-dom";
+
 export default function Home() {
-  const location = useLocation()
-  console.log(location.pathname,        
-    "hhhh")
   return (
     <>
     <div className="py-10">
-      <main class="responsive-wrapper">
-        <div class="page-title">
+      <main className="responsive-wrapper">
+        <div className="page-title">
           <h1>Latest Updates</h1>
         </div>
-        <div class="magazine-layout">
-          <div class="magazine-column">
-            <article class="article">
-              <h2 class="article-title article-title--large">
-                <a href="#" class="article-link">
+        <div className="magazine-layout">
+          <div className="magazine-column">
+            <article className="article">
+              <h2 className="article-title article-title--large">
+                <a href="#" className="article-link">
                   The First Signs of{" "}
-                  <mark class="mark mark--primary">Alcoholic Liver</mark> Damage
+                  <mark className="mark mark--primary">Alcoholic Liver</mark> Damage
                   Are Not in the Liver
                 </a>
               </h2>
-              <div class="article-excerpt">
+              <div className="article-excerpt">
                 <p>
                   The combination of my father's death and my personal back
                   ground lit a fire in me to know more
                 </p>
                 <p>He was admitted to the hospital on June 24, 2016.</p>
               </div>
-              <div class="article-author">
-                <div class="article-author-img">
+              <div className="article-author">
+                <div className="article-author-img">
                   <img src="https://assets.codepen.io/285131/author-3.png" />
                 </div>
-                <div class="article-author-info">
+                <div className="article-author-info">
                   <dl>
                     <dt>David Sherof</dt>
                     <dd>Reporter</dd>
@@ -41,13 +38,13 @@ export default function Home() {
                 </div>
               </div>
             </article>
-            <article class="article">
-              <h2 class="article-title article-title--medium">
-                <a href="#" class="article-link">
+            <article className="article">
+              <h2 className="article-title article-title--medium">
+                <a href="#" className="article-link">
                   The Founder's Guide to Actually Understanding Users Nowadays
                 </a>
               </h2>
-              <div class="article-creditation">
+              <div className="article-creditation">
                 <p>
                   By Johnathan O'Connell, Andrew Van Dam, Aaron Gregg and Alyssa
                   Fowers
@@ -55,17 +52,17 @@ export default function Home() {
               </div>
             </article>
           </div>
-          <div class="magazine-column">
-            <article class="article">
-              <figure class="article-img">
+          <div className="magazine-column">
+            <article className="article">
+              <figure className="article-img">
                 <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
               </figure>
-              <h2 class="article-title article-title--medium">
-                <a href="#" class="article-link">
+              <h2 className="article-title article-title--medium">
+                <a href="#" className="article-link">
                   How 7 Lines of Code Turned Into a $36 Billion Empire
                 </a>
               </h2>
-              <div class="article-excerpt">
+              <div className="article-excerpt">
                 <p>
                   Yeah, it's safe to say these guys have a great sense of humor,
                   which isn't really suprising for us considering their
@@ -74,11 +71,11 @@ export default function Home() {
                   payments solutions for each individual client, the Collison...
                 </p>
               </div>
-              <div class="article-author">
-                <div class="article-author-img">
+              <div className="article-author">
+                <div className="article-author-img">
                   <img src="https://assets.codepen.io/285131/author-2.png" />
                 </div>
-                <div class="article-author-info">
+                <div className="article-author-info">
                   <dl>
                     <dt>James Robert</dt>
                     <dd>Editor</dd>
@@ -87,54 +84,54 @@ export default function Home() {
               </div>
             </article>
           </div>
-          <div class="magazine-column">
-            <article class="article">
-              <figure class="article-img">
+          <div className="magazine-column">
+            <article className="article">
+              <figure className="article-img">
                 <img src="https://images.unsplash.com/photo-1512521743077-a42eeaaa963c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" />
               </figure>
-              <h2 class="article-title article-title--small">
-                <a href="#" class="article-link">
-                  To Become <mark class="mark mark--secondary">Happier</mark>,
+              <h2 className="article-title article-title--small">
+                <a href="#" className="article-link">
+                  To Become <mark className="mark mark--secondary">Happier</mark>,
                   Ask Yourself These Two Questions Every Night
                 </a>
               </h2>
-              <div class="article-creditation">
+              <div className="article-creditation">
                 <p>By Jonathan O'Connell</p>
               </div>
             </article>
-            <article class="article">
-              <figure class="article-img">
+            <article className="article">
+              <figure className="article-img">
                 <img src="https://images.unsplash.com/photo-1569234817121-a2552baf4fd4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
               </figure>
-              <h2 class="article-title article-title--small">
-                <a href="#" class="article-link">
+              <h2 className="article-title article-title--small">
+                <a href="#" className="article-link">
                   10 Things I Stole From People Smarter Than Me
                 </a>
               </h2>
-              <div class="article-creditation">
+              <div className="article-creditation">
                 <p>By Jonathan O'Connell</p>
               </div>
             </article>
           </div>
-          <div class="magazine-column">
-            <article class="article">
-              <h2 class="article-title article-title--medium">
-                <a href="#" class="article-link">
+          <div className="magazine-column">
+            <article className="article">
+              <h2 className="article-title article-title--medium">
+                <a href="#" className="article-link">
                   Traveller Visiting Ice Cave With Amazing Eye-Catching Scenes
                 </a>
               </h2>
-              <div class="article-excerpt">
+              <div className="article-excerpt">
                 <p>
                   Slack has become indispensible for many businesses operation
                   remotely during the pandemic. Here's what the acquisition
                   could mean for users...
                 </p>
               </div>
-              <div class="article-author">
-                <div class="article-author-img">
+              <div className="article-author">
+                <div className="article-author-img">
                   <img src="https://assets.codepen.io/285131/author-2.png" />
                 </div>
-                <div class="article-author-info">
+                <div className="article-author-info">
                   <dl>
                     <dt>James Robert</dt>
                     <dd>Editor</dd>
@@ -142,11 +139,11 @@ export default function Home() {
                 </div>
               </div>
             </article>
-            <article class="article">
-              <small class="article-category">
+            <article className="article">
+              <small className="article-category">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
                   width="28"
                   height="22"
                   viewBox="0 0 28 22"
@@ -156,7 +153,7 @@ export default function Home() {
                       <rect width="28" height="22" />
                     </clipPath>
                   </defs>
-                  <g id="headphones" clip-path="url(#clip-headphones)">
+                  <g id="headphones" clipPath="url(#clip-headphones)">
                     <g
                       id="Group_2"
                       data-name="Group 2"
@@ -211,14 +208,14 @@ export default function Home() {
                 </svg>
                 <span>Post Reports / Podcast</span>
               </small>
-              <h2 class="article-title article-title--medium">
-                <a href="#" class="article-link">
+              <h2 className="article-title article-title--medium">
+                <a href="#" className="article-link">
                   Things to Do After 6 P.M Will Enrich{" "}
-                  <mark class="mark mark--tertiary">Your Life</mark>
+                  <mark className="mark mark--tertiary">Your Life</mark>
                 </a>
               </h2>
-              <div class="article-podcast-player">
-                <button class="podcast-play-button">
+              <div className="article-podcast-player">
+                <button className="podcast-play-button">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="192"
@@ -230,17 +227,17 @@ export default function Home() {
                     <path d="M232.3125,114.34375,88.34375,26.35937A15.99781,15.99781,0,0,0,64,40.00781V215.99219a16.00521,16.00521,0,0,0,24.34375,13.64843L232.3125,141.65625a16.00727,16.00727,0,0,0,0-27.3125Z"></path>
                   </svg>
                 </button>
-                <div class="podcast-progression"></div>
-                <span class="podcast-time">23:45</span>
+                <div className="podcast-progression"></div>
+                <span className="podcast-time">23:45</span>
               </div>
-              <div class="article-podcast-info">
+              <div className="article-podcast-info">
                 Apple Podcasts, Google Podcasts, Stitcher
               </div>
-              <div class="article-author">
-                <div class="article-author-img">
+              <div className="article-author">
+                <div className="article-author-img">
                   <img src="https://assets.codepen.io/285131/author-3.png" />
                 </div>
-                <div class="article-author-info">
+                <div className="article-author-info">
                   <dl>
                     <dt>David Sherof</dt>
                     <dd>Reporter</dd>
