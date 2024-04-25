@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Spinner from "./spinner";
 
 
 function NewsCard() {
   const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
   let [data, setData] = useState([]);
+  let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     let config = {
       method: "get",
@@ -18,6 +20,7 @@ function NewsCard() {
       .then((response) => {
         setData(response.data.articles);
         console.log(JSON.stringify(response.data));
+        setIsLoading(false);  
       })
       .catch((error) => {
         console.log(error);
@@ -51,6 +54,7 @@ function NewsCard() {
   return (
     <>
     <div className="flex flex-row align-middle justify-center mb-5">
+      {isLoading && <Spinner/>}
         <nav aria-label="Page navigation">
           <ul className="inline-flex -space-x-px text-base h-10">
             <li>
@@ -84,7 +88,7 @@ function NewsCard() {
             </li>
           </ul>
         </nav>
-      </div>
+      </div>  
       <div className="flex flex-row gap-28 flex-wrap">
         {records.map((dataObj, index) => {
           return (

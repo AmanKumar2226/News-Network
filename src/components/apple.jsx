@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
+import Spinner from './spinner';
 
 
 function Apple() {
     const url = "https://newsapi.org/v2/everything?q=apple&from=2024-04-07&to=2024-04-07&sortBy=popularity&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
     let [data, setData] = useState([]);
+    let [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
       let config = {
         method: "get",
@@ -18,6 +20,7 @@ function Apple() {
         .then((response) => {
           setData(response.data.articles);
           console.log(JSON.stringify(response.data));
+          setIsLoading(false);
         })
         .catch((error) => {
           console.log(error);
@@ -25,7 +28,13 @@ function Apple() {
     }, []);
     return (
       <div className='ml-14 p-5'>
+        <h1 className='text-3xl font-semibold pb-10 text-center'>Apple Articles from Yesterday</h1>
+        {isLoading && <Spinner/>}
+        
         <div className="flex flex-row gap-28 flex-wrap">
+          
+          
+     
           {data.map((dataObj, index) => {
             return (
               <div

@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Spinner from "./spinner";
 function Science() {
     const url = "https://saurav.tech/NewsAPI/top-headlines/category/science/in.json";
  
     const [data, setData] = useState([]);
-
+    const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     let config = {
       method: 'get',
@@ -18,6 +19,7 @@ function Science() {
     .then((response) => {
       setData(response.data.articles);
       console.log(JSON.stringify(response.data));
+      setIsLoading(false)
     })
     .catch((error) => {
       console.log(error);
@@ -31,6 +33,7 @@ function Science() {
         <h1 className="text-3xl font-semibold text-black">
           Science
         </h1>
+        {isLoading && <Spinner/>}
       </div>
       <div className="flex flex-row gap-28 flex-wrap justify-center mt-5 mb-5">
       {data.map((dataObj, index) => {

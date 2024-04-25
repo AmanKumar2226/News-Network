@@ -19,6 +19,7 @@ import Technology from './components/technology'
 import Breadcrumb from "./components/breadcrumb";
 import Headlines from './components/top-headlines'
 import Apple from './components/apple'
+import Spinner from './components/spinner'
 
 function App() {
 
