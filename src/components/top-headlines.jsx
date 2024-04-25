@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
+import Spinner from './spinner';
 
 function Headlines() {
     const url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
+  let [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     let config = {
       method: "get",
@@ -17,6 +19,7 @@ function Headlines() {
       .then((response) => {
         setData(response.data.articles);
         console.log(JSON.stringify(response.data));
+        setIsLoading(false)
       })
       .catch((error) => {
         console.log(error);
@@ -24,6 +27,10 @@ function Headlines() {
   }, []);
   return (
     <div className='ml-14 p-5'>
+      <div>
+        <h1 className='text-3xl text-center pb-5 font-semibold'>Top Headlines</h1>
+        {isLoading && <Spinner/>}
+      </div>
       <div className="flex flex-row gap-28 flex-wrap">
         {data.map((dataObj, index) => {
           return (
