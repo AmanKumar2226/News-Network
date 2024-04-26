@@ -5,11 +5,12 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import Spinner from './spinner';
 
 function One() {
     const url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
-  // let [isLoading, setIsLoading] = useState(true);
+  let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     let config = {
       method: "get",
@@ -23,7 +24,7 @@ function One() {
       .then((response) => {
         setData(response.data.articles);
         console.log(JSON.stringify(response.data));
-        // setIsLoading(false);  
+        setIsLoading(false);  
       })
       .catch((error) => {
         console.log(error);
@@ -66,6 +67,7 @@ function One() {
   };
   return (
     <div>
+        {isLoading && <Spinner/>}
       <div className="w-3/4 mb-10 mt-5 mx-auto">
           <div className="">
           <Slider {...settings}>

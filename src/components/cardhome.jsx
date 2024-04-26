@@ -32,6 +32,7 @@ function CardHome() {
     <div className="my-20">
         <h1 className="text-3xl font-semibold text-center underline decoration-double">Grab More Here</h1>
     </div>    
+    {isLoading && <Spinner/>}
     <div className="flex flex-row flex-wrap gap-10 justify-center">
     {data.map((dataObj, index)=>{
         return(

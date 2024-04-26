@@ -1,12 +1,14 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import "../component-styles/home.css";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Spinner from "./spinner";
 
 function Four() {
+    let [isLoading, setIsLoading] = useState(true);
+
   const url =
     "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
@@ -23,8 +25,7 @@ function Four() {
       .request(config)
       .then((response) => {
         setData(response.data.articles);
-        console.log(JSON.stringify(response.data));
-        // setIsLoading(false);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
@@ -70,6 +71,7 @@ function Four() {
       <div className="mb-20">
         <h1 className="text-3xl font-semibold text-center underline decoration-double">More Articles</h1>
       </div>
+      {isLoading && <Spinner/>}
       <div className="w-3/4 mb-10 mt-5 mx-auto">
         <div className="">
           <Slider {...settings}>
