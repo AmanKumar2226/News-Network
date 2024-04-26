@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import "../component-styles/form.css";
+import ToastNotification from "./notifications/toast";
 
 export default function Form() {
   //javascript goes here.......
@@ -54,19 +56,23 @@ export default function Form() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    saveEmailandPass();
     if (validationForm) {
+      saveEmailandPass();
       console.log(user);
     }
   };
  
   const validationForm = () => {
-    if (user.password !== user.confirmPassword) {
+    if(user.password.length < 8){
+      document.getElementById("err").innerHTML = "Password should contain atleast 8 characters";
+      document.getElementById("err").style.color = "red";
+    }
+    else if (user.password !== user.confirmPassword) {
       document.getElementById("err").innerHTML = "Password doesn't match";
       document.getElementById("err").style.color = "red";
-    } else {
-      document.getElementById("err").innerHTML = "Registered Successfully";
-      document.getElementById("err").style.color = "green";
+    } 
+    else if(user.password === user.confirmPassword) {
+      toast.success("Registered Successfully")
     }
   };
 
@@ -82,13 +88,13 @@ export default function Form() {
       document.getElementById("not-exist").style.color = 'red';
     }
     else if(signInUser.email === email && signInUser.password === password){
-      document.getElementById("not-exist").innerText = "creds matched. Logging you in...."
-      document.getElementById("not-exist").style.color = "green";
+      toast.success("Login Success")
     }
   }
 
   return (
     <>
+    <ToastNotification/>
       <div className="flex mx-96 my-40  flex-row shadow-2xl">
         <div id="main-container" className="flex flex-row w-full">
           <div
