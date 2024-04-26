@@ -10,35 +10,35 @@ function Category() {
       <nav className='flex flex-row justify-between '>
         <div className='flex flex-row items-center flex-wrap gap-10 justify-center'>
         <div>
-          <NavLink to="/sports" activeClassName="active-category" className='text-white py-1 px-3'>Sports</NavLink>
+          <NavLink to="/sports" activeclassname="active-category" className='text-white py-1 px-3'>Sports</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/entertainment">Entertainment</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/entertainment">Entertainment</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/general">General</NavLink>
+          <NavLink Name="active-category" className='menu-link text-white py-1 px-3' to="/general">General</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/health">Health</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/health">Health</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/science">Science</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/science">Science</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/business">Business</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/business">Business</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/technology">Technology</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/technology">Technology</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/headlines">Top Headlines</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/headlines">Top Headlines</NavLink>
         </div>
         <div>
-          <NavLink activeClassName="active-category" className='menu-link text-white py-1 px-3' to="/apple-articles-from-yesterday">Apple Articles from yesterday</NavLink>
+          <NavLink activeclassname="active-category" className='menu-link text-white py-1 px-3' to="/apple-articles-from-yesterday">Apple Articles from yesterday</NavLink>
         </div>
         </div>  
         <div>
-          <NavLink to="/login-form" activeClassName="login-link-active" className='login-link border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</NavLink>
+          <NavLink to="/login-form" activeclassname="login-link-active" className='login-link border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</NavLink>
         </div>
       </nav>
     </div>

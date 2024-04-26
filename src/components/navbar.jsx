@@ -16,13 +16,13 @@ export default function Navbar() {
         <div className="flex flex-row md:items-center md:space-x-20">
           <div className="hidden md:block">
             <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16 md:items-center">
-              <NavLink to="/" className="menu-link px-3 py-2 font-medium leading-none text-center" activeClassName="active-nav">
+              <NavLink to="/" className="menu-link px-3 py-2 font-medium leading-none text-center" activeclassname="active-nav">
                 Home
               </NavLink>
-              <NavLink to="/about" className="menu-link px-3 py-2 font-medium leading-none text-center" activeClassName="active-nav">
+              <NavLink to="/about" className="menu-link px-3 py-2 font-medium leading-none text-center" activeclassname="active-nav">
                 About
               </NavLink>
-              <NavLink to="/all-news" className="menu-link px-3 py-2 font-medium leading-none text-center" activeClassName="active-nav">
+              <NavLink to="/all-news" className="menu-link px-3 py-2 font-medium leading-none text-center" activeclassname="active-nav">
                 All News
               </NavLink>
             </div>
