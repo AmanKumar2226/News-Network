@@ -4,13 +4,13 @@
 }
 
 .active{
-    color: #FC7753;
-    border-bottom: 2px solid #FC7753;
+    color: #78C091;
+    border-bottom: 2px solid #78C091;
     font-weight: 900px;
 }
 
 .menu-link:hover{
-    border-bottom: 2px solid #FC7753;
+    border-bottom: 2px solid #78C091;
     transition: 1s ease-in-out;
 }
 
