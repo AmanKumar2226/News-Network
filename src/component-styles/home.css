@@ -322,3 +322,7 @@ img {
 .loader{
   height: 50vh;
 }
+
+.slick-slide > div{
+  margin : 0 10px;
+}
