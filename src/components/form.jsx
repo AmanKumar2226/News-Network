@@ -101,11 +101,11 @@ export default function Form() {
             id="sign-in-container"
             className="zsm:mx-auto sm:w-full sm:max-w-sm p-10 w-2/5"
           >
-            <form className="space-y-6" action="#" onSubmit={onSubmit}>
-              <h1 classNameName="text-2xl font-bold">Sign-In</h1>
+            <form className="space-y-6" action="/">
+              <h1 className="text-2xl font-bold">Sign-In</h1>
               <div>
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Email address
@@ -117,7 +117,7 @@ export default function Form() {
                     id="email"
                     name="email"
                     type="email"
-                    autocomplete="email"
+                    autoComplete="email"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -127,14 +127,14 @@ export default function Form() {
               <div>
                 <div className="flex items-center justify-between">
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Password
                   </label>
                   <div className="text-sm">
                     <a
-                      href="#"
+                      href="/forgot-password"
                       className="font-semibold text-indigo-600 hover:text-indigo-500"
                     >
                       Forgot password?
@@ -148,7 +148,7 @@ export default function Form() {
                     id="password"
                     name="password"
                     type="password"
-                    autocomplete="current-password"
+                    autoComplete="current-password"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -176,7 +176,7 @@ export default function Form() {
             <form onSubmit={onSubmit}>
               <div>
                 <label
-                  for="first-name"
+                  htmlFor="first-name"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   First Name
@@ -196,7 +196,7 @@ export default function Form() {
 
               <div>
                 <label
-                  for="last-name"
+                  htmlFor="last-name"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Last Name
@@ -216,7 +216,7 @@ export default function Form() {
 
               <div>
                 <label
-                  for="r-email"
+                  htmlFor="r-email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Email address
@@ -228,7 +228,7 @@ export default function Form() {
                     id="r-email"
                     name="email"
                     type="email"
-                    autocomplete="email"
+                    autoComplete="email"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -238,7 +238,7 @@ export default function Form() {
               <div>
                 <div className="flex items-center justify-between">
                   <label
-                    for="r-password"
+                    htmlFor="r-password"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Password
@@ -251,7 +251,7 @@ export default function Form() {
                     id="r-password"
                     name="password"
                     type="password"
-                    autocomplete="current-password"
+                    autoComplete="current-password"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -261,7 +261,7 @@ export default function Form() {
               <div>
                 <div className="flex items-center justify-between">
                   <label
-                    for="confirm-password"
+                    htmlFor="confirm-password"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Confirm Password
