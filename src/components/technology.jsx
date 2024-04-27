@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "./spinner";
 function Technology() {
-    const url = "https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json";
+    const url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
  
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true)

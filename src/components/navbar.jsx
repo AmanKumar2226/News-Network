@@ -6,10 +6,10 @@ export default function Navbar() {
     <>
       <div className="pt-2 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md">
         <div className="flex flex-row items-center text-xl gap-3 font-semibold">
-          <a href="/home">
+          <a href="/">
             <img className="logo" src="./images/logo.jpg" alt="logo" />
           </a>
-          <a href="/home">
+          <a href="/">
             <h1>News Network India</h1>
           </a>
         </div>

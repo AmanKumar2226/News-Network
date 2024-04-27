@@ -4,7 +4,7 @@ import Spinner from './spinner';
 
 
 function Apple() {
-    const url = "https://newsapi.org/v2/everything?q=apple&from=2024-04-07&to=2024-04-07&sortBy=popularity&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
+    const url = "https://newsapi.org/v2/everything?q=apple&from=2024-04-26&to=2024-04-26&sortBy=popularity&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
     let [data, setData] = useState([]);
     let [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
