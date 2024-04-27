@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Spinner from './spinner';
 
 function One() {
-    const url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
+    const url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
