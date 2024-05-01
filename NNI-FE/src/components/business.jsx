@@ -29,7 +29,7 @@ function Business() {
 
   return (
     <>
-    <div className="flex flex-col gap-5  flex-wrap justify-center mt-5 mb-5">
+    <div className="flex flex-col gap-5 flex-wrap justify-center mt-5 mb-5">
       <div className="ml-20">
         <h1 className="text-3xl font-semibold text-black">
           Business
