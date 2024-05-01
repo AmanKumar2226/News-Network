@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
 
   const User = mongoose.model('User', userSchema);
 
-server.post('/demo', async(req, res)=>{
+server.post('/api/demo', async(req, res)=>{
 
     let user = new User();
     user.firstName = req.body.firstName;

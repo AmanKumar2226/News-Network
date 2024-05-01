@@ -59,7 +59,7 @@ export default function Form() {
       document.getElementById('err').style.color="red";
       setIsSame(false);
     }
-    else if(user.passwor.lenght < 8){
+    else if(user.password.length < 8){
         document.getElementById("err").innerHTML = "Password should contain atleast 8 characters";
         document.getElementById("err").style.color = "red";
       }
@@ -69,7 +69,7 @@ export default function Form() {
   }
 
    const saveUser = async() =>{
-    const response = await fetch('http://localhost:8080/demo',{
+    const response = await fetch('/api/demo',{
       method:'POST',
       body: JSON.stringify(user),
       headers:{
@@ -88,7 +88,7 @@ export default function Form() {
   };
 
   const getUsers = async() =>{
-    axios.get('/api/demo')
+    axios.get('http:localhost:8080/demo')
     .then((response)=>{
       setStoredUsers(response.data);
       console.log(storedUsers)
