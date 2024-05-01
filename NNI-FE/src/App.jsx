@@ -21,7 +21,7 @@ import Breadcrumb from "./components/breadcrumb";
 import Headlines from './components/top-headlines'
 import Apple from './components/apple'
 import Spinner from './components/spinner'
-import React, {useState, useEffect} from 'react';
+import ForgotPassword from './components/forgot-password'
 
 function App(){
   return (
@@ -45,6 +45,7 @@ function App(){
           <Route path="technology" element={<Technology />}/>
           <Route path="headlines" element={<Headlines  />}/>
           <Route path="apple-articles-from-yesterday" element={<Apple  />}/>
+          <Route path="forgot-password" element={<ForgotPassword  />}/>
       </Routes> 
       <Footer />
 
