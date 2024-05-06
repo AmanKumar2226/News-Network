@@ -1,0 +1,16 @@
+.container{ 
+   width: 80%;  
+   height: 100vh;
+   margin-left: 200px;  
+}
+table{
+    margin-left: 17rem;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+th,td{
+    padding: 1rem;
+}

@@ -8,7 +8,7 @@ function Category() {
     <>
       <div className='w-full bg-black p-5 sticky top-0 z-40'>
       <nav className='flex flex-row justify-between '>
-        <div className='flex flex-row items-center flex-wrap gap-6 justify-center'>
+        <div className='flex flex-row items-center flex-wrap gap-5 justify-center'>
         <div>
           <NavLink to="/sports" activeclassname="active-category" className='text-white py-1 px-3'>Sports</NavLink>
         </div>
@@ -38,8 +38,12 @@ function Category() {
         </div>
         </div>  
         <div>
+          <NavLink to="/articles-from-us" activeclassname="active-category" className='text-white py-1 px-3'>Articles from NNI</NavLink>
+        </div>
+        <div>
           <NavLink to="/login-form" activeclassname="login-link-active" className='login-link border-2 border-solid border-white rounded-xl text-white p-2'>Sign-in/Sign-up</NavLink>
         </div>
+        
       </nav>
     </div>
     

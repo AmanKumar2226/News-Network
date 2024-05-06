@@ -2,9 +2,11 @@ import { Link, Outlet, NavLink } from "react-router-dom";
 import "../component-styles/navbar.css";
 
 export default function Navbar() {
+
   return (
     <>
       <div className="pt-2 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md">
+        <div className="flex flex-col">
         <div className="flex flex-row items-center text-xl gap-3 font-semibold">
           <a href="/">
             <img className="logo" src="./images/logo.jpg" alt="logo" />
@@ -13,6 +15,11 @@ export default function Navbar() {
             <h1>News Network India</h1>
           </a>
         </div>
+        <div className="w-3/4 absolute top-12 left-36">
+          <p className="text-sm">Today is {Date().slice(0,16)}</p>
+        </div>
+        </div>
+        
         <div className="flex flex-row md:items-center md:space-x-20">
           <div className="hidden md:block">
             <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16 md:items-center">
@@ -28,13 +35,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden md:block">
-            <a
-              href="#"
-              className="text-base font-bold leading-none underline text-center  hover:text-indigo-700"
-            >
-              {" "}
-              Let's work together{" "}
-            </a>
+            <NavLink to="/weather-today" className="menu-link px-3 py-2 font-medium leading-none text-center">
+              Weather Today
+            </NavLink>
           </div>
 
           <div className="flex items-center md:hidden relative">
