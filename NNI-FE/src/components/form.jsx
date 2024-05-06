@@ -102,7 +102,8 @@ export default function Form() {
     getUsers();
   },[])
  
-  const isExist = () =>{
+  const isExist = (e) =>{
+    e.preventDefault();
     storedUsers.map((user)=>{
       if(signInUser.email !== user.email){
         document.getElementById('not-exist').innerText = "User doesn't exist";

@@ -20,8 +20,10 @@ import Technology from './components/technology'
 import Breadcrumb from "./components/breadcrumb";
 import Headlines from './components/top-headlines'
 import Apple from './components/apple'
-import Spinner from './components/spinner'
 import ForgotPassword from './components/forgot-password'
+import NNIArticles from './components/NNI-articles';
+import Weather from './components/weather';
+
 
 function App(){
   return (
@@ -46,7 +48,10 @@ function App(){
           <Route path="headlines" element={<Headlines  />}/>
           <Route path="apple-articles-from-yesterday" element={<Apple  />}/>
           <Route path="forgot-password" element={<ForgotPassword  />}/>
+          <Route path="articles-from-us" element={<NNIArticles/>}/>
+          <Route path="weather-today" element={<Weather/>}/>
       </Routes> 
+          
       <Footer />
 
      
