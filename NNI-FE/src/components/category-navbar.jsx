@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 function Category() {
   return (
     <>
-      <div className='w-full bg-black p-5 sticky top-0 z-40'>
+      <div className='w-full bg-black p-5 sticky top-0 '>
       <nav className='flex flex-row justify-between '>
         <div className='flex flex-row items-center flex-wrap gap-5 justify-center'>
         <div>
