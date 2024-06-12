@@ -1,11 +1,18 @@
 import { Link, Outlet, NavLink } from "react-router-dom";
 import "../component-styles/navbar.css";
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 
 export default function Navbar() {
 
   return (
     <>
-      <div className="pt-2 flex flex-row items-center justify-between header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md">
+      <div className="pt-2 flex flex-row items-center header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md justify-between">
         <div className="flex flex-col">
         <div className="flex flex-row items-center text-xl gap-3 font-semibold">
           <a href="/">
@@ -15,7 +22,7 @@ export default function Navbar() {
             <h1>News Network India</h1>
           </a>
         </div>
-        <div className="w-3/4 absolute top-12 left-36">
+        <div className="w-3/4 absolute top-12 left-32">
           <p className="text-sm">Today is {Date().slice(0,16)}</p>
         </div>
         </div>
@@ -94,6 +101,29 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
+        
+
+    <div class="flex w-[]">
+        
+        <div class="relative w-[399px] ">
+            <button type="submit" class="absolute top-0 -left-8 p-2.5 h-full text-sm font-medium bg-[#F5F5F5] text-white rounded-s-lg border border-r-0"><img src="./images/3dots.png" alt="" /></button>
+            <input type="search" id="search-dropdown" class="block p-2.5 w-[400px] z-20 text-sm bg-[#F5F5F5] rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-l-none" placeholder="Search Anything" required />
+            <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white rounded-e-lg"><img src="./images/icon.png" alt="" /></button>
+        </div>
+    </div>
+              <div className="flex items-center gap-5">
+                  <img className='w-10 h-10 rounded-full' src="./images/icon.png" alt="" />
+                  <Menu>
+                    <MenuHandler>
+                      <Button>Menu</Button>
+                    </MenuHandler>
+                    <MenuList className="w-52 text-xl pt-2">
+                      <MenuItem>Menu Item 1</MenuItem>
+                      <MenuItem>Menu Item 2</MenuItem>
+                      <MenuItem>Menu Item 3</MenuItem>
+                    </MenuList>
+                  </Menu>
+          </div>
       </div>
       <Outlet />
     </>
