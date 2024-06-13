@@ -9,9 +9,9 @@ import Spinner from "./spinner";
 function Four() {
     let [isLoading, setIsLoading] = useState(true);
 
-    const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
-  // const url =
-  //   "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
+    // const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
+  const url =
+    "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
   // let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -69,11 +69,12 @@ function Four() {
   };
   return (
     <div>
-      <div className="mb-20">
-        <h1 className="text-3xl font-semibold text-center underline decoration-double">More Articles</h1>
+      <div className=" mx-44 flex gap-2">
+        <img src="./images/red-icon.png" alt="" className="py-3" />
+        <h1 className="text-2xl font-semibold">More Articles</h1>
       </div>
       {isLoading && <Spinner/>}
-      <div className="w-3/4 mb-10 mt-5 mx-auto">
+      <div className="w-[82%] mb-10 mt-2 mx-auto">
         <div className="">
           <Slider className="text-black" {...settings}>
             {data.map((dataObj, index) => {
@@ -84,15 +85,15 @@ function Four() {
                 >
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
                     <img
-                      className=" h-[190px] w-[320px] mr-6 p-2 rounded-2xl"
+                      className=" h-[190px] w-[340px] ml-1 p-2 rounded-2xl"
                       src={dataObj.urlToImage}
                       alt="image"
                     />
                   </div>
                   <div className="flex flex-col pt-4 px-2">
                     <p className="line-clamp-1 font-semibold">{dataObj.title}</p>
-                    <p className="line-clamp-3">{dataObj.description}</p>
-                    <div className={`w-full rounded-xl bg-[#F5F5F5] p-2 flex justify-between items-center px-4 ${dataObj.description== null ? 'mt-20 ': "mt-2"}`}>
+                    <p className="line-clamp-2">{dataObj.description}</p>
+                    <div className={`w-full rounded-xl bg-[#F5F5F5] p-2 flex justify-between items-center px-4 ${dataObj.description== null ? 'mt-20 ': "mt-5"}`}>
                      <div className="h-[54px] flex justify-center flex-col">
                      <p className="font-semibold line-clamp-1">{dataObj.author}</p>    
                       <p>
