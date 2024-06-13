@@ -68,20 +68,21 @@ function One() {
   return (
     <div>
         {isLoading && <Spinner/>}
-      <div className="w-3/4 mb-10 mt-5 mx-auto">
+      <div className="w-1/2 mb-10 mt-5 mx-auto">
           <div className="">
           <Slider {...settings}>
  {data.map((dataObj, index) => {
           return (
-            <div className="h-full bg-white text-black rounded-xl">
-              <div className="h-1/2 flex justify-center items-center">
-                <img className="h-[500px] w-full" src={dataObj.urlToImage} alt="image"/>
+            <div className="w-[50%] h-full bg-white text-black rounded-xl">
+              <div className="h-[50vh] flex justify-center items-end bg-no-repeat bg-contain bg-center" style={{backgroundImage: `url(${dataObj.urlToImage})`}}>
+                {/* <img className="h-[500px] w-full" src={dataObj.urlToImage} alt="image"/> */}
+                <div className="flex flex-col bg-[rgba(255,255,255,0.75)] gap-4  w-[58%] p-5 rounded-xl mb-3">
+                <p className="line-clamp-1 text-xl font-semibold">{dataObj.title}</p>
+                <p className='line-clamp-2'>{dataObj.description}</p>
+                
               </div>
-              <div className="flex flex-col justify-center items-center gap-4 p-10">
-                <p className="text-xl font-semibold">{dataObj.title}</p>
-                <p>{dataObj.description}</p>
-                <a href={dataObj.url} className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">Read More</a>
               </div>
+              
             </div>
 
           )})}
