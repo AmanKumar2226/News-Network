@@ -32,7 +32,7 @@ export default function Footer() {
                     </p>
                   </div>
                   <div className="pl-14">
-                    <h1 className="flex items-center text-xl font-semibold">
+                    <h1 className="flex items-center text-xl font-semibold mb-3 mt-2">
                       <img
                         className="py-2 pr-2"
                         src="./images/red-icon.png"
@@ -40,13 +40,7 @@ export default function Footer() {
                       />
                       Newsletters
                     </h1>
-                    <label
-                      for="input-group-1"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Your Email
-                    </label>
-                    <div class="relative mb-6">
+                    <div class="relative mb-9">
                       <input
                         type="text"
                         id="input-group-1"
@@ -104,14 +98,14 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between p-5 gap-5 bg-[rgba(62,50,50,0.05)] w-[100%] rounded-e-[12px] pl-52">
-                <div className="flex gap-5">
-                  <h1>Privacy Policy</h1>
+              <div className="flex justify-between p-5 gap-5 bg-[rgba(62,50,50,0.05)] w-[92%] rounded-e-[12px] pl-32">
+                <div className="flex gap-2">
+                  <h1 className="text-[14px]">Privacy Policy</h1>
                   <p>|</p>
                   <h1>Terms & Conditions</h1>
                 </div>
                 <div>
-                  <h1>All copyright (c) 2024 reserved</h1>
+                  <h1 className="text-[14px]">All copyright (c) 2024 reserved</h1>
                 </div>
               </div>
             </div>
