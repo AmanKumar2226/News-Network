@@ -11,6 +11,7 @@ function AddNews() {
     title: "",
     description: "",
     content: "",
+    publishedAt: ""
   });
   
   const formData = new FormData();
@@ -20,6 +21,7 @@ function AddNews() {
   formData.append("title", news.title);
   formData.append("description", news.description);
   formData.append("content", news.content);
+  formData.append("publishedAt", news.publishedAt);
   formData.append("image", image);
 
   const onChangeNews = (evt) => {
@@ -29,7 +31,8 @@ function AddNews() {
 
   const saveNews = async() =>{
     const response = await axios.post("/api/add-news", formData);
-    console.log(response) 
+    console.log(response)
+    alert("news added successfully"); 
   }
 
   const onSubmit = (e) =>{
@@ -128,6 +131,12 @@ function AddNews() {
               rows="10"
               placeholder="Enter the content of news here"
             ></textarea>
+          </div>
+          <div className="mb-5 flex flex-row gap-5 items-center">
+            <label className="font-semibold text-lg" htmlFor="publishedAt">
+              Date of publish
+            </label>
+            <input type="text" onChange={onChangeNews} name="publishedAt" id="publishedAt" className="p-3 w-full rounded-lg"/>
           </div>
           <div className="mb-5 flex flex-row gap-5 items-center">
             <p className="font-semibold text-lg">Upload Image</p>
