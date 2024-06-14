@@ -92,34 +92,34 @@ function One() {
     <div className='flex gap-2 justify-center items-center mx-44'>
       <div className='flex w-1/2 gap-2 mb-4'>
       <div className='w-1/2 h-[456px] rounded-xl'>
-        {news.map((newsObj,index)=>{
-          return(
+        {/* {news.map((newsObj,index)=>{
+          return( */}
             <div className='relative'>
               <div className=' '>
               <img className='h-[456px] w-[40vh] rounded-xl' src="./images/car4.png" alt="" />
               </div>
               <div className='p-4 rounded-xl absolute bg-[rgba(255,255,255,0.75)] border-[2px]  w-[80%] right-[45px] bottom-5 flex flex-col gap-3'>
-              <h1 className='line-clamp-1 text-xl font-semibold'>{newsObj.title}</h1>
-              <p className='line-clamp-2'>{newsObj.description}</p>
+              <h1 className='line-clamp-1 text-xl font-semibold'>efef</h1>
+              <p className='line-clamp-2'>fefe</p>
               </div>
             </div>
-          )
-        })}
+          {/* )
+        })} */}
       </div>
       <div className='w-1/2  h-[456px] rounded-xl'>
-        {news.map((newsObj,index)=>{
-          return(
+        {/* {news.map((newsObj,index)=>{
+          return( */}
             <div className='relative'>
               <div className=' '>
               <img className='h-[456px] w-[40vh] rounded-xl' src="./images/music-girl.jpg" alt="" />
               </div>
               <div className='p-4 rounded-xl absolute bg-[rgba(255,255,255,0.75)] border-[2px] w-[80%] right-[45px] bottom-5 flex flex-col gap-3'>
-              <h1 className='line-clamp-1 text-xl font-semibold'>{newsObj.title}</h1>
-              <p className='line-clamp-2'>{newsObj.description}</p>
+              <h1 className='line-clamp-1 text-xl font-semibold'>fg</h1>
+              <p className='line-clamp-2'>fgd</p>
               </div>
             </div>
-          )
-        })}
+          {/* )
+        })} */}
       </div>
       </div>
      
