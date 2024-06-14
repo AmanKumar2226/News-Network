@@ -54,6 +54,9 @@ function NNIArticles() {
                 <p className="mb-3 font-normal text-gray-700 ">
                   {dataObj.description}
                 </p>
+                <p className=''>
+                  {dataObj.publishedAt}
+                </p>
                 <a
                   href={dataObj.url}
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"

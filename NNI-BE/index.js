@@ -68,6 +68,7 @@ const newsSchema = new mongoose.Schema({
   author: String,
   description: String,
   content: String,
+  publishedAt: String,
   image: String,
 })
 
@@ -85,6 +86,7 @@ server.post("/api/add-news", upload.single("image"), async (req, res) => {
   news.title = req.body.title;
   news.description = req.body.description;
   news.content = req.body.content;
+  news.publishedAt = req.body.publishedAt;
   news.image = req.file.path;
   try {
     const doc = await news.save();
