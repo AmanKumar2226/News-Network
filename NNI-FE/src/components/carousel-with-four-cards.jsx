@@ -6,12 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Spinner from "./spinner";
 
-function Four() {
+function Four({ url, title }) {
     let [isLoading, setIsLoading] = useState(true);
 
     // const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
-  const url =
-    "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
   // let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -71,7 +69,7 @@ function Four() {
     <div>
       <div className=" mx-44 flex gap-2">
         <img src="./images/red-icon.png" alt="" className="py-3" />
-        <h1 className="text-2xl font-semibold">More Articles</h1>
+        <h1 className="text-2xl font-semibold">{title}</h1>
       </div>
       {isLoading && <Spinner/>}
       <div className="w-[82%] mb-10 mt-2 mx-auto">
@@ -84,14 +82,16 @@ function Four() {
                   className="w-[360px] h-[400px] text-black rounded-xl p-2 shadow-lg my-5"
                 >
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
+                    <a href={dataObj.url}>
                     <img
                       className=" h-[190px] w-[340px] ml-1 p-2 rounded-2xl"
                       src={dataObj.urlToImage}
                       alt="image"
                     />
+                    </a>
                   </div>
                   <div className="flex flex-col pt-4 px-2">
-                    <p className="line-clamp-1 font-semibold">{dataObj.title}</p>
+                    <a href={dataObj.url}><p className="line-clamp-1 font-semibold">{dataObj.title}</p></a>
                     <p className="line-clamp-2">{dataObj.description}</p>
                     <div className={`w-full rounded-xl bg-[#F5F5F5] p-2 flex justify-between items-center px-4 ${dataObj.description== null ? 'mt-20 ': "mt-5"}`}>
                      <div className="h-[54px] flex justify-center flex-col">
