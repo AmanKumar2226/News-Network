@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "./spinner";
+import { getRandomGradient } from "../utils/Gradients";
 
-function Weather({ url }) {
+function Weather({ url, image }) {
   const [location, setLocation] = useState({});
   const [current, setCurrent] = useState({});
   const [condition, setCondition] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [gradient, setGradient] = useState("");
 
   useEffect(() => {
     let config = {
@@ -23,18 +25,46 @@ function Weather({ url }) {
         setCurrent(response.data.current);
         setCondition(response.data.current.condition);
         setIsLoading(false);
+        setGradient(getRandomGradient());
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [url]);
   return (
     <div>
       
       {isLoading && <Spinner />}
 
-      <div className="flex justify-center my-10">
-        <div className="card  min-w-sm max-w-sm border border-gray-100 bg-gray-50   transition-shadow test  shadow-lg hover:shadow-shadow-xl w-full bg-green-600 text-purple-50 rounded-md">
+      <div className="w-[360px] relative flex flex-col justify-between h-[245px] overflow-hidden bg-no-repeat bg-cover rounded-xl p-5"
+      style={{
+        backgroundImage: `${image}`
+      }}>
+        <div className={`absolute inset-0 w-full h-full opacity-75  ${gradient}`}></div>
+        <div className="flex justify-between w-[90%] absolute">
+        <div  className="text-white">
+          <p>Precipitation: {current.precip_in}%</p>
+          <p>Humidity: {current.humidity}%</p>
+          <p>Wind: {current.wind_kph}km/H</p>
+        </div>
+        <div className="text-white flex flex-col text-right">
+          <p className="text-xl font-semibold ">{location.name}</p>
+          <p>{location.localtime}</p>
+          <p className="text-white mb-2">{condition.text}</p>
+        </div>
+        </div>
+        <div className="flex items-center  justify-center absolute bottom-5 right-20">
+          <img className="h-[80px] w-[80px]" src={condition.icon} alt="" />
+          <p className="text-5xl text-white">{current.temp_c}<span className="text-sm align-top">°C</span></p>
+        </div>
+        <div>
+          
+        </div>
+        
+      </div>
+
+      {/* <div className="flex justify-center my-10">
+        <div className="min-w-sm max-w-sm border border-gray-100  transition-shadow test  shadow-lg hover:shadow-shadow-xl w-full bg-green-600 text-purple-50 rounded-md">
           <h2 className="text-md mb-2 px-4 pt-4">
             <div className="flex justify-between">
               <div className="badge relative top-0">
@@ -89,7 +119,7 @@ function Weather({ url }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
