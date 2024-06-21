@@ -3,6 +3,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import '../component-styles/home.css'
 function LatestVideos() {
 
     let [data, setData] = useState([])
@@ -11,7 +12,7 @@ function LatestVideos() {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'https://saurav.tech/NewsAPI/everything/cnn.json',
+            url: 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c',
             headers: { }
           };
           
@@ -30,8 +31,9 @@ function LatestVideos() {
       dots: true,
       infinite: false,
       speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 2 ,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      rows: 2,
       initialSlide: 0,
       responsive: [
         {
@@ -75,7 +77,7 @@ function LatestVideos() {
         <div className="flex gap-10 "> 
           
         <div
-          className="h-[50vh] bg-cover bg-no-repeat w-[50%] flex items-end justify-center rounded-xl"
+          className="h-[50vh] bg-cover bg-no-repeat w-[60%] flex items-end justify-center rounded-xl"
           style={{ backgroundImage: "url(./images/video.jpg)" }}
         >
             <div className="bg-[rgba(255,255,255,0.75)] w-[95%] p-5 mb-6 rounded-xl">
@@ -86,13 +88,13 @@ function LatestVideos() {
             </div>
         </div>
         
-        <div className="h-[] w-1/2">
-        <Slider className="h-[450px] w-[900px] grid" {...settings}>
+        <div className="w-[40%]  ">
+        <Slider className="w-[670px] h-[50vh] " {...settings}>
 
         {data.map((dataObj,index)=>{
             return(
-            <div className="shadow-xl gap-[10px] rounded-xl flex w-[500px] h-[210px] p-2">
-                <div className="w-[40%] flex items-center">
+            <div className="shadow-xl gap-[10px] rounded-xl h-[210px] mb-7 p-2 video-card">
+                <div className="w-[40%] flex items-center ">
                     <img className="rounded-xl h-full" src={dataObj.urlToImage} alt="" />
                 </div>
                 <div className="w-[60%] flex flex-col gap-3">
