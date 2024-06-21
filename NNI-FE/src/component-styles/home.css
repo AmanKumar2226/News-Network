@@ -63,6 +63,11 @@ img {
   }
 }
 
+.video-card{
+  display: flex  !important;
+  width: 650px !important;
+}
+
 .header-link {
   color: #000;
   text-decoration: none;

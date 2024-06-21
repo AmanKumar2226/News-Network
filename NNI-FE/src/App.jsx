@@ -23,6 +23,7 @@ import Apple from './components/apple'
 import ForgotPassword from './components/forgot-password'
 import NNIArticles from './components/NNI-articles';
 import Weather from './components/weather';
+import NewsDescription from './components/NewsDescription';
 
 
 function App(){
@@ -50,6 +51,7 @@ function App(){
           <Route path="forgot-password" element={<ForgotPassword  />}/>
           <Route path="articles-from-us" element={<NNIArticles/>}/>
           <Route path="weather-today" element={<Weather/>}/>
+          <Route path="news-description" element={<NewsDescription/>}/>
       </Routes> 
           
       <Footer />
