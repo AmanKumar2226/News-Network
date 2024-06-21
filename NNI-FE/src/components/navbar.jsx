@@ -39,8 +39,12 @@ export default function Navbar() {
               <NavLink to="/all-news" className="menu-link px-3 py-2 font-medium leading-none text-center" activeclassname="active-nav">
                 All News
               </NavLink>
+              <NavLink to="/contact-us" className="menu-link px-3 py-2 font-medium leading-none text-center">
+              Contact Us
+            </NavLink>
             </div>
           </div>
+          
 
           <div className="flex items-center md:hidden relative">
             <button
