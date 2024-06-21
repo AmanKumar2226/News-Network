@@ -41,11 +41,6 @@ export default function Navbar() {
               </NavLink>
             </div>
           </div>
-          <div className="hidden md:block">
-            <NavLink to="/weather-today" className="menu-link px-3 py-2 font-medium leading-none text-center">
-              Weather Today
-            </NavLink>
-          </div>
 
           <div className="flex items-center md:hidden relative">
             <button
