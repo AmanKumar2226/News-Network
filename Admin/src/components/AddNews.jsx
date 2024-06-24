@@ -30,7 +30,7 @@ function AddNews() {
 
 
   const saveNews = async() =>{
-    const response = await axios.post("/api/add-news", formData);
+    const response = await axios.post("/api/nni/add-news", formData);
     console.log(response)
     alert("news added successfully"); 
   }

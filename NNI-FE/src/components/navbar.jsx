@@ -1,5 +1,7 @@
 import { Link, Outlet, NavLink } from "react-router-dom";
 import "../component-styles/navbar.css";
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 import {
   Menu,
   MenuHandler,
@@ -9,7 +11,30 @@ import {
 } from "@material-tailwind/react";
 
 export default function Navbar() {
+  const [details, setDetails] = useState({});
+  const token = localStorage.getItem('token'); // Get token from localStorage
 
+  useEffect(() => {
+    if (token) { // Check if token exists before making API request
+      const config = {
+        method: 'get',
+        maxBodyLength: Infinity,
+        url: 'http://localhost:8080/api/nni/get-users',
+        headers: {
+          Authorization: `Bearer ${token.replace(/"/g, '')}`, // Remove quotes
+        },
+      };
+
+      axios.request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data));
+          setDetails(response.data.user);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  }, [token]);
   return (
     <>
       <div className="pt-2 flex flex-row items-center header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md justify-between">
@@ -110,19 +135,41 @@ export default function Navbar() {
             <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white rounded-e-lg"><img src="./images/icon.png" alt="" /></button>
         </div>
     </div>
-              <div className="flex items-center gap-5">
-                  <img className='w-10 h-10 rounded-full' src="./images/icon.png" alt="" />
+              {/* <div className="flex items-center gap-5">
+                  
                   <Menu>
                     <MenuHandler>
-                      <Button>Menu</Button>
+                      <img className='w-14 h-14 rounded-xl' src={details.profilePicture} alt="" />
+                  <p className="typo">{details.userName}</p>
                     </MenuHandler>
                     <MenuList className="w-52 text-xl pt-2">
-                      <MenuItem>Menu Item 1</MenuItem>
-                      <MenuItem>Menu Item 2</MenuItem>
-                      <MenuItem>Menu Item 3</MenuItem>
+                      <MenuItem>My Account</MenuItem>
+                      <MenuItem>My Articles</MenuItem>
+                      <MenuItem>Logout</MenuItem>
                     </MenuList>
                   </Menu>
+          </div> */}
+          {token ? (
+          <div className="flex gap-10 mr-10">
+            <div className="flex gap-5 items-center">
+              <a href="/favorites" className="border-r-[3px] border-[#000] pr-4">
+                <img src="./images/Favorite.png" alt="" />
+              </a>
+              <div>
+                <a href="/account" className="flex gap-2 items-center">
+                  <img className='w-14 h-14 rounded-xl' src={details.profilePicture} alt="" />
+                  <p className="text-lg font-semibold">{details.userName}</p>
+                </a>
+              </div>
+            </div>
           </div>
+        ) : (
+          <div className='flex gap-10 mr-10'>
+            {/* Login/Signup buttons */}
+            <a href="/login" className='flex'><button className='typo'>Login</button></a>
+            <a href="/sign-up"><button className='typo bg-black text-white rounded-xl p-4'>Sign-Up</button></a>
+          </div>
+        )}
       </div>
       <Outlet />
     </>

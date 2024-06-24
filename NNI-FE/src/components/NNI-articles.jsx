@@ -3,7 +3,7 @@ import axios from 'axios';
 import Spinner from './spinner';
 
 function NNIArticles() {
-    const url = "/api/add-news";
+    const url = "/api/nni/add-news";
  
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
