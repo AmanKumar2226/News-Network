@@ -1,4 +1,4 @@
-import { Link, Outlet, NavLink } from "react-router-dom";
+import { Link, Outlet, NavLink , useNavigate} from "react-router-dom";
 import "../component-styles/navbar.css";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
@@ -13,6 +13,13 @@ import {
 export default function Navbar() {
   const [details, setDetails] = useState({});
   const token = localStorage.getItem('token'); // Get token from localStorage
+
+const navigate = useNavigate();
+
+  const handleLogout = ()=>{
+    localStorage.removeItem('token');
+    navigate('/login')
+  }
 
   useEffect(() => {
     if (token) { // Check if token exists before making API request
@@ -135,34 +142,21 @@ export default function Navbar() {
             <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white rounded-e-lg"><img src="./images/icon.png" alt="" /></button>
         </div>
     </div>
-              {/* <div className="flex items-center gap-5">
-                  
-                  <Menu>
-                    <MenuHandler>
-                      <img className='w-14 h-14 rounded-xl' src={details.profilePicture} alt="" />
-                  <p className="typo">{details.userName}</p>
-                    </MenuHandler>
-                    <MenuList className="w-52 text-xl pt-2">
-                      <MenuItem>My Account</MenuItem>
-                      <MenuItem>My Articles</MenuItem>
-                      <MenuItem>Logout</MenuItem>
-                    </MenuList>
-                  </Menu>
-          </div> */}
+              
           {token ? (
-          <div className="flex gap-10 mr-10">
-            <div className="flex gap-5 items-center">
-              <a href="/favorites" className="border-r-[3px] border-[#000] pr-4">
-                <img src="./images/Favorite.png" alt="" />
-              </a>
-              <div>
-                <a href="/account" className="flex gap-2 items-center">
-                  <img className='w-14 h-14 rounded-xl' src={details.profilePicture} alt="" />
-                  <p className="text-lg font-semibold">{details.userName}</p>
-                </a>
-              </div>
-            </div>
-          </div>
+          <div className="flex items-center gap-5 mr-10">
+     
+          <Menu>
+            <MenuHandler>
+              <button className="flex items-center gap-2 font-semibold text-lg"><img className='w-14 h-14 rounded-xl' src={details.profilePicture} alt="" /><p className="typo">{details.userName}</p></button>
+            </MenuHandler>
+            <MenuList className="w-52 text-xl pt-2">
+              <MenuItem onClick={()=>{navigate("/account")}}>My Account</MenuItem>
+              <MenuItem onClick={()=>{navigate("/articles-from-us")}}>My Articles</MenuItem>
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </MenuList>
+          </Menu>
+  </div>
         ) : (
           <div className='flex gap-10 mr-10'>
             {/* Login/Signup buttons */}
