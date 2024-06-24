@@ -1,6 +1,5 @@
 
 import './App.css'
-import axios from 'axios';
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import AboutUs from './components/about'
@@ -8,7 +7,6 @@ import Home from './components/home'
 import AllNews from './components/all-news'
 import Contact from './components/contact-us'
 import {Route, Routes} from 'react-router-dom'
-import Form from './components/form'
 import Category from './components/category-navbar'
 import Sports from './components/sports'
 import Entertainment from './components/entertainment'
@@ -24,6 +22,8 @@ import ForgotPassword from './components/forgot-password'
 import NNIArticles from './components/NNI-articles';
 import Weather from './components/weather';
 import NewsDescription from './components/NewsDescription';
+import SignUp from './components/forms/SignUp';
+import Login from './components/forms/Login'
 
 
 function App(){
@@ -37,7 +37,8 @@ function App(){
           <Route path="/" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
-          <Route path="login-form" element={<Form />} />
+          <Route path="login" element={<Login/>}/>
+          <Route path="sign-up" element={<SignUp />} />
           <Route path="contact-us" element={<Contact />}/>
           <Route path="sports" element={<Sports />}/>
           <Route path="entertainment" element={<Entertainment />}/>

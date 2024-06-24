@@ -14,7 +14,7 @@ function One() {
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'http://localhost:8080/api/add-news',
+      url: 'http://localhost:8080/api/nni/add-news',
       headers: {},
       data: data
     };
