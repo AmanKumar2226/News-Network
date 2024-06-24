@@ -105,7 +105,7 @@ function Login() {
           <input onChange={handleChange} value={user.email} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
         </div>
 
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 relative'>
           <label className="font-semibold" htmlFor="password">
             Password
           </label>

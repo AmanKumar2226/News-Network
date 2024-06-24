@@ -102,7 +102,10 @@ function SignUp() {
         <p>Register with us to publish your articles</p>
       </div>
       <form className='flex flex-col gap-10' action="" onSubmit={onSubmit}> 
-        <div className='flex justify-between'>
+       <div className='flex justify-between'>
+        <div className='flex flex-col justify-between'>
+          
+        <div className='flex justify-between gap-7'>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="firstName">First Name</label>
             <input onChange={handleChange} value={newUser.firstName} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="text" id='firstName' name='firstName'/>
@@ -111,10 +114,7 @@ function SignUp() {
             <label className="font-semibold" htmlFor="lastName">Last Name</label>
             <input onChange={handleChange} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="text" id='lastName' name='lastName'/>
           </div>
-          <div className='flex flex-col gap-2'>
-            <label className="font-semibold" htmlFor="userName">User Name</label>
-            <input onChange={handleChange} value={newUser.userName} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="text" id='userName' name='userName'/>
-          </div>
+          
         </div>
         <div className='flex justify-between'>
           <div className='flex flex-col gap-2 relative'>
@@ -153,10 +153,7 @@ function SignUp() {
             />
             <p id='err'></p>
           </div>
-          <div className='flex flex-col gap-2'>
-            <label className="font-semibold" htmlFor="email">Email</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
-          </div>
+          
         </div>
         <div className='flex justify-between'>
           <div className='flex flex-col gap-2'>
@@ -166,6 +163,32 @@ function SignUp() {
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="dateOfBirth">Date of Birth</label>
             <input onChange={handleChange} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
+          </div>
+         
+        </div>
+        </div>
+        <div>
+        <div>
+          <label className="font-semibold" htmlFor="profilePicture">
+              Profile Picture
+          </label>
+          <div className='flex justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
+              <div className='border-[2px] border-dashed rounded-xl w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >
+              <img src="./images/banner-icon.png" alt="" />
+              <input onChange={handleProfilePictureChange} className='w-1/2' type="file" id='profilePicture' name='profilePicture'/>
+              </div>  
+          </div>
+        </div>
+        </div>
+       </div>
+        <div className='flex justify-between'>
+        <div className='flex flex-col gap-2'>
+            <label className="font-semibold" htmlFor="userName">User Name</label>
+            <input onChange={handleChange} value={newUser.userName} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="text" id='userName' name='userName'/>
+          </div>
+          <div className='flex flex-col gap-2'>
+            <label className="font-semibold" htmlFor="email">Email</label>
+            <input onChange={handleChange} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="phoneNumber">Phone Number</label>
@@ -177,27 +200,17 @@ function SignUp() {
               Add Banner
           </label>
           <div className='flex justify-center items-center bg-[#F5F5F5] h-[170px] rounded-xl mt-2'>
-              <div className='border-[2px] border-dashed w-[98%] flex items-center justify-center h-[85%]' >
+              <div className='border-[2px] border-dashed w-[98%] rounded-xl flex items-center justify-center h-[85%]' >
               <img src="./images/banner-icon.png" alt="" />
               <input onChange={handleBannerChange} type="file" id='banner' name='banner'/>
               </div> 
           </div>
         </div>
-        <div>
-          <label className="font-semibold" htmlFor="profilePicture">
-              Profile Picture
-          </label>
-          <div className='flex justify-center w-[340px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
-              <div className='border-[2px] border-dashed w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >
-              <img src="./images/banner-icon.png" alt="" />
-              <input onChange={handleProfilePictureChange} className='w-1/2' type="file" id='profilePicture' name='profilePicture'/>
-              </div>  
-          </div>
-        </div>
+        
         <div>
           <div className='flex justify-end'>
-            <button type='submit' className='p-2 gap-4 h-[40px] flex pl-[16px] pr-[24px] text-white items-center justify-center bg-[#F81539BF] rounded-2xl'>
-              <img className='w-[30px] h-[30px]' src="./images/sign-up.png" alt="sign-up" />
+            <button type='submit' className='py-[10px] gap-3  h-[40px] flex pl-[16px] pr-[24px] text-white items-center justify-center bg-[#F81539BF] rounded-2xl'>
+              <img className='w-[20px] h-[20px]' src="./images/sign-up.png" alt="sign-up" />
               Sign up
             </button>
           </div>
