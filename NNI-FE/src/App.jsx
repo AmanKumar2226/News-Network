@@ -25,6 +25,7 @@ import NewsDescription from './components/NewsDescription';
 import SignUp from './components/forms/SignUp';
 import Login from './components/forms/Login'
 import NotFound from './components/NotFound'
+import Account from './components/Account'
 
 
 function App(){
@@ -36,6 +37,7 @@ function App(){
        <Routes>
        <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
+          <Route path="account" element={<Account />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
           <Route path="login" element={<Login/>}/>
