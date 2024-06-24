@@ -24,6 +24,7 @@ import Weather from './components/weather';
 import NewsDescription from './components/NewsDescription';
 import SignUp from './components/forms/SignUp';
 import Login from './components/forms/Login'
+import NotFound from './components/NotFound'
 
 
 function App(){
@@ -33,6 +34,7 @@ function App(){
     <Category /> 
     <Breadcrumb/>
        <Routes>
+       <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="all-news" element={<AllNews />} />
