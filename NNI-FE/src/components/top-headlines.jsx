@@ -6,7 +6,7 @@ import NewsCard from './news-card';
 function Headlines() {
     
   return (
-    <div className='flex flex-col gap-2 mx-32 my-10'>
+    <div className='flex flex-col gap-2 mx-40 my-10'>
       <div className='flex gap-2'>
         <img className='py-3' src="./images/red-icon.png" alt="" />
         <h1 className='text-3xl font-semibold'>Top Headlines</h1>

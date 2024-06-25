@@ -1,33 +1,161 @@
 import React from "react";
 
 export default function AboutUs() {
-    return(
+  return (
     <>
-        <div className="xl:container xl:mx-auto py-10" >
-            <div className=" flex flex-col md:flex-row items-strech justify-center">
-                <div className="md:w-3/5 relative">
-                        <img src="https://i.ibb.co/2Y2W5h2/florian-klauer-mk7-D-4-UCfmg-unsplash-1.png" alt="A typewriter" role="img" className="absolute inset-0 object-cover object-center w-full h-full hidden lg:block rounded" />
-                        <img src="https://i.ibb.co/PZRDh0s/florian-klauer-mk7-D-4-UCfmg-unsplash-1-1-1.png" alt="A typewriter" role="img" className="absolute inset-0 object-cover object-center w-full h-full lg:hidden rounded" />
-                        <img src="https://i.ibb.co/CsYRYtk/florian-klauer-mk7-D-4-UCfmg-unsplash-1-1.png" alt="A typewriter" role="img" className="object-cover object-center w-full h-full md:hidden rounded" />   
-                </div>
-                <div className="md:w-2/5 flex justify-center items-center -mt-14 md:-mt-0 md:-ml-12 lg:-ml-16 md:py-24 lg:py-36 relative z-10 mx-4 md:mx-0">
-                    <div className="bg-gray-800 p-8 lg:p-10">
-                        <p role="heading" className="text-base leading-none lg:text-xl lg:leading-tight text-white">About us</p>
-                        <p className="text-2xl md:text-4xl lg:text-5xl font-semibold lg:font-bold md:leading-10 text-white mt-6 md:mt-4 lg:mt-8" >Here is all you need to know about us</p>
-                        <p className="text-base leading-normal text-white mt-4 lg:mt-6">Welcome to NNI(News Network India), your go-to destination for breaking news, insightful analysis, and thought-provoking features from around the globe. We are dedicated to delivering accurate and timely information on a wide range of topics, including politics, technology, science, business, culture, and more.</p>
-                    </div>
-                </div>
-               
+      <div className="">
+        <div className="w-[80%] bg-[#F5F5F5] rounded-xl my-10 p-8 mx-44">
+          <div className="mb-10">
+            <h1 className="text-4xl font-semibold">
+              We pay attention to your needs and do the best design.
+            </h1>
+          </div>
+          <div className="flex gap-14">
+            <div className="w-1/2 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae
+              congue mauris rhoncus aenean vel elit scelerisque. In egestas erat
+              imperdiet sed euismod nisi porta lorem mollis. Morbi tristique
+              senectus et netus. Mattis pellentesque id nibh tortor id aliquet
+              lectus proin. Sapien faucibus et molestie ac feugiat sed lectus
+              vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt
+              ornare massa eget. Dictum varius duis at consectetur lorem. Nisi
+              vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut
+              tortor pretium viverra suspendisse potenti nullam. Et molestie ac
+              feugiat sed lectus. Non nisi est sit amet facilisis magna.
+              Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut
+              enim blandit volutpat maecenas volutpat. Ornare lectus sit amet
+              est placerat in egestas erat.
             </div>
-            <div className="mt-10 mx-5 bg-gray-900 p-10 py-20 rounded-2xl">
-                    <h1 className="text-white text-5xl text-base text-center font-semibold mb-5">Our mission</h1>
-                    <p className="text-white ">At NNI, we understand the importance of staying informed in today's fast-paced world. Our team of experienced journalists, writers, and editors works tirelessly to bring you the latest developments and trends, ensuring that you're always up-to-date with what's happening both locally and internationally. What sets us apart is our commitment to journalistic integrity and objectivity. We strive to present diverse perspectives and foster meaningful conversations on issues that matter most. Whether it's uncovering groundbreaking stories or providing in-depth analysis, we aim to empower our readers with knowledge and understanding.
-
-In addition to news coverage, NNI also features opinion pieces, interviews, and multimedia content to offer a comprehensive view of the world around us. Our goal is not only to inform but also to inspire and engage our audience in meaningful dialogue.
-
-Thank you for choosing NNI as your trusted source for news and information. Join us on this journey as we explore the stories shaping our world today and into the future.</p>
+            <div className="w-1/2">
+              <img
+                className="w-[744px] h-[444px] rounded-xl"
+                src="./images/abstract-video.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex my-20 gap-12">
+        <div className="w-[60%] flex justify-end p-8  items-center rounded-[0px_50px_50px_0px] h-[361px] bg-[#F5F5F5]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018.4963018700189!2d76.68827997053899!3d30.69731441504843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefe02b751aa3%3A0xe34a68768b59b3ac!2stecHangouts%20-%20Industrial%20Training%20Company%20in%20Mohali%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1719300683199!5m2!1sen!2sin"
+            width="840"
+            height="297"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div >
+            <div className="flex gap-2 mt-5">
+                <img className="py-3" src="./images/red-icon.png" alt="" />
+                <h1 className="text-lg font-semibold">NNI Information</h1>
+            </div>
+            <div className="border-l-4">
+                <div className="flex gap-4 pl-3 my-7">
+                    <img src="./images/email-icon.png" alt="" />
+                    <p className="font-semibold text-sm">Email : management@nni.com</p>
+                </div>
+                <div className="flex gap-4 pl-3 my-7">
+                    <img src="./images/phone-icon.png" alt="" />
+                    <p className="font-semibold text-sm">Phone number : +1(234) 567-8910</p>
+                </div>
+                <div className="flex gap-4 pl-3 my-7">
+                    <img src="./images/fax-icon.png" alt="" />
+                    <p className="font-semibold text-sm">fax : +1(234) 567-8910</p>
+                </div>
+                <div className="flex gap-4 pl-3 my-7">
+                    <img src="./images/address-icon.png" alt="" />
+                    <p className="font-semibold text-sm">Address : 1234 Foxrun St.New Lenox, IL 123456</p>
+                </div>
+            </div>
+            <div className="flex gap-2 px-[22px] py-[10px] bg-[#F5F5F5] rounded-xl items-center">
+                <img className="h-[20px]" src="./images/timer.png" alt="" />
+                <p className="font-semibold">Responding 24 hours a day, 7 days a week</p>
             </div>
         </div>
+        </div>
+        <div className="mx-32 my-10">
+            <div className="flex gap-2 my-10 items-center">
+                <img className="py-3" src="./images/red-icon.png" alt="" />
+                <h1 className="text-xl font-semibold">NNI Team</h1>
+            </div>
+            <div className="flex justify-between mb-20">
+            <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div>
+                <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
+            </div>
+            <div className="mt-[25px]">
+                <h2>designer</h2>
+            </div>
+            <div className="w-full mt-[25px]">
+                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
+            </div>
+        </div>
+        
+            </div>
+           
+            
+        </div>
+        
+      </div>
     </>
-);
+  );
 }

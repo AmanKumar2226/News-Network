@@ -9,7 +9,7 @@ export default function AllNews(){
                 
                 <div className="flex gap-2 items-center">
                 <img className="py-3" src="./images/red-icon.png" alt="" />
-                <h1 className="text-xl font-semibold">All News</h1>
+                <h1 className="text-2xl font-semibold">All News</h1>
                 </div>
                 <div className="card-container  my-10">
                     {/* <Breadcrumb/>    */}
