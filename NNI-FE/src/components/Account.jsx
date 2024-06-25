@@ -25,9 +25,7 @@ useEffect(()=>{
   
   axios.request(config)
   .then((response) => {
-    console.log(JSON.stringify(response.data));
     setDetails(response.data.user);
-    console.log(response.data.user+"jjjjjjjjjjjjjjjjjj")
   })
   .catch((error) => {
     console.log(error);
@@ -62,9 +60,6 @@ const bannerUrl = details.banner
     ? sanitizeUrl(details.banner)
     : `http://localhost:8080/uploads/${sanitizeUrl(details.banner)}`
   : '';
-
-console.log(bannerUrl)
-console.log(details)
 
   return (
     <div className='bg-[#FAFBFC]'>

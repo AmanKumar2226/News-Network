@@ -26,6 +26,7 @@ import SignUp from './components/forms/SignUp';
 import Login from './components/forms/Login'
 import NotFound from './components/NotFound'
 import Account from './components/Account'
+import BackToTopButton from './components/BackToTop'
 
 
 function App(){
@@ -57,7 +58,7 @@ function App(){
           <Route path="weather-today" element={<Weather/>}/>
           <Route path="news-description" element={<NewsDescription/>}/>
       </Routes> 
-          
+          <BackToTopButton/>
       <Footer />
 
      

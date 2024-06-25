@@ -34,7 +34,6 @@ const navigate = useNavigate();
 
       axios.request(config)
         .then((response) => {
-          console.log(JSON.stringify(response.data));
           setDetails(response.data.user);
         })
         .catch((error) => {
