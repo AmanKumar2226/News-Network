@@ -124,6 +124,9 @@ function Login() {
             Login
           </button>
         </div>
+        <div className="my-10">
+          <p className="text-lg font-semibold">Not having an account? <a className="text-[#F81539BF]" href="/sign-up">Sign Up</a></p>
+        </div>
       </form>
     </div>
   )
