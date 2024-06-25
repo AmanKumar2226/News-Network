@@ -19,7 +19,6 @@ function NewsCard({ url }) {
       .request(config)
       .then((response) => {
         setData(response.data.articles);
-        console.log(JSON.stringify(response.data));
         setIsLoading(false);  
       })
       .catch((error) => {

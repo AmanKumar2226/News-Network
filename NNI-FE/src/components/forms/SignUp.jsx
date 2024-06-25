@@ -57,7 +57,6 @@ function SignUp() {
         method: 'POST',
         body: formData, // Use FormData for file upload
       });
-      console.log(response);
     } catch (err) {
       console.log(err);
     }
@@ -66,7 +65,6 @@ function SignUp() {
   const onSubmit = async (e) => {
     e.preventDefault();
     validatePassword();
-    console.log(newUser);
   };
 
   const validatePassword = () => {

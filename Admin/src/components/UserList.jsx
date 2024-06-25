@@ -14,7 +14,6 @@ function UserList() {
     axios
       .request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
         setUser(response.data);
       })
       .catch((error) => {

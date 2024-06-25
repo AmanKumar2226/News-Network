@@ -21,7 +21,6 @@ function One() {
 
     axios.request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
         setNews(response.data)
       })
       .catch((error) => {
@@ -46,7 +45,6 @@ function One() {
       .request(config)
       .then((response) => {
         setData(response.data.articles);
-        console.log(JSON.stringify(response.data));
         setIsLoading(false);
       })
       .catch((error) => {
