@@ -172,10 +172,10 @@ function SignUp() {
           <label className="font-semibold" htmlFor="profilePicture">
               Profile Picture
           </label>
-          <div className='flex justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
+          <div className='flex bg-[url("./images/banner-icon.png")] bg-no-repeat bg-center justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
               <div className='border-[2px] border-dashed rounded-xl w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >
-              <img src="./images/banner-icon.png" alt="" />
-              <input onChange={handleProfilePictureChange} className='w-1/2' type="file" id='profilePicture' name='profilePicture'/>
+              
+              <input className="opacity-0 h-full w-full" onChange={handleProfilePictureChange} type="file" id='profilePicture' name='profilePicture'/>
               </div>  
           </div>
         </div>
@@ -199,10 +199,10 @@ function SignUp() {
           <label className="font-semibold" htmlFor="banner">
               Add Banner
           </label>
-          <div className='flex justify-center items-center bg-[#F5F5F5] h-[170px] rounded-xl mt-2'>
+          <div className='flex bg-[url("./images/banner-icon.png")] bg-no-repeat bg-center justify-center items-center bg-[#F5F5F5] h-[170px] rounded-xl mt-2'>
               <div className='border-[2px] border-dashed w-[98%] rounded-xl flex items-center justify-center h-[85%]' >
-              <img src="./images/banner-icon.png" alt="" />
-              <input onChange={handleBannerChange} type="file" id='banner' name='banner'/>
+              
+              <input className='opacity-0 h-full w-full' onChange={handleBannerChange} type="file" id='banner' name='banner'/>
               </div> 
           </div>
         </div>
