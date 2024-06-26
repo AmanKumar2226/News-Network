@@ -178,7 +178,7 @@ const navigate = useNavigate();
           </Menu>
   </div>
         ) : (
-          <div className='flex gap-10 mr-10'>
+          <div className='flex gap-10 mr-10 max-[768px]:hidden'>
             {/* Login/Signup buttons */}
             <a href="/login" className='flex'><button className='typo'>Login</button></a>
             <a href="/sign-up"><button className='typo bg-black text-white rounded-xl p-4'>Sign-Up</button></a>
