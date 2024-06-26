@@ -33,7 +33,7 @@ function App(){
   return (
     <>
     <Navbar />
-    <Category /> 
+    <Category/> 
     <Breadcrumb/>
        <Routes>
        <Route path="*" element={<NotFound />} />

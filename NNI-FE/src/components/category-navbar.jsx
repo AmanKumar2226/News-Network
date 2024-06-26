@@ -46,7 +46,7 @@ function Category() {
       </nav>
     </div> */}
 
-      <div className="links flex justify-center mt-11 mb-14">
+      <div className="links flex justify-center mt-11 mb-14 max-[1024px]:hidden">
         <nav className="rounded-xl w-full mx-2 bg-[#F5F5F5] flex gap-6 cursor-pointer justify-center py-5">
         {[
           { name: "#Sports", Ref: "/sports" , image:"/images/sports.png"},

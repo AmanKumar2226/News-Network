@@ -9,11 +9,13 @@ import {
   MenuItem,
   Button,
 } from "@material-tailwind/react";
+import Category from "./category-navbar";
 
 export default function Navbar() {
   const [details, setDetails] = useState({});
   const token = localStorage.getItem('token'); // Get token from localStorage
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuClass, setMenuClass] = useState(""); 
 const navigate = useNavigate();
 
   const handleLogout = ()=>{
@@ -41,11 +43,18 @@ const navigate = useNavigate();
         });
     }
   }, [token]);
+
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setMenuClass(isMenuOpen ? "slide-out-bottom" : "slide-in-top");
+  };
+
   return (
     <>
       <div className="pt-2 flex flex-row items-center header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 shadow-md justify-between">
         <div className="flex flex-col">
-        <div className="flex flex-row items-center text-xl gap-3 font-semibold">
+        <div className="flex flex-row items-center text-xl max-[768px]:hidden gap-3 font-semibold">
           <a href="/">
             <img className="logo" src="./images/logo.jpg" alt="logo" />
           </a>
@@ -53,7 +62,7 @@ const navigate = useNavigate();
             <h1>News Network India</h1>
           </a>
         </div>
-        <div className="w-3/4 absolute top-12 left-32">
+        <div className="w-3/4 absolute top-12 left-32 max-[768px]:hidden">
           <p className="text-sm">Today is {Date().slice(0,16)}</p>
         </div>
         </div>
@@ -77,73 +86,64 @@ const navigate = useNavigate();
           </div>
           
 
-          <div className="flex items-center md:hidden relative">
+          <div className="flex items-center max-[768px]:block min-[768px]:hidden relative">
             <button
+            onClick={toggleMenu}
               id="menu"
-              className="text-gray-800 text-2xl focus:outline-none focus:ring-2 focus:ring-gray-600 rounded"
+              className="bg-[#F5F5F5] p-3 focus:outline-none focus:ring-2 focus:ring-gray-600 rounded-xl"
             >
-              <svg
-                aria-label="open menu"
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-menu-2"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="4" y1="6" x2="20" y2="6" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="18" x2="20" y2="18" />
-              </svg>
+              <img src="./images/dialog-btn.png" alt="" />
             </button>
-            <ul className="p-2 w-40 border-r bg-white absolute rounded z-20 top-10 right-0 shadow hidden">
-              <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-400 focus:text-indigo-700 focus:outline-none">
-                <div className="flex items-center">
-                  <a href="#" className="ml-2">
-                    Home
-                  </a>
-                </div>
-              </li>
-              <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
-                <Link to="/about" className="nav-link text-white">
-                  About Us
-                </Link>
-              </li>
-              <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none bg-white">
-                <a href="#" className="ml-2">
-                  Projects
-                </a>
-              </li>
-              <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 ml-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none bg-white">
-                <a
-                  href="#"
-                  className="font-bold leading-none underline text-gray-900 hover:text-indigo-700"
-                >
-                  {" "}
-                  Let's work together{" "}
-                </a>
-              </li>
-            </ul>
+            {isMenuOpen && (
+            <div className={`top-0 left-0 h-screen z-[9999] fixed py-4 px-2 ${menuClass} bg-white w-[390px]`}>
+              <div className="mb-5 flex justify-between mr-10">
+              <img className="h-[50px] w-[50px]" src="./images/logo.jpg" alt="" />
+              <button
+              onClick={toggleMenu} className="text-xl font-bold bg-[#F5F5F5] p-1 h-[48px] w-[48px] px-4 rounded-xl">
+                  X
+              </button>
+              </div>
+              <div className="flex flex-col justify-between h-[90%]">
+              <div>
+              <NavLink to="/" className="block py-2 mb-2 text-center" onClick={toggleMenu}>Home</NavLink>
+            <NavLink to="/about" className="block py-2 mb-2 text-center" onClick={toggleMenu}>About</NavLink>
+            <NavLink to="/all-news" className="block py-2 mb-2 text-center" onClick={toggleMenu}>All News</NavLink>
+            <NavLink to="/contact-us" className="block py-2 mb-2 text-center" onClick={toggleMenu}>Contact Us</NavLink>
+              </div>
+              {token ? 
+              <div className="flex flex-col justify-center items-center gap-3 mb-10">
+                <img className="h-[100px] w-[100px] rounded-[50%] border-2 border-[red]" src={details.profilePicture} alt="" />
+                <p className="text-2xl font-semibold">{details.firstName} {details.lastName}</p>
+                <a href="/account" className="underline text-[blue] font-semibold">Visit Profile</a>
+                <button onClick={()=>{handleLogout(), toggleMenu()}} className="w-full bg-black text-white text-xl py-2 rounded-xl">Logout</button>
+              </div>
+              :
+              <div className="flex flex-col gap-2">
+              <button onClick={()=>{navigate('/login'),  toggleMenu()}} className="block py-2 mb-2 text-center font-semibold text-xl border-2 rounded-xl w-full">Login</button>
+              <button to="/sign-up" className="block py-2 mb-2 text-center font-semibold text-xl bg-black text-white rounded-xl w-full" onClick={()=>{navigate('/sign-up'), toggleMenu()}}>Sign Up</button>
+              </div> }
+              
+              </div>
+             
+           
           </div>
+             )}
+          </div>
+          
         </div>
         
 
     <div class="flex w-[]">
         
-        <div class="relative w-[399px] ">
-            <button type="submit" class="absolute top-0 -left-8 p-2.5 h-full text-sm font-medium bg-[#F5F5F5] text-white rounded-s-lg border border-r-0"><img src="./images/3dots.png" alt="" /></button>
-            <input type="search" id="search-dropdown" class="block p-2.5 w-[400px] z-20 text-sm bg-[#F5F5F5] rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-l-none" placeholder="Search Anything" required />
-            <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white rounded-e-lg"><img src="./images/icon.png" alt="" /></button>
+        <div class="relative w-[399px] max-[769px]:w-[300px]">
+            <button type="submit" class="absolute top-0 -left-8 p-2.5 h-full text-sm font-medium bg-[#F5F5F5] text-white rounded-s-lg border border-r-0 max-[769px]:ml-24"><img src="./images/3dots.png" alt="" /></button>
+            <input type="search" id="search-dropdown" class="block p-2.5 w-[400px] z-20 text-sm bg-[#F5F5F5] rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-l-none max-[768px]:w-[190px] max-[769px]:ml-24" placeholder="Search Anything" required />
+            <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white rounded-e-lg max-[768px]"><img src="./images/icon.png" alt="" /></button>
         </div>
     </div>
               
           {token ? (
-          <div className="flex items-center gap-5 mr-10">
+          <div className="flex items-center gap-5 mr-10 max-[768px]:hidden">
      
           <Menu>
             <MenuHandler>
@@ -164,6 +164,7 @@ const navigate = useNavigate();
           </div>
         )}
       </div>
+       
       <Outlet />
     </>
   );
