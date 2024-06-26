@@ -10,12 +10,15 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Category from "./category-navbar";
+import CategoryDialog from "./dialogs/Category-menu";
 
 export default function Navbar() {
   const [details, setDetails] = useState({});
   const token = localStorage.getItem('token'); // Get token from localStorage
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuClass, setMenuClass] = useState(""); 
+  const [subDialogClass, setSubDialogClass] = useState("");
+  const [isSubDialogOpen, setIsSubDialogOpen] = useState(false);
 const navigate = useNavigate();
 
   const handleLogout = ()=>{
@@ -48,6 +51,20 @@ const navigate = useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setMenuClass(isMenuOpen ? "slide-out-bottom" : "slide-in-top");
+  };
+
+  const toggleSubDialog = () => {
+    if (isSubDialogOpen) {
+      // Start closing animation
+      setSubDialogClass("slide-out-right");
+      setTimeout(() => {
+        setIsSubDialogOpen(false);
+      }, 300); // Duration should match the CSS animation time
+    } else {
+      // Open sub-dialog with animation
+      setIsSubDialogOpen(true);
+      setSubDialogClass("slide-in-right");
+    }
   };
 
   return (
@@ -105,6 +122,10 @@ const navigate = useNavigate();
               </div>
               <div className="flex flex-col justify-between h-[90%]">
               <div>
+              <button className="block flex gap-2 items-center py-2 mb-2 text-center font-semibold text-xl" onClick={()=>{toggleSubDialog(), toggleMenu()}}>
+              <img src="./images/red-icon.png" alt="" />
+              Categories
+            </button>
               <NavLink to="/" className="block py-2 mb-2 text-center" onClick={toggleMenu}>Home</NavLink>
             <NavLink to="/about" className="block py-2 mb-2 text-center" onClick={toggleMenu}>About</NavLink>
             <NavLink to="/all-news" className="block py-2 mb-2 text-center" onClick={toggleMenu}>All News</NavLink>
@@ -164,6 +185,8 @@ const navigate = useNavigate();
           </div>
         )}
       </div>
+
+      <CategoryDialog isOpen={isSubDialogOpen} onClose={toggleSubDialog} className={subDialogClass} />
        
       <Outlet />
     </>

@@ -1,8 +1,8 @@
-import CardHome from "./cardhome";
-import One from "./carousel-with-one-card";
-import Four from "./carousel-with-four-cards";
-import Weather from "./weather";
-import LatestVideos from "./LatestVideos";
+import CardHome from "../components/cardhome";
+import One from "../components/carousel-with-one-card";
+import Four from "../components/carousel-with-four-cards";
+import Weather from "../components/weather";
+import LatestVideos from "../components/LatestVideos";
 
 export default function Home() {
   return (
