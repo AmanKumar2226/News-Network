@@ -7,7 +7,7 @@ function General() {
     
   return (
     <>
-    <div className="flex flex-col gap-5  flex-wrap justify-center my-10 mx-40">
+    <div className="min-w[769px]:px-10 max-[769px]:mx-2 min-[769px]-gap-5  min-[769px]-flex-wrap justify-center py-10 flex-col min-[769px]:mx-40 flex justify-center">
       <div className="flex gap-2">
         <img className="py-3" src="./images/red-icon.png" alt="" />
         <h1 className="text-3xl font-semibold text-black">

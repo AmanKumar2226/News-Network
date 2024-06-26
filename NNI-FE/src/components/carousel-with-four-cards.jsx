@@ -67,7 +67,7 @@ function Four({ url, title }) {
   };
   return (
     <div>
-      <div className=" mx-44 flex gap-2">
+      <div className="min-[769px]:mx-44 max-[769px]:mx-2 flex gap-2">
         <img src="./images/red-icon.png" alt="" className="py-3" />
         <h1 className="text-2xl font-semibold">{title}</h1>
       </div>

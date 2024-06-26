@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="w-full flex">
+        <div className="max-[769px]:hidden w-full flex">
           <div className="w-1/2 bg-[#F5F5F5] rounded-e-[50px] py-10 pr-10">
             <div className="flex flex-col">
               <div className="flex justify-around">
