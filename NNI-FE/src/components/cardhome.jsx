@@ -37,8 +37,8 @@ function CardHome() {
 
   return (
     <>
-      <section className="mx-20">
-        <div className="my-10 flex gap-2 items-center mx-24 justify-between">
+      <section className="min-[769px]:mx-20">
+        <div className="my-10 flex gap-2 items-center min-[769px]:mx-24 justify-between">
           <div className="flex gap-2 items-center mt-6">
           <img src="./images/red-icon.png" className="py-2" alt="" />
           <h1 className="text-2xl font-semibold">Grab More Here</h1>

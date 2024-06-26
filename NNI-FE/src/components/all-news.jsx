@@ -5,7 +5,7 @@ export default function AllNews(){
     return(
         <>
         
-            <div className="px-10 py-10 flex-col mx-32 flex justify-center"> 
+            <div className="min-w[769px]:px-10 max-[769px]:mx-2 py-10 flex-col min-[769px]:mx-32 flex justify-center"> 
                 
                 <div className="flex gap-2 items-center">
                 <img className="py-3" src="./images/red-icon.png" alt="" />

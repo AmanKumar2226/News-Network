@@ -87,7 +87,7 @@ function One() {
     ]
   };
   return (
-    <div className='flex gap-2 justify-center items-center mx-44'>
+    <div className='flex gap-2 justify-center items-center min-[769px]:mx-44 max-[769px]:mx-2'>
       <div className='flex w-1/2 gap-2 mb-4'>
       <div className='w-1/2 h-[456px] rounded-xl'>
         {/* {news.map((newsObj,index)=>{

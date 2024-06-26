@@ -65,7 +65,7 @@ function LatestVideos() {
   return (
     <div className="py-10 bg-[#F5F5F5] w-full">
         
-      <div className="mx-44">
+      <div className="min-[769px]:mx-44 max-[769px]:mx-2">
       <div className="flex gap-2 mb-5">
             <img className="py-3" src="./images/red-icon.png" alt="" />
             <h1 className="text-2xl font-semibold">

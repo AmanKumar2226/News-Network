@@ -7,7 +7,7 @@ import LatestVideos from "./LatestVideos";
 export default function Home() {
   return (
     <>
-      <div className="my-10 mx-44 flex gap-2">
+      <div className="my-10 min-[769px]:mx-44  max-[769px]:mx-2  flex gap-2">
         <img src="./images/red-icon.png" className="py-3" alt="" />
         <h1 className="text-2xl font-semibold">Latest Updates</h1>
       </div>
@@ -32,13 +32,13 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
         />
       </div>
       <div className="bg-[#F5F5F5]">
-        <div className="mx-44 py-10">
+        <div className="min-[769px]:mx-44 max-[769px]:mx-2 py-10">
         <div className="flex gap-2">
           <img src="./images/red-icon.png" className="py-3" alt="" />
           <h1 className="text-2xl font-semibold">Weather Today</h1>
         </div>
         <div className="flex my-10">
-          <div className="w-1/2">
+          <div className="w-1/2  max-[769px]:hidden">
             <div className="w-[744px] h-[514px] rounded-xl shadow-2xl py-[39px] px-[24px] bg-white">
               <div className="flex items-center justify-between">
                 <div className="flex gap-5">
@@ -150,7 +150,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-5 w-1/2">
+          <div className="flex flex-wrap gap-5  min-[769px]:w-1/2">
             <Weather url="http://api.weatherapi.com/v1/current.json?key=4b61e802d0324d04a21123435240305&q=SundarNagar&aqi=no" image={"url('./images/sundernagar.jpeg')"}/>
             <Weather url="http://api.weatherapi.com/v1/current.json?key=4b61e802d0324d04a21123435240305&q=Mohali&aqi=no" image={"url('./images/mohali.jpeg')"}/>
             <Weather url="http://api.weatherapi.com/v1/current.json?key=4b61e802d0324d04a21123435240305&q=Kedarnath&aqi=no" image={"url('./images/kedaarnath.jpg')"}/>
