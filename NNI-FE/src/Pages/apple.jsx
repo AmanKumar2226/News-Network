@@ -1,7 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
-import Spinner from './spinner';
-import NewsCard from './news-card';
+
+import NewsCard from '../components/news-card';
 
 
 function Apple() {

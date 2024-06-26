@@ -2,31 +2,31 @@
 import './App.css'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
-import AboutUs from './components/about'
-import Home from './components/home'
-import AllNews from './components/all-news'
-import Contact from './components/contact-us'
+import AboutUs from './Pages/about'
+import Home from './Pages/home'
+import AllNews from './Pages/all-news'
+import Contact from './Pages/contact-us'
 import {Route, Routes} from 'react-router-dom'
 import Category from './components/category-navbar'
-import Sports from './components/sports'
-import Entertainment from './components/entertainment'
-import General from './components/general'
-import Health from './components/health'
-import Science from './components/science'
-import Business from './components/business'
-import Technology from './components/technology'
+import Sports from './Pages/sports'
+import Entertainment from './Pages/entertainment'
+import General from './Pages/general'
+import Health from './Pages/health'
+import Science from './Pages/science'
+import Business from './Pages/business'
+import Technology from './Pages/technology'
 import Breadcrumb from "./components/breadcrumb";
-import Headlines from './components/top-headlines'
-import Apple from './components/apple'
-import ForgotPassword from './components/forgot-password'
-import NNIArticles from './components/NNI-articles';
+import Headlines from './Pages/top-headlines'
+import Apple from './Pages/apple'
+import ForgotPassword from './Pages/forgot-password'
+import NNIArticles from './Pages/NNI-articles';
 import Weather from './components/weather';
-import NewsDescription from './components/NewsDescription';
-import SignUp from './components/forms/SignUp';
-import Login from './components/forms/Login'
+import NewsDescription from './Pages/NewsDescription';
+import SignUp from './Pages/forms/SignUp';
+import Login from './Pages/forms/Login'
 import NotFound from './components/NotFound'
-import Account from './components/Account'
-import BackToTopButton from './components/BackToTop'
+import Account from './Pages/Account'
+import BackToTopButton from './utils/BackToTop'
 
 
 function App(){

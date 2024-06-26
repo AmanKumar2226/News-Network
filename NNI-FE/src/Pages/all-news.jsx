@@ -1,5 +1,4 @@
-import Breadcrumb from "./breadcrumb";
-import NewsCard from "./news-card";
+import NewsCard from "../components/news-card";
 
 export default function AllNews(){
     return(
