@@ -88,8 +88,8 @@ function One() {
   };
   return (
     <div className='flex gap-2 justify-center items-center min-[769px]:mx-44 max-[769px]:mx-2'>
-      <div className='flex w-1/2 gap-2 mb-4'>
-      <div className='w-1/2 h-[456px] rounded-xl'>
+      <div className='flex w-1/2 gap-2 mb-4 max-[769px]:hidden  '>
+      <div className='w-1/2 h-[456px] rounded-xl '>
         {/* {news.map((newsObj,index)=>{
           return( */}
             <div className='relative'>
@@ -122,7 +122,7 @@ function One() {
       </div>
      
       {isLoading && <Spinner />}
-      <div className="w-1/2 mb-10 mt-5 ">
+      <div className="min-[769px]:w-1/2 mb-10 mt-5 ">
         <div className="">
           <Slider  {...settings}>
             {data.map((dataObj, index) => {

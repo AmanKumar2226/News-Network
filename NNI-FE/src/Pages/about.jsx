@@ -4,14 +4,14 @@ export default function AboutUs() {
   return (
     <>
       <div className="">
-        <div className="w-[80%] bg-[#F5F5F5] rounded-xl my-10 p-8 mx-44">
+        <div className="min-[769px]:w-[80%] max-[769px]:mx-2 bg-[#F5F5F5] rounded-xl my-10 p-8 min-[769px]:mx-44">
           <div className="mb-10">
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl max-[769px]:text-xl font-semibold text-justify">
               We pay attention to your needs and do the best design.
             </h1>
           </div>
-          <div className="flex gap-14">
-            <div className="w-1/2 text-lg">
+          <div className="flex max-[769px]:flex-col text-justify gap-14">
+            <div className="min-[769px]:w-1/2 text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae
@@ -28,17 +28,17 @@ export default function AboutUs() {
               enim blandit volutpat maecenas volutpat. Ornare lectus sit amet
               est placerat in egestas erat.
             </div>
-            <div className="w-1/2">
+            <div className="min-[769px]:w-1/2">
               <img
-                className="w-[744px] h-[444px] rounded-xl"
+                className="min-[769px]:w-[744px] min-[749px]:h-[444px] rounded-xl"
                 src="./images/abstract-video.png"
                 alt=""
               />
             </div>
           </div>
         </div>
-        <div className="flex my-20 gap-12">
-        <div className="w-[60%] flex justify-end p-8  items-center rounded-[0px_50px_50px_0px] h-[361px] bg-[#F5F5F5]">
+        <div className="flex my-20 gap-12 max-[769px]:flex-col mx-2">
+        <div className="min-[769px]:w-[60%] flex min-[769px]:justify-end min-[769px]:p-8  items-center min-[769px]:rounded-[0px_50px_50px_0px] max-[769px]:rounded-xl h-[361px] min-[769px]:bg-[#F5F5F5]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018.4963018700189!2d76.68827997053899!3d30.69731441504843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefe02b751aa3%3A0xe34a68768b59b3ac!2stecHangouts%20-%20Industrial%20Training%20Company%20in%20Mohali%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1719300683199!5m2!1sen!2sin"
             width="840"
@@ -46,10 +46,11 @@ export default function AboutUs() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            className="max-[769px]:rounded-xl"
           ></iframe>
         </div>
         <div >
-            <div className="flex gap-2 mt-5">
+            <div className="flex gap-2 mt-5 max-[769px]:mx-5">
                 <img className="py-3" src="./images/red-icon.png" alt="" />
                 <h1 className="text-lg font-semibold">NNI Information</h1>
             </div>
@@ -77,13 +78,13 @@ export default function AboutUs() {
             </div>
         </div>
         </div>
-        <div className="mx-32 my-10">
+        <div className="min-[769px]:mx-32 max-[769px]:mx-2 my-10">
             <div className="flex gap-2 my-10 items-center">
                 <img className="py-3" src="./images/red-icon.png" alt="" />
                 <h1 className="text-xl font-semibold">NNI Team</h1>
             </div>
-            <div className="flex justify-between mb-20">
-            <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+            <div className="flex max-[769px]:flex-wrap justify-between mb-20">
+            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>
@@ -94,7 +95,7 @@ export default function AboutUs() {
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
             </div>
         </div>
-        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+        <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>
@@ -105,7 +106,7 @@ export default function AboutUs() {
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
             </div>
         </div>
-        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+        <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>
@@ -116,7 +117,7 @@ export default function AboutUs() {
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
             </div>
         </div>
-        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+        <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>
@@ -127,7 +128,7 @@ export default function AboutUs() {
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
             </div>
         </div>
-        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+        <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>
@@ -138,7 +139,7 @@ export default function AboutUs() {
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] text-md font-semibold">Behzad pashei</button>
             </div>
         </div>
-        <div className="w-[232px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
+        <div className="min-[769px]:w-[232px] max-[796px]:w-[171px]  pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)]">
             <div>
                 <img className="w-[124px] h-[124px] rounded-xl border-2" src="./images/logo.jpg" alt="" />
             </div>

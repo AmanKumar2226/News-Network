@@ -3,7 +3,7 @@ import NewsCard from "../components/news-card";
 function Business() {
   return (
     <>
-      <div className="flex flex-col gap-5 flex-wrap justify-center mx-40 my-10">
+      <div className="flex flex-col gap-5 flex-wrap justify-center min-[769px]:mx-40 max-[769px]:mx-2 my-10">
         <div className="flex gap-2">
           <img className="py-3" src="./images/red-icon.png" alt="" />
           <h1 className="text-3xl font-semibold text-black">Business</h1>
