@@ -4,7 +4,7 @@ function Sports() {
    
   return (
     <>
-    <div className="flex flex-wrap my-10 mx-40">
+    <div className="flex flex-wrap my-10 min-[769px]:mx-40 max-[769px]:mx-2">
       <div className="flex gap-2">
         <img className="py-3" src="./images/red-icon.png" alt="" />
         <h1 className="text-3xl font-semibold text-black">
