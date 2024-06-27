@@ -27,9 +27,10 @@ import Login from './Pages/forms/Login'
 import NotFound from './components/NotFound'
 import Account from './Pages/Account'
 import BackToTopButton from './utils/BackToTop'
-
+import ThemeSwitcher from './utils/ThemeSwitcher'
 
 function App(){
+ 
   return (
     <>
     <Navbar />
@@ -58,10 +59,11 @@ function App(){
           <Route path="weather-today" element={<Weather/>}/>
           <Route path="news-description" element={<NewsDescription/>}/>
       </Routes> 
+          <ThemeSwitcher/>
           <BackToTopButton/>
       <Footer />
 
-     
+      
     </>
   )
 }
