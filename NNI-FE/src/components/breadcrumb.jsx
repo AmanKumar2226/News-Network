@@ -6,7 +6,7 @@ function Breadcrumb() {
   return (
     <div>
       <nav
-        className="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg mt-5"
+        className="flex px-5 py-3 text-gray-700 border border-gray-200 dark:border-none rounded-lg mt-5"
         aria-label="Breadcrumb"
       >
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
