@@ -62,7 +62,7 @@ function Account() {
     : '';
 
   return (
-    <div className='bg-[#FAFBFC] dark:text-white'>
+    <div className='bg-[#FAFBFC] dark:bg-[#2A2C38] dark:text-white'>
       <div>
         <div className='mb-44 relative flex justify-center items-end'>
           <div className={`h-[350px] flex justify-end w-full items-end p-8 rounded-xl`} style={{ backgroundImage: `url(${bannerUrl})` }}>

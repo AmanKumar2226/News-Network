@@ -63,7 +63,7 @@ function LatestVideos() {
     };
 
   return (
-    <div className="py-10 bg-[#F5F5F5] w-full">
+    <div className="py-10 bg-[#F5F5F5] dark:bg-[#1F1F1F] dark:text-white w-full">
         
       <div className="min-[769px]:mx-44 max-[769px]:mx-2">
       <div className="flex gap-2 mb-5">
@@ -76,14 +76,14 @@ function LatestVideos() {
         <div className="flex gap-10 "> 
           
         <div
-          className="h-[50vh] bg-cover bg-no-repeat w-[60%] flex items-end justify-center rounded-xl"
+          className="h-[50vh] bg-cover bg-no-repeat w-[60%] dark:bg-[#2A2C38] flex items-end justify-center rounded-xl"
           style={{ backgroundImage: "url(./images/video.jpg)" }}
         >
-            <div className="bg-[rgba(255,255,255,0.75)] w-[95%] p-5 mb-6 rounded-xl">
-                <h1 className="text-xl font-semibold text-black">
+            <div className="bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)]  w-[95%] p-5 mb-6 rounded-xl">
+                <h1 className="text-xl font-semibold text-black dark:text-white">
                 How Music Affects Your Brain (Plus 11 Artists To Listen To At Work)
                 </h1>
-                <p>You’ve read all your free member-only stories, become a member to get unlimited access. Your membership fee supports the voices you want to hear more from.</p>
+                <p className="dark:text-white">You’ve read all your free member-only stories, become a member to get unlimited access. Your membership fee supports the voices you want to hear more from.</p>
             </div>
         </div>
         
@@ -92,7 +92,7 @@ function LatestVideos() {
 
         {data.map((dataObj,index)=>{
             return(
-            <div className="shadow-xl gap-[10px] rounded-xl h-[210px] mb-7 p-2 video-card">
+            <div className="shadow-xl gap-[10px] rounded-xl dark:bg-[#2A2C38] dark:text-white h-[210px] mb-7 p-2 video-card">
                 <div className="w-[40%] flex items-center ">
                     <img className="rounded-xl h-full" src={dataObj.urlToImage} alt="" />
                 </div>

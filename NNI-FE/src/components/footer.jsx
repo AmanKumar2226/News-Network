@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="max-[769px]:hidden w-full flex dark:text-white">
+        <div className="max-[769px]:hidden w-full flex dark:text-white pt-5">
           <div className="w-1/2 bg-[#F5F5F5] dark:bg-[#1F1F1F] rounded-e-[50px] py-10 pr-10">
             <div className="flex flex-col">
               <div className="flex justify-around">

@@ -114,7 +114,7 @@ export default function Navbar() {
               id="menu"
               className="bg-[#F5F5F5] p-3 focus:outline-none focus:ring-2 dark:bg-[#1F1F1F] rounded-xl"
             >
-               <img className="dark:h-[30px] dark:w-[30px]" src={theme === "light" ? "././images/dialog-btn.png" : "./images/Menu-Button.png"} alt="logo" />
+               <img className="dark:h-[25px] dark:w-[25px]" src={theme === "light" ? "././images/dialog-btn.png" : "./images/Menu-Button.png"} alt="logo" />
               
             </button>
             {isMenuOpen && (

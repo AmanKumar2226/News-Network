@@ -32,7 +32,7 @@ function Weather({ url, image }) {
       });
   }, [url]);
   return (
-    <div>
+    <div className="dark:bg-[#2A2C38]">
       
       {isLoading && <Spinner />}
 
