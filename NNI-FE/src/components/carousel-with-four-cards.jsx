@@ -82,7 +82,7 @@ function Four({ url, title }) {
                   className="w-[360px] h-[400px] text-black dark:text-white dark:bg-[#1F1F1F] rounded-xl p-2 shadow-lg my-5"
                 >
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
-                    <a href={dataObj.url}>
+                    <a href={dataObj.url} target="_blank">
                     <img
                       className=" h-[190px] w-[340px] ml-1 p-2 rounded-2xl"
                       src={dataObj.urlToImage}

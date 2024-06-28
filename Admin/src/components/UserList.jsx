@@ -7,7 +7,7 @@ function UserList() {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:8080/api/demo",
+      url: "http://localhost:8080/api/nni/get-users",
       headers: {},
     };
 

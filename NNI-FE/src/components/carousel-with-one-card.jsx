@@ -131,7 +131,7 @@ function One() {
                   <div className="rounded-xl h-[50vh] flex justify-center items-end bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${dataObj.urlToImage})` }}>
                     {/* <img className="h-[500px] w-full" src={dataObj.urlToImage} alt="image"/> */}
                     <div className="flex flex-col bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)]  dark:border-none gap-4  w-[95%] p-5 rounded-xl mb-6">
-                      <a href={dataObj.url}><p className="line-clamp-1 text-xl font-semibold">{dataObj.title}</p></a>
+                      <a href={dataObj.url} target='_blank'><p className="line-clamp-1 text-xl font-semibold">{dataObj.title}</p></a>
                       <p className='line-clamp-2'>{dataObj.description}</p>
 
                     </div>
