@@ -48,11 +48,11 @@ function CardHome() {
           <button onClick={handleToggleShow} className="flex items-center gap-2 px-4 py-2 bg-[#F5F5F5] dark:bg-[#1F1F1F] dark:text-white text-[#3E3232BF] rounded-2xl">
           {showAll ? (
               <>
-                Show Less <img src="./images/forward-chevron.png" alt="" className="-rotate-90"/>
+                Show Less <img src={theme === "light" ? "./images/forward-chevron.png": "./images/forward-chevron-white.svg"} alt="" className="-rotate-90"/>
               </>
             ) : (
               <>
-                Show All <img src="./images/forward-chevron.png" alt="" className="rotate-90" /> 
+                Show All <img src={theme === "light" ? "./images/forward-chevron.png": "./images/forward-chevron-white.svg"} alt="" className="rotate-90" /> 
               </>
             )}
 
@@ -66,7 +66,7 @@ function CardHome() {
             return (
               <div className="w-[744px] bg-white hover:bg-gray-100 border dark:bg-[#1F1F1F] dark:text-[white] dark:border-none border-gray-200 shadow rounded-lg flex" key={index} id={index}>
                 <div className="w-[40%] flex items-center pl-2">
-                  <Link to={dataObj.url} className="flex h-[209px] bg-white md:flex-row md:max-w-xl ">
+                  <Link to={dataObj.url} target="_blank" className="flex h-[209px] bg-white md:flex-row md:max-w-xl ">
                     <img
                       className="rounded-xl md:h-auto md:w-48 md:rounded-none md:rounded-s-lg object-cover"
                       src={dataObj.urlToImage}

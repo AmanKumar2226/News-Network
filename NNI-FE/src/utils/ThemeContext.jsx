@@ -6,7 +6,7 @@ const ThemeContext = createContext();
 
 // Create a provider component
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     if (theme === 'dark') {

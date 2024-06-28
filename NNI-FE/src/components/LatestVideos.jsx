@@ -94,7 +94,10 @@ function LatestVideos() {
             return(
             <div className="shadow-xl gap-[10px] rounded-xl dark:bg-[#2A2C38] dark:text-white h-[210px] mb-7 p-2 video-card">
                 <div className="w-[40%] flex items-center ">
-                    <img className="rounded-xl h-full" src={dataObj.urlToImage} alt="" />
+                  <a href={dataObj.url} target="_blank">
+                  <img className="rounded-xl h-full" src={dataObj.urlToImage} alt="" />
+                  </a>
+                    
                 </div>
                 <div className="w-[60%] flex flex-col gap-3">
                     <h1 className="line-clamp-1 font-semibold text-xl">{dataObj.title}</h1>
