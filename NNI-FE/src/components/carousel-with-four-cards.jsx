@@ -5,10 +5,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Spinner from "./spinner";
-
+import { useTheme } from '../utils/ThemeContext';
 function Four({ url, title }) {
     let [isLoading, setIsLoading] = useState(true);
-
+ const {theme} = useTheme();
     // const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
   let [data, setData] = useState([]);
   // let [isLoading, setIsLoading] = useState(true);
@@ -67,19 +67,19 @@ function Four({ url, title }) {
   };
   return (
     <div>
-      <div className="min-[769px]:mx-44 max-[769px]:mx-2 flex gap-2">
+      <div className="min-[769px]:mx-44 max-[769px]:mx-2 flex gap-2 dark:bg-[#2A2C38]">
         <img src="./images/red-icon.png" alt="" className="py-3" />
         <h1 className="text-2xl font-semibold">{title}</h1>
       </div>
       {isLoading && <Spinner/>}
-      <div className="w-[82%] mb-10 mt-2 mx-auto">
+      <div className="w-[82%] mb-10 mt-2 mx-auto dark:bg-[#2A2C38]">
         <div className="">
-          <Slider className="text-black" {...settings}>
+          <Slider className="text-black dark:text-white" {...settings}>
             {data.map((dataObj, index) => {
               return (
                 <div
                   key={index}
-                  className="w-[360px] h-[400px] text-black rounded-xl p-2 shadow-lg my-5"
+                  className="w-[360px] h-[400px] text-black dark:text-white dark:bg-[#1F1F1F] rounded-xl p-2 shadow-lg my-5"
                 >
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
                     <a href={dataObj.url}>
@@ -93,7 +93,7 @@ function Four({ url, title }) {
                   <div className="flex flex-col pt-4 px-2">
                     <a href={dataObj.url}><p className="line-clamp-1 font-semibold">{dataObj.title}</p></a>
                     <p className="line-clamp-2">{dataObj.description}</p>
-                    <div className={`w-full rounded-xl bg-[#F5F5F5] p-2 flex justify-between items-center px-4 ${dataObj.description== null ? 'mt-20 ': "mt-5"}`}>
+                    <div className={`w-full rounded-xl bg-[#F5F5F5] dark:bg-[rgba(42,44,56,0.75)] dark:text-white p-2 flex justify-between items-center px-4 ${dataObj.description== null ? 'mt-20 ': "mt-5"}`}>
                      <div className="h-[54px] flex justify-center flex-col">
                      <p className="font-semibold line-clamp-1">{dataObj.author}</p>    
                       <p>
@@ -101,7 +101,7 @@ function Four({ url, title }) {
                       </p>
                      </div>
                       <div>
-                        <img src="./images/save-icon.png" alt="" />
+                      <img src={theme === "light" ? "./images/save-icon.png" : "./images/save-dark.png"} alt="" />
                       </div>
                     </div>
                   </div>
