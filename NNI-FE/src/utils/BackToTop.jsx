@@ -29,7 +29,7 @@ const BackToTopButton = () => {
     <div className="back-to-top">
       {isVisible && (
         <button onClick={scrollToTop} style={styles.button}>
-          ↑ Back to Top
+          ↑
         </button>
       )}
     </div>
