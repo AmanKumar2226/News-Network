@@ -83,7 +83,7 @@ function Login() {
   }
 
   return (
-    <div className='my-10'>
+    <div className='my-10 dark:text-white max-[769px]:mx-2'>
       <ToastContainer/>
       <div className='my-2 mb-10 flex justify-center mr-36'>
         <div>
@@ -101,14 +101,14 @@ function Login() {
           <label className="font-semibold" htmlFor="email">
             Email
           </label>
-          <input onChange={handleChange} value={user.email} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
+          <input onChange={handleChange} value={user.email} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
         </div>
 
         <div className='flex flex-col gap-2 relative'>
           <label className="font-semibold" htmlFor="password">
             Password
           </label>
-          <input onChange={handleChange} value={user.password} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4"
+          <input onChange={handleChange} value={user.password} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4"
           type={isPasswordVisible ? "text" : "password"}
             id='email' name='password'/>
             <img 
@@ -123,7 +123,7 @@ function Login() {
             Login
           </button>
         </div>
-        <div className="my-10">
+        <div className="min-[769px]:my-10 ">
           <p className="text-lg font-semibold">Not having an account? <a className="text-[#F81539BF]" href="/sign-up">Sign Up</a></p>
         </div>
       </form>
