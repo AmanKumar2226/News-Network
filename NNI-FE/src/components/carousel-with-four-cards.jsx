@@ -54,6 +54,7 @@ function Four({ url, title }) {
           slidesToShow: 3,
           slidesToScroll: 3,
           initialSlide: 1,
+          dots:false
         },
       },
       {
@@ -61,6 +62,7 @@ function Four({ url, title }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots:false
         },
       },
     ],
@@ -72,7 +74,7 @@ function Four({ url, title }) {
         <h1 className="text-2xl font-semibold">{title}</h1>
       </div>
       {isLoading && <Spinner/>}
-      <div className="w-[82%] mb-10 mt-2 mx-auto dark:bg-[#2A2C38]">
+      <div className="min-[769px]:w-[82%] mb-10 mt-2 mx-auto dark:bg-[#2A2C38]">
         <div className="">
           <Slider className="text-black dark:text-white" {...settings}>
             {data.map((dataObj, index) => {
@@ -84,7 +86,7 @@ function Four({ url, title }) {
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
                     <a href={dataObj.url} target="_blank">
                     <img
-                      className=" h-[190px] w-[340px] ml-1 p-2 rounded-2xl"
+                      className=" h-[190px] w-[340px] min-[769px]:ml-1 p-2 rounded-2xl"
                       src={dataObj.urlToImage}
                       alt="image"
                     />
