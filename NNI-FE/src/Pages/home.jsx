@@ -19,7 +19,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
           title="Popular Posts"
         />
       </div>
-      <div className="my-10 p-5">
+      <div className="">
         <CardHome />
       </div>
       <div>
