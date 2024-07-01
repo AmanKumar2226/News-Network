@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "./spinner";
 import { useTheme } from '../utils/ThemeContext';
+import '../component-styles/home.css'
 
 
 function NewsCard({ url }) {
@@ -54,7 +55,7 @@ function NewsCard({ url }) {
 
   return (
     <>
-      <div className="flex flex-row align-middle justify-center mb-5">
+      <div className="flex flex-row align-middle justify-center mb-5 news-card">
         {isLoading && <Spinner />}
       </div>
       <div className="flex flex-wrap gap-10">

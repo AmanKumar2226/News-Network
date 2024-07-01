@@ -89,7 +89,7 @@ function SignUp() {
   };
 
   return (
-    <div className=' my-10 min-[769px]:mx-48 max-[769px]:mx-2'>
+    <div className=' my-10 min-[769px]:mx-48 max-[769px]:mx-2 dark:text-white'>
       <ToastContainer/> 
       <div className='my-2 mb-5'>
         <div className='flex gap-2 mb-2'>
@@ -117,11 +117,11 @@ function SignUp() {
         <div className='flex max-[769px]:flex-col justify-between max-[769px]:gap-2 gap-7'>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="firstName">First Name</label>
-            <input onChange={handleChange} value={newUser.firstName} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='firstName' name='firstName'/>
+            <input onChange={handleChange} value={newUser.firstName} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 dark:text-black" type="text" id='firstName' name='firstName'/>
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="lastName">Last Name</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='lastName' name='lastName'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 dark:text-black" type="text" id='lastName' name='lastName'/>
           </div>
           
         </div>
@@ -131,7 +131,7 @@ function SignUp() {
             <input 
               onChange={handleChange}
               value={newUser.password}
-              className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 pr-10"
+              className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 pr-10 dark:text-black"
               type={isPasswordVisible ? "text" : "password"}
               id='password'
               name='password'
@@ -149,7 +149,7 @@ function SignUp() {
             <input 
               onChange={handleChange}
               value={newUser.confirmPassword}
-              className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 pr-10"
+              className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4 pr-10 dark:text-black"
               type={isConfirmPasswordVisible ? "text" : "password"}
               id='confirmPassword'
               name='confirmPassword'
@@ -167,11 +167,11 @@ function SignUp() {
         <div className='flex max-[769px]:flex-col justify-between'>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="address">Address</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='address' name='address'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='address' name='address'/>
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="dateOfBirth">Date of Birth</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
           </div>
          
         </div>
@@ -184,7 +184,7 @@ function SignUp() {
           <div className='flex bg-[url("./images/banner-icon.png")] bg-no-repeat bg-center justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
               <div className='border-[2px] border-dashed rounded-xl w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >
               
-              <input className="opacity-0 h-full w-full" onChange={handleProfilePictureChange} type="file" id='profilePicture' name='profilePicture'/>
+              <input className="opacity-0 h-full w-full " onChange={handleProfilePictureChange} type="file" id='profilePicture' name='profilePicture'/>
               </div>  
           </div>
         </div>
@@ -193,15 +193,15 @@ function SignUp() {
         <div className='flex max-[769px]:flex-col justify-between'>
         <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="userName">User Name</label>
-            <input onChange={handleChange} value={newUser.userName} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='userName' name='userName'/>
+            <input onChange={handleChange} value={newUser.userName} className="dark:text-black bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" id='userName' name='userName'/>
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="email">Email</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="email" id='email' name='email'/>
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="phoneNumber">Phone Number</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" minLength={10} maxLength={10} id='phoneNumber' name='phoneNumber'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] max-[769px]:w-[358px] h-[48px] rounded-xl px-4" type="text" minLength={10} maxLength={10} id='phoneNumber' name='phoneNumber'/>
           </div>
         </div>
         <div>
