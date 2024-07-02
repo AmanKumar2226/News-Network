@@ -26,7 +26,7 @@ useEffect(()=>{
 
   return (
     <>
-      <div className="flex flex-col gap-5 mx-44  flex-wrap my-10 dark:text-white">
+      <div className="flex flex-col min-[769px]:gap-5 min-[769px]:mx-44 max-[769px]:mx-2  flex-wrap my-10 dark:text-white">
         <div className="flex gap-2 items-center">
           <img className='py-3' src="./images/red-icon.png" alt="" />
           <h1 className="text-3xl font-semibold ">
@@ -34,7 +34,7 @@ useEffect(()=>{
           </h1>
 
         </div>
-        <div className="flex flex-row gap-28 flex-wrap mt-5 mb-5">
+        <div className="flex flex-row min-[769px]:gap-28 flex-wrap mt-5 mb-5">
         {data.map((dataObj, index) => {
           return (
             <div

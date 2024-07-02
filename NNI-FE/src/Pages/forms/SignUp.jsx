@@ -171,7 +171,7 @@ function SignUp() {
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="dateOfBirth">Date of Birth</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
           </div>
          
         </div>
