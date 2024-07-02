@@ -1,5 +1,5 @@
 import express from "express";
-import { addUser, getUsers, login, updateUser } from "../controllers/userController.js";
+import { addUser, deleteUser, getUsers, login, updateUser } from "../controllers/userController.js";
 import upload from "../middlewares/multerConfig.js";
 import fetchUser from "../middlewares/fetchUser.js";
 const router = express.Router();
@@ -15,5 +15,5 @@ router.get("/get-users", fetchUser, getUsers);
 
 router.put("/update-user",fetchUser, updateUser);
 
-
+router.delete("/delete-user",fetchUser, deleteUser);
 export default router;

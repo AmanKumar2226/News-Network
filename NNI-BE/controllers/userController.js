@@ -2,6 +2,7 @@ import User from '../models/User.js'
 import bcrypt from 'bcryptjs'
 
 import jsonwebtoken from "jsonwebtoken";
+import mongoose from 'mongoose';
 
 export const addUser = async (req, res) => {
     try {
@@ -72,6 +73,14 @@ export const addUser = async (req, res) => {
           success: false,
           message:"user not found"
         });
+      }
+
+      const isPasswordCorrect = await bcrypt.compare(password, user.password);
+      if (!isPasswordCorrect) {
+          return res.status(401).json({
+              success: false,
+              message: "Incorrect password entered. Please check"
+          });
       }
   
       if (user && (await bcrypt.compare(password, user.password))) {
@@ -158,3 +167,16 @@ export const updateUser = async (req, res) => {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
+
+export const deleteUser = async(req, res)=>{
+  const userId = req.user.id;
+  console.log('Received ID:', userId); // Debugging line
+  const objectId =new mongoose.Types.ObjectId(userId); 
+    try{
+   await User.findByIdAndDelete(objectId);
+   res.status(200).send({ message: 'User deleted successfully' });
+  }
+  catch(err){
+    console.log("error deleting user"+err);
+  }
+}
