@@ -63,20 +63,15 @@ function Account() {
 
   return (
     <div className='bg-[#FAFBFC] dark:bg-[#2A2C38] dark:text-white'>
-      <div>
-        <div className='mb-44 relative flex justify-center items-end'>
-          <div className={`h-[350px] flex justify-end w-full items-end p-8 rounded-xl`} style={{ backgroundImage: `url(${bannerUrl})` }}>
+      <div className='w-full'>
+        <div className='min-[769px]:mb-44 relative flex max-[769px]:h-[400px]  w-full justify-center '>
+          <div className={`min-[769px]:h-[500px] max-[769px]:h-[330px] bg-no-repeat max-[769px]:bg-contain max-[769px]:object-cover bg-cover flex justify-end w-full items-end min-[769px]:mx-32 min-[769px]:my-10 rounded-xl`} style={{ backgroundImage: `url(${bannerUrl})` }}>
 
             {/* <img className='h-[450px] w-[1632px] rounded-xl relative' src="./images/cover1.jpg" alt="" /> */}
-            <button className='flex items-center gap-2 bg-[#8DD3BB] rounded-md py-2 px-4 h-[50px]'>
-              <img src="./images/Upload.png" alt="" />
-              <p className='text-[14px] font-medium'>Upload new cover</p>
-            </button>
-
           </div>
-          <div className='flex flex-col justify-center items-center absolute top-[280px] z-[999] gap-5'>
+          <div className='flex flex-col justify-center items-center absolute top-[450px] max-[769px]:top-[170px] z-[999] gap-5'>
             <div>
-              <img className='w-[150px] h-[150px] border-[3px] border-[#FF8682] rounded-full' src={details.profilePicture} alt="" />
+              <img className='min-[769px]:w-[150px] min-[769px]:h-[150px] max-[769px]:h-[100px] max-[769px]:w-[100px] border-[3px] border-[#FF8682] rounded-full' src={details.profilePicture} alt="" />
             </div>
             <div className='text-center'>
               <h1 className='text-[24px] font-semibold '>{details.firstName} {details.lastName}</h1>
@@ -96,89 +91,55 @@ function Account() {
           </div>
         </div> */}
       </div>
-      <section className='font-["Montserrat"] mx-32 mt-12'>
+      <section className='font-["Montserrat"] min-[768px]:mx-32 max-[769px]:mx-2 min-[769px]:mt-12'>
 
         <h1 className='font-bold text-[32px] font-["Trade_Gothic_LT_Std"] mb-4'>Account</h1>
-        <div className="flex flex-col gap-8 w-full py-8 px-6 shadow-[0px_4px_16px_0px_rgba(17,34,17,0.05)] font-['Montserrat'] rounded-2xl">
+        <div className="flex flex-col gap-8 w-full py-8 px-6 dark:bg-[#1F1F1F] shadow-[0px_4px_16px_0px_rgba(17,34,17,0.05)] font-['Montserrat'] rounded-2xl">
           <div className='flex items-center justify-between w-full'>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Name</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Name</p>
               <h1 className='text-[20px] font-semibold'>{details.firstName + " " + details.lastName}</h1>
-            </div>
-            <div>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
             </div>
           </div>
           <div className='flex items-center justify-between w-full '>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Email</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Email</p>
               <h1 className='text-[20px] font-semibold'>{details.email}</h1>
             </div>
-            <div className='flex gap-2'>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Add_circle_small.png" alt="" />
-                <p>Add another email</p>
-              </button>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
-            </div>
           </div>
           <div className='flex items-center justify-between w-full'>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Password</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Password</p>
               <h1 className='text-[20px] font-semibold'>************</h1>
             </div>
-            <div>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
-            </div>
           </div>
           <div className='flex items-center justify-between w-full'>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Phone number</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Phone number</p>
               <h1 className='text-[20px] font-semibold'>{details.phoneNumber}</h1>
             </div>
-            <div>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
-            </div>
           </div>
           <div className='flex items-center justify-between w-full'>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Address</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Address</p>
               <h1 className='text-[20px] font-semibold'>{details.address}</h1>
             </div>
-            <div>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
-            </div>
           </div>
           <div className='flex items-center justify-between w-full'>
             <div>
-              <p className='text-[16px] font-normal text-[#11221175]'>Date of birth</p>
+              <p className='text-[16px] font-normal text-[#11221175] dark:text-white'>Date of birth</p>
               <h1 className='text-[20px] font-semibold'>{details.dateOfBirth}</h1>
             </div>
-            <div>
-              <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex items-center gap-2 rounded'>
-                <img src="./images/Edit.png" alt="" />
-                <p>Change</p>
-              </button>
-            </div>
+
           </div>
         </div>
         <div className='w-full flex justify-center items-center my-10'>
-          <button className='border-[1px] border-[#8DD3BB] py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded' onClick={handleLogout}>Logout</button>
+          <button onClick={()=>{navigate('/update-profile')}} className='border-[1px] bg-[#8DD3BB] dark:bg-[#1F1F1F] hover:border-[#8DD3BB] hover:bg-white py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded'>
+            Edit Profile
+          </button>
+        </div>
+        <div className='w-full flex justify-center items-center my-10'>
+          <button className='border-[1px] hover:bg-[#8DD3BB] border-[#8DD3BB] py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded' onClick={handleLogout}>Logout</button>
         </div>
       </section>
     </div>

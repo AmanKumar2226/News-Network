@@ -28,6 +28,7 @@ import NotFound from './components/NotFound'
 import Account from './Pages/Account'
 import BackToTopButton from './utils/BackToTop'
 import ThemeSwitcher from './utils/ThemeSwitcher'
+import UpdateProfile from './Pages/forms/UpdateProfile'
 
 function App(){
  
@@ -58,6 +59,7 @@ function App(){
           <Route path="articles-from-us" element={<NNIArticles/>}/>
           <Route path="weather-today" element={<Weather/>}/>
           <Route path="news-description" element={<NewsDescription/>}/>
+          <Route path="update-profile" element={<UpdateProfile/>}/>
       </Routes> 
           <ThemeSwitcher/>
           <BackToTopButton/>

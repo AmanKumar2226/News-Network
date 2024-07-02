@@ -112,3 +112,49 @@ export const getUsers = async (req, res) => {
     console.log(error)
   }
 };
+
+export const updateUser = async (req, res) => {
+  try {
+    const userId = req.user;
+    // Assuming req.user contains the authenticated user's information
+    console.log(userId)
+    // Extract fields that can be updated
+    const { firstName, lastName, userName, email, phoneNumber, address, dateOfBirth } = req.body;
+    // Find the user by userId
+    let user = await User.findById(userId.id)
+
+    // If user not found
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    // Update user object with new values
+    if (firstName) user.firstName = firstName;
+    if (lastName) user.lastName = lastName;
+    if (userName) user.userName = userName;
+    if (email) user.email = email;
+    if (phoneNumber) user.phoneNumber = phoneNumber;
+    if (address) user.address = address;
+    if (dateOfBirth) user.dateOfBirth = new Date(dateOfBirth); // Parse date string to Date object
+    
+    // Save updated user to the database
+    user = await user.save();
+
+    // Optionally, you can generate a new JWT token here if needed
+    const jwt = jsonwebtoken;
+    const token = jwt.sign(
+      {
+        id: user._id,
+        email: user.email,
+      },
+      "shhhh"
+    );
+    user.token = token;
+
+    // Respond with updated user data
+    res.status(200).json({ success: true, user });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};

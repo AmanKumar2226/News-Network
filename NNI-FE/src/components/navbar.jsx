@@ -75,17 +75,14 @@ export default function Navbar() {
   return (
     <>
       <div className="pt-2 flex flex-row items-center header-container mx-auto px-5 lg:px-10 bg-white pb-2 border-solid border-2 border-black-500 dark:border-none shadow-md dark:shadow-none justify-between dark:bg-[#2A2C38] dark:text-white ">
-        <div className="flex flex-col">
-          <div className="flex flex-row items-center text-xl max-[768px]:hidden gap-3 font-semibold">
+        <div className="flex gap-5">
+          <div className="flex flex-row items-center ml-11 text-xl max-[768px]:hidden gap-3 font-semibold">
             <a href="/">
-              <img className="logo dark:mix-blend-screen " src={theme === "light" ? "./images/logo.jpg" : "./images/logo-white.jpeg"} alt="logo" />
-            </a>
-            <a href="/">
-              <h1>News Network India</h1>
+              <img className="logo w-[100px] h-[50px]" src="./images/logo-new.png" alt="logo" />
             </a>
           </div>
-          <div className="w-3/4 absolute top-12 left-32 max-[768px]:hidden">
-            <p className="text-sm">Today is {Date().slice(0, 16)}</p>
+          <div className="flex items-center">
+            <p className="text-lg dark:text-white text-[#1F1F1F]">Today is <br/> <span className="font-semibold">{Date().slice(0,16)}</span></p>
           </div>
         </div>
 
@@ -120,7 +117,7 @@ export default function Navbar() {
             {isMenuOpen && (
               <div className={`top-0 left-0 h-screen z-[9999] fixed py-4 px-2 ${menuClass} dark:bg-[#2A2C38] bg-white w-[390px]`}>
                 <div className="mb-5 flex justify-between mr-10">
-                <img className="logo dark:mix-blend-screen h-[50px] w-[50px]" src={theme === "light" ? "./images/logo.jpg" : "./images/logo-white.jpeg"} alt="logo" />
+                <img className="logo dark:mix-blend-screen h-[50px] w-[100px]" src="./images/logo-new.png" alt="logo" />
                   <button
                     onClick={toggleMenu} className="text-xl dark:bg-[#1F1F1F] dark:text-white font-bold bg-[#F5F5F5] p-1 h-[48px] w-[48px] px-4 rounded-xl">
                     X

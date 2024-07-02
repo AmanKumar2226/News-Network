@@ -1,8 +1,7 @@
 import express from "express";
-import { addUser, getUsers, login } from "../controllers/userController.js";
+import { addUser, getUsers, login, updateUser } from "../controllers/userController.js";
 import upload from "../middlewares/multerConfig.js";
 import fetchUser from "../middlewares/fetchUser.js";
-
 const router = express.Router();
 
 router.post("/sign-up", upload.fields([
@@ -13,6 +12,8 @@ router.post("/sign-up", upload.fields([
   router.post("/login", login)
 
 router.get("/get-users", fetchUser, getUsers);
+
+router.put("/update-user",fetchUser, updateUser);
 
 
 export default router;
