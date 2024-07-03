@@ -19,6 +19,9 @@ function SignUp() {
     banner: "",
   });
 
+  const [profilePreview, setprofilePreview] = useState("./images/banner-icon.png")
+  const [bannerPreview, setbannerPreview] = useState("./images/banner-icon.png")
+
   const [isSame, setIsSame] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false);
@@ -30,11 +33,13 @@ function SignUp() {
   const handleProfilePictureChange = (event) => {
     const selectedFile = event.target.files[0];
     setNewUser({ ...newUser, profilePicture: selectedFile });
+    setprofilePreview(URL.createObjectURL(selectedFile));
   };
 
   const handleBannerChange = (event) =>{
     const selectedBanner = event.target.files[0];
     setNewUser({...newUser, banner: selectedBanner });
+    setbannerPreview(URL.createObjectURL(selectedBanner));
   }
 
   const saveUser = async () => {
@@ -181,10 +186,12 @@ function SignUp() {
           <label className="font-semibold" htmlFor="profilePicture">
               Profile Picture
           </label>
-          <div className='flex bg-[url("./images/banner-icon.png")] bg-no-repeat bg-center justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2'>
-              <div className='border-[2px] border-dashed rounded-xl w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >
+          <div className={`flex justify-center w-[488px] h-[340px] items-center bg-[#F5F5F5] rounded-xl mt-2`}
+          style={{ backgroundImage: `url(${profilePreview})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
+          >
+              <div className='relative border-[2px] border-dashed rounded-xl w-[95%] flex gap-5 flex-col items-center justify-center h-[95%]' >              
+              <input className="opacity-0 h-full w-full" onChange={handleProfilePictureChange} type="file" id='profilePicture' name='profilePicture'/>
               
-              <input className="opacity-0 h-full w-full " onChange={handleProfilePictureChange} type="file" id='profilePicture' name='profilePicture'/>
               </div>  
           </div>
         </div>
@@ -208,7 +215,9 @@ function SignUp() {
           <label className="font-semibold" htmlFor="banner">
               Add Banner
           </label>
-          <div className='flex bg-[url("./images/banner-icon.png")] bg-no-repeat bg-center justify-center items-center bg-[#F5F5F5] h-[170px] rounded-xl mt-2'>
+          <div className='flex justify-center items-center bg-[#F5F5F5] h-[170px] rounded-xl mt-2'
+          style={{ backgroundImage: `url(${bannerPreview})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
+          >
               <div className='border-[2px] border-dashed w-[98%] rounded-xl flex items-center justify-center h-[85%]' >
               
               <input className='opacity-0 h-full w-full' onChange={handleBannerChange} type="file" id='banner' name='banner'/>
