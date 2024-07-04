@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
+import DeleteAccModal from '../components/Modals/DeleteAccModal';
 function Account() {
   const navigate = useNavigate()
   let token = localStorage.getItem('token')
@@ -61,15 +62,26 @@ function Account() {
       : `http://localhost:8080/uploads/${sanitizeUrl(details.banner)}`
     : '';
 
+    const showModal = ()=>{
+      setisClicked(true);
+  }
+  const [isClicked, setisClicked] = useState(false);
+    const closeModal = () => setisClicked(false);
+
+
   return (
+    <>
+    {isClicked && <DeleteAccModal closeModal={closeModal} />}
+   
     <div className='bg-[#FAFBFC] dark:bg-[#2A2C38] dark:text-white'>
+      
       <div className='w-full'>
         <div className='min-[769px]:mb-44 relative flex max-[769px]:h-[400px]  w-full justify-center '>
           <div className={`min-[769px]:h-[500px] max-[769px]:h-[330px] bg-no-repeat max-[769px]:bg-contain max-[769px]:object-cover bg-cover flex justify-end w-full items-end min-[769px]:mx-32 min-[769px]:my-10 rounded-xl`} style={{ backgroundImage: `url(${bannerUrl})` }}>
 
             {/* <img className='h-[450px] w-[1632px] rounded-xl relative' src="./images/cover1.jpg" alt="" /> */}
           </div>
-          <div className='flex flex-col justify-center items-center absolute top-[450px] max-[769px]:top-[170px] z-[999] gap-5'>
+          <div className='flex flex-col justify-center items-center absolute top-[450px] max-[769px]:top-[170px] z-[50] gap-5'>
             <div>
               <img className='min-[769px]:w-[150px] min-[769px]:h-[150px] max-[769px]:h-[100px] max-[769px]:w-[100px] border-[3px] border-[#FF8682] rounded-full' src={details.profilePicture} alt="" />
             </div>
@@ -133,16 +145,20 @@ function Account() {
 
           </div>
         </div>
-        <div className='w-full flex justify-center items-center my-10'>
-          <button onClick={()=>{navigate('/update-profile')}} className='border-[1px] bg-[#8DD3BB] dark:bg-[#1F1F1F] hover:border-[#8DD3BB] hover:bg-white py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded'>
+        <div className='xl:w-[50%] w-full xl:ml-[410px] gap-5 flex flex-col xl:flex-row justify-center items-center xl:my-10 mt-10'>
+          <button onClick={()=>{navigate('/update-profile')}} className='border-[1px]  bg-[#8DD3BB] dark:bg-[#1F1F1F] hover:border-[#8DD3BB] hover:bg-white py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded'>
             Edit Profile
           </button>
+          <button onClick={showModal} className='border-[1px] text-white hover:text-black bg-[#ff0505] dark:bg-[#1F1F1F] hover:border-[#ff0505] hover:bg-white py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded'>
+            Delete Profile
+          </button>
         </div>
-        <div className='w-full flex justify-center items-center my-10'>
+        <div className='w-full flex justify-center items-center xl:my-10 my-5'>
           <button className='border-[1px] hover:bg-[#8DD3BB] border-[#8DD3BB] py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded' onClick={handleLogout}>Logout</button>
         </div>
       </section>
     </div>
+    </>
   )
 }
 
