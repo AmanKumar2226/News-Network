@@ -21,6 +21,7 @@ function SignUp() {
 
   const [profilePreview, setprofilePreview] = useState("./images/banner-icon.png")
   const [bannerPreview, setbannerPreview] = useState("./images/banner-icon.png")
+  const [isAdult, setIsAdult] = useState()
 
   const [isSame, setIsSame] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -69,15 +70,35 @@ function SignUp() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     validatePassword();
+
   };
 
+  const validDob =()=>{
+    const today = new Date();
+    const birthday = new Date(newUser.dateOfBirth);
+    const age = today.getFullYear() - birthday.getFullYear();
+  
+    if(age<18){
+      setIsAdult(false)
+    }
+    else{
+      setIsAdult(true)
+    }
+  }
+
+  
   const validatePassword = () => {
+    validDob()
     if (newUser.password !== newUser.confirmPassword) {
       document.getElementById("err").innerText = "Please enter the same password";
       document.getElementById('err').style.color = "red";
       setIsSame(false);
-    } else {
+    } else if(isAdult === false){
+      alert("you are under aged")
+    }
+    else {
       setIsSame(true);
       saveUser();
       navigate('/login');
@@ -176,7 +197,7 @@ function SignUp() {
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="dateOfBirth">Date of Birth</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth' value={newUser.dateOfBirth}/>
           </div>
          
         </div>
