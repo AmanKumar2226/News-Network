@@ -81,7 +81,7 @@ export default function Navbar() {
               <img className="logo w-[100px] h-[50px]" src="./images/logo-new.png" alt="logo" />
             </a>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center max-[769px]:hidden">
             <p className="text-lg dark:text-white text-[#1F1F1F]">Today is <br/> <span className="font-semibold">{Date().slice(0,16)}</span></p>
           </div>
         </div>
@@ -118,6 +118,9 @@ export default function Navbar() {
               <div className={`top-0 left-0 h-screen z-[9999] fixed py-4 px-2 ${menuClass} dark:bg-[#2A2C38] bg-white w-[390px]`}>
                 <div className="mb-5 flex justify-between mr-10">
                 <img className="logo dark:mix-blend-screen h-[50px] w-[100px]" src="./images/logo-new.png" alt="logo" />
+                <div className="flex items-center mr-10">
+            <p className="text-md dark:text-white text-[#1F1F1F]">Today is <br/> <span className="font-semibold">{Date().slice(0,16)}</span></p>
+          </div>
                   <button
                     onClick={toggleMenu} className="text-xl dark:bg-[#1F1F1F] dark:text-white font-bold bg-[#F5F5F5] p-1 h-[48px] w-[48px] px-4 rounded-xl">
                     X
