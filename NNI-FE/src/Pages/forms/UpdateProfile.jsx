@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import Breadcrumb from '../../components/breadcrumb';
 function UpdateProfile() {
     let token = localStorage.getItem('token')
   token = token.replace(/"/g, '')
@@ -57,6 +58,8 @@ function UpdateProfile() {
   };
 
   return (
+   <>
+   <Breadcrumb/>
     <div className=' my-10 min-[769px]:mx-48 max-[769px]:mx-2 dark:text-white'>
       <ToastContainer/> 
       <div className='my-2 mb-5'>
@@ -145,7 +148,7 @@ function UpdateProfile() {
           </div>
         </div>
       </form>
-    </div>
+    </div></>
   )
 }
 

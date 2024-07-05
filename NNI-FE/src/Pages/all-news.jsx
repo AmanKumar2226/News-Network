@@ -1,9 +1,12 @@
+import Breadcrumb from "../components/breadcrumb";
+import Category from "../components/category-navbar";
 import NewsCard from "../components/news-card";
 
 export default function AllNews() {
     return (
         <>
-
+        <Category/>
+        <Breadcrumb/>
             <div className="min-w[769px]:px-10 max-[769px]:mx-2 py-10 flex-col min-[769px]:mx-32 flex justify-center dark:text-white">
 
                 <div className="flex gap-2 items-center">

@@ -44,7 +44,7 @@ let token = localStorage.getItem('token')
       <div className='overflow-hidden top-1/2 left-1/2 -translate-x-[50%] p-10 -translate-y-[50%] xl:w-[597px] xl:h-[667px] w-[250px] h-[300px] rounded-3xl fixed z-[99] shadow-lg bg-white'>
      
           <div className='flex justify-center'>
-            <img className='xl:w-[450px] xl:h-[300px] w-[70px] h-[50px]' src="./images/delete.png" alt="" />
+            <img className='xl:w-[250px] xl:h-[250px] w-[50px] h-[50px]' src="./images/delete1.png" alt="" />
           </div>
           <div className='xl:text-[20px] flex-col items-center text-[16px] font-semibold flex justify-center xl:mt-5 mt-2 gap-5'>
             <h1 className='max-[769px]:hidden text-3xl'>Account Deletion</h1>

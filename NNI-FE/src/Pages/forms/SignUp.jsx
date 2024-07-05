@@ -2,6 +2,7 @@ import { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import Breadcrumb from '../../components/breadcrumb';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ function SignUp() {
 
   const [profilePreview, setprofilePreview] = useState("./images/banner-icon.png")
   const [bannerPreview, setbannerPreview] = useState("./images/banner-icon.png")
+  const [isAdult, setIsAdult] = useState()
 
   const [isSame, setIsSame] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -69,20 +71,39 @@ function SignUp() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     validatePassword();
+
   };
 
+  
   const validatePassword = () => {
-    if (newUser.password !== newUser.confirmPassword) {
-      document.getElementById("err").innerText = "Please enter the same password";
-      document.getElementById('err').style.color = "red";
-      setIsSame(false);
-    } else {
-      setIsSame(true);
-      saveUser();
-      navigate('/login');
-      toast.success("User registered successfully");
-    }
+     // Check if user is an adult
+  const today = new Date();
+  const birthday = new Date(newUser.dateOfBirth);
+  const age = today.getFullYear() - birthday.getFullYear();
+  
+  if (age < 18) {
+    setIsAdult(false);
+    toast.error("You must be 18 or older to sign up.");
+    return; // Exit the function if user is not an adult
+  } else {
+    setIsAdult(true);
+  }
+
+  // Check if passwords match
+  if (newUser.password !== newUser.confirmPassword) {
+    document.getElementById("err").innerText = "Please enter the same password.";
+    document.getElementById('err').style.color = "red";
+    setIsSame(false);
+    return; // Exit the function if passwords don't match
+  }
+
+  // If both conditions above are satisfied, proceed
+  setIsSame(true);
+  saveUser();
+  navigate('/login');
+  toast.success("User registered successfully");
   };
 
   const togglePasswordVisibility = () => {
@@ -94,6 +115,8 @@ function SignUp() {
   };
 
   return (
+    <>
+    <Breadcrumb/>
     <div className=' my-10 min-[769px]:mx-48 max-[769px]:mx-2 dark:text-white'>
       <ToastContainer/> 
       <div className='my-2 mb-5'>
@@ -176,7 +199,7 @@ function SignUp() {
           </div>
           <div className='flex flex-col gap-2'>
             <label className="font-semibold" htmlFor="dateOfBirth">Date of Birth</label>
-            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth'/>
+            <input onChange={handleChange} className="bg-[#F5F5F5] dark:text-black min-[769px]:w-[488px] h-[48px] rounded-xl px-4" type="date" id='dateOfBirth' name='dateOfBirth' value={newUser.dateOfBirth}/>
           </div>
          
         </div>
@@ -237,7 +260,8 @@ function SignUp() {
           </div>
         </div>
       </form>
-    </div>
+    </div></>
+    
   )
 }
 
