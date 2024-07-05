@@ -1,6 +1,8 @@
 import {useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTheme } from '../utils/ThemeContext';
+import Category from '../components/category-navbar';
+import Breadcrumb from '../components/breadcrumb';
 
 function NNIArticles() {
   const {theme} = useTheme();
@@ -26,6 +28,9 @@ useEffect(()=>{
 
   return (
     <>
+      
+<Category/>
+<Breadcrumb/>
       <div className="flex flex-col min-[769px]:gap-5 min-[769px]:mx-44 max-[769px]:mx-2  flex-wrap my-10 dark:text-white">
         <div className="flex gap-2 items-center">
           <img className='py-3' src="./images/red-icon.png" alt="" />

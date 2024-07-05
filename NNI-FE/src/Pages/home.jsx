@@ -3,10 +3,17 @@ import One from "../components/carousel-with-one-card";
 import Four from "../components/carousel-with-four-cards";
 import Weather from "../components/weather";
 import LatestVideos from "../components/LatestVideos";
+import Marquee from "../components/Marquee";
+import Category from "../components/category-navbar";
+import Breadcrumb from "../components/breadcrumb";
 
 export default function Home() {
   return (
-    <div className="dark:text-white">
+    <div>
+      <Marquee/>
+      <Category/> 
+      <Breadcrumb/>
+      <div className="dark:text-white">
       <div className="my-10 min-[769px]:mx-44  max-[769px]:mx-2  flex gap-2">
         <img src="./images/red-icon.png" className="py-3" alt="" />
         <h1 className="text-2xl font-semibold">Latest Updates</h1>
@@ -161,5 +168,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
         
       </div>
     </div>
+    </div>
+    
   );
 }

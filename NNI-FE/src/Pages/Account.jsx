@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import DeleteAccModal from '../components/Modals/DeleteAccModal';
+import Breadcrumb from '../components/breadcrumb';
 function Account() {
   const navigate = useNavigate()
   let token = localStorage.getItem('token')
@@ -72,7 +73,7 @@ function Account() {
   return (
     <>
     {isClicked && <DeleteAccModal closeModal={closeModal} />}
-   
+   <Breadcrumb/>
     <div className='bg-[#FAFBFC] dark:bg-[#2A2C38] dark:text-white'>
       
       <div className='w-full'>

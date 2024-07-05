@@ -1,9 +1,13 @@
 import React from "react";
 import NewsCard from "../components/news-card";
+import Category from "../components/category-navbar";
+import Breadcrumb from "../components/breadcrumb";
 function General() {
 
   return (
     <>
+    <Category/>
+    <Breadcrumb/>
       <div className="min-w[769px]:px-10 max-[769px]:mx-2 min-[769px]-gap-5  min-[769px]-flex-wrap justify-center py-10 flex-col min-[769px]:mx-40 flex dark:text-white">
         <div className="flex gap-2">
           <img className="py-3" src="./images/red-icon.png" alt="" />

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
+import Breadcrumb from "../../components/breadcrumb";
 
 function Login() {
   let navigate = useNavigate();
@@ -83,6 +84,8 @@ function Login() {
   }
 
   return (
+    <>
+    <Breadcrumb/>
     <div className='my-10 dark:text-white max-[769px]:mx-2'>
       <ToastContainer/>
       <div className='my-2 mb-10 flex justify-center mr-36'>
@@ -127,7 +130,8 @@ function Login() {
           <p className="text-lg font-semibold">Not having an account? <a className="text-[#F81539BF]" href="/sign-up">Sign Up</a></p>
         </div>
       </form>
-    </div>
+    </div></>
+    
   )
 }
 

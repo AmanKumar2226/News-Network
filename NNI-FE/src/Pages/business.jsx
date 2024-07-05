@@ -1,8 +1,12 @@
 
+import Breadcrumb from "../components/breadcrumb";
+import Category from "../components/category-navbar";
 import NewsCard from "../components/news-card";
 function Business() {
   return (
     <>
+    <Category/>
+    <Breadcrumb/>
       <div className="flex flex-col gap-5 flex-wrap justify-center min-[769px]:mx-40 max-[769px]:mx-2 my-10 dark:text-white">
         <div className="flex gap-2">
           <img className="py-3" src="./images/red-icon.png" alt="" />

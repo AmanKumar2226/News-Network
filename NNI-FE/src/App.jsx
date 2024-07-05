@@ -29,16 +29,15 @@ import Account from './Pages/Account'
 import BackToTopButton from './utils/BackToTop'
 import ThemeSwitcher from './utils/ThemeSwitcher'
 import UpdateProfile from './Pages/forms/UpdateProfile'
-import Marquee from './components/Marquee'
 
 function App(){
  
   return (
     <>
     <Navbar />
-    <Marquee/>
-    <Category/> 
-    <Breadcrumb/>
+  
+    
+    
        <Routes>
        <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />

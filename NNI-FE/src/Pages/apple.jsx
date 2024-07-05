@@ -1,4 +1,6 @@
 
+import Breadcrumb from '../components/breadcrumb';
+import Category from '../components/category-navbar';
 import NewsCard from '../components/news-card';
 
 
@@ -6,6 +8,8 @@ function Apple() {
 
   return (
     <div className='ml-14 p-5 dark:text-white'>
+      <Category/>
+      <Breadcrumb/>
       <div>
 
       </div>
