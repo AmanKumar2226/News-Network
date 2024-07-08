@@ -23,3 +23,21 @@ export const getNews = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+export const deleteNews = async(req, res)=>{
+  try{
+    const id = req.params.id;
+    console.log(id);
+    const doc = await News.findByIdAndDelete(id);
+    if(!doc){
+      return res.json({message:"news not found"})
+    }
+    else{
+      return res.json({status:"200", message:"News deleted successfully"})
+    }
+  }
+  catch(err){
+    console.log(err);
+    res.status(500).json({message:"Server error"})
+  }
+}
