@@ -2,6 +2,7 @@ import { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import Breadcrumb from '../../components/breadcrumb';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -75,35 +76,34 @@ function SignUp() {
 
   };
 
-  const validDob =()=>{
-    const today = new Date();
-    const birthday = new Date(newUser.dateOfBirth);
-    const age = today.getFullYear() - birthday.getFullYear();
-  
-    if(age<18){
-      setIsAdult(false)
-    }
-    else{
-      setIsAdult(true)
-    }
-  }
-
   
   const validatePassword = () => {
-    validDob()
-    if (newUser.password !== newUser.confirmPassword) {
-      document.getElementById("err").innerText = "Please enter the same password";
-      document.getElementById('err').style.color = "red";
-      setIsSame(false);
-    } else if(isAdult === false){
-      alert("you are under aged")
-    }
-    else {
-      setIsSame(true);
-      saveUser();
-      navigate('/login');
-      toast.success("User registered successfully");
-    }
+     // Check if user is an adult
+  const today = new Date();
+  const birthday = new Date(newUser.dateOfBirth);
+  const age = today.getFullYear() - birthday.getFullYear();
+  
+  if (age < 18) {
+    setIsAdult(false);
+    toast.error("You must be 18 or older to sign up.");
+    return; // Exit the function if user is not an adult
+  } else {
+    setIsAdult(true);
+  }
+
+  // Check if passwords match
+  if (newUser.password !== newUser.confirmPassword) {
+    document.getElementById("err").innerText = "Please enter the same password.";
+    document.getElementById('err').style.color = "red";
+    setIsSame(false);
+    return; // Exit the function if passwords don't match
+  }
+
+  // If both conditions above are satisfied, proceed
+  setIsSame(true);
+  saveUser();
+  navigate('/login');
+  toast.success("User registered successfully");
   };
 
   const togglePasswordVisibility = () => {
@@ -115,6 +115,8 @@ function SignUp() {
   };
 
   return (
+    <>
+    <Breadcrumb/>
     <div className=' my-10 min-[769px]:mx-48 max-[769px]:mx-2 dark:text-white'>
       <ToastContainer/> 
       <div className='my-2 mb-5'>
@@ -258,7 +260,8 @@ function SignUp() {
           </div>
         </div>
       </form>
-    </div>
+    </div></>
+    
   )
 }
 

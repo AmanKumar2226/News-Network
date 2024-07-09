@@ -1,9 +1,11 @@
 import React from "react";
 import { useTheme } from '../utils/ThemeContext';
+import Breadcrumb from "../components/breadcrumb";
 export default function AboutUs() {
     const {theme} = useTheme();
     return (
         <>
+        <Breadcrumb/>
             <div className="dark:text-white">
                 <div className="min-[769px]:w-[80%] max-[769px]:mx-2 bg-[#F5F5F5] dark:bg-[#1F1F1F] rounded-xl my-10 p-8 min-[769px]:mx-44">
                     <div className="mb-10">
