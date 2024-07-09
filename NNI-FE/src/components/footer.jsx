@@ -6,12 +6,12 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="max-[769px]:hidden w-full flex dark:text-white pt-5">
-          <div className="w-1/2 bg-[#F5F5F5] dark:bg-[#1F1F1F] rounded-e-[50px] py-10 pr-10">
+        <div className="w-full flex dark:text-white xl:pt-5">
+          <div className="xl:w-1/2 w-full bg-[#F5F5F5] dark:bg-[#1F1F1F] xl:rounded-e-[50px] xl:py-10 px-[16px] xl:px-0 xl:pr-10">
             <div className="flex flex-col">
-              <div className="flex justify-around">
+              <div className="flex flex-col xl:flex-row justify-around">
                 <div className="flex flex-col">
-                  <div className="w-[385px] text-justify pl-14 mb-5">
+                  <div className="w-[385px] text-justify xl:pl-14 mb-5">
                     <div className="flex items-center mb-5">
                       <img
                         src="./images/red-icon.png"
@@ -23,7 +23,7 @@ export default function Footer() {
                       </h1>
                     </div>
 
-                    <p>
+                    <p className="">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu
@@ -33,7 +33,7 @@ export default function Footer() {
                       Mattis pellentesque id nibh tortor id aliquet lectus proin
                     </p>
                   </div>
-                  <div className="pl-14">
+                  <div className="xl:pl-14">
                     <h1 className="flex items-center text-xl font-semibold mb-3 mt-2">
                       <img
                         className="py-2 pr-2"
@@ -74,7 +74,7 @@ export default function Footer() {
                       />
                       Categories
                     </h1>
-                    <ul className="flex flex-col gap-2">
+                    <ul className="flex xl:flex-col gap-2 text-[12px]">
                       <li>Culture</li>
                       <li>Fashion</li>
                       <li>Featured</li>
@@ -84,7 +84,7 @@ export default function Footer() {
                     </ul>
                   </div>
                   <div>
-                    <div className="flex gap-2 mb-2 mt-16">
+                    <div className="flex gap-2 mb-2 xl:mt-16 mt-2">
                       <img src="./images/red-icon.png" alt="" className="py-2" />
                       <h1 className="text-xl font-semibold">Social Network</h1>
                     </div>
@@ -100,19 +100,18 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between p-5 gap-5 bg-[rgba(62,50,50,0.05)] w-[92%] rounded-e-[12px] pl-32">
-                <div className="flex gap-2">
-                  <h1 className="text-[14px]">Privacy Policy</h1>
-                  <p>|</p>
-                  <h1>Terms & Conditions</h1>
+              <div className="flex justify-between xl:p-5 xl:gap-5 xl:bg-[rgba(62,50,50,0.05)] xl:w-[92%] w-full xl:rounded-e-[12px] xl:pl-32 py-[16px] text-nowrap">
+                <div className="flex">
+                  <h1 className="xl:text-[14px] text-[11px] border-r-[1px] pr-1 border-black">Privacy Policy</h1>
+                  <h1 className="xl:text-[14px] text-[11px] pl-1">Terms & Conditions</h1>
                 </div>
                 <div>
-                  <h1 className="text-[14px]">All copyright (c) 2024 reserved</h1>
+                  <h1 className="xl:text-[14px] text-[11px]">All copyright (c) 2024 reserved</h1>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-1/2 py-10 px-6 flex gap-5">
+          <div className="w-1/2 hidden xl:flex py-10 px-6 gap-5">
             <div className="w-1/2">
               <h1 className="flex text-xl font-semibold">
                 <img src="./images/red-icon.png" alt="" className="py-2 pr-2" />
