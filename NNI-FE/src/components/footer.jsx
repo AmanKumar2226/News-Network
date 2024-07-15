@@ -24,13 +24,7 @@ export default function Footer() {
                     </div>
 
                     <p className="">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu
-                      cursus vitae congue mauris rhoncus aenean vel elit
-                      scelerisque. In egestas erat imperdiet sed euismod nisi
-                      porta lorem mollis. Morbi tristique senectus et netus.
-                      Mattis pellentesque id nibh tortor id aliquet lectus proin
+                    Welcome to Global News, your go-to destination for breaking news, insightful analysis, and thought-provoking features from around the globe. We are dedicated to delivering accurate and timely information on a wide range of topics, including politics, technology, science, business, culture, and more.
                     </p>
                   </div>
                   <div className="xl:pl-14">
