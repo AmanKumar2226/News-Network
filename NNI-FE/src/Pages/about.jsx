@@ -130,111 +130,48 @@ export default function AboutUs() {
         <div className="min-[769px]:mx-32 max-[769px]:mx-2 my-10">
           <div className="flex gap-2 my-10 items-center">
             <img className="py-3" src="./images/red-icon.png" alt="" />
-            <h1 className="text-xl font-semibold">NNI Team</h1>
+            <h1 className="text-xl font-semibold">Global News Team</h1>
           </div>
-          <div className="flex max-[769px]:flex-wrap gap-2 justify-between mb-20">
-            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
+          <div className="flex max-[769px]:flex-wrap gap-10 mb-20">
+            
+          <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
               <div>
                 <img
                   className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
+                  src="./images/aman.jpeg"
                   alt=""
                 />
               </div>
               <div className="mt-[25px]">
-                <h2>designer</h2>
+                <h2>MERN Stack Developer</h2>
               </div>
               <div className="w-full mt-[25px]">
+                <a target="_blank" href="https://www.instagram.com/_kumar_aman_1120/">
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
+                 Aman Kumar
                 </button>
+                </a>
               </div>
             </div>
             <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
               <div>
                 <img
                   className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
+                  src="./images/gaurav.jpeg"
                   alt=""
                 />
               </div>
               <div className="mt-[25px]">
-                <h2>designer</h2>
+                <h2>MERN Stack Developer</h2>
               </div>
               <div className="w-full mt-[25px]">
-                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
-                </button>
+                
+                <a target="_blank" href="https://www.instagram.com/_thisgaurav/"><button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
+                 Gaurav Garg
+                </button></a>
               </div>
             </div>
-            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
-              <div>
-                <img
-                  className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="mt-[25px]">
-                <h2>designer</h2>
-              </div>
-              <div className="w-full mt-[25px]">
-                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
-                </button>
-              </div>
-            </div>
-            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
-              <div>
-                <img
-                  className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="mt-[25px]">
-                <h2>designer</h2>
-              </div>
-              <div className="w-full mt-[25px]">
-                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
-                </button>
-              </div>
-            </div>
-            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
-              <div>
-                <img
-                  className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="mt-[25px]">
-                <h2>designer</h2>
-              </div>
-              <div className="w-full mt-[25px]">
-                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
-                </button>
-              </div>
-            </div>
-            <div className="min-[769px]:w-[232px] max-[796px]:w-[171px]  pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
-              <div>
-                <img
-                  className="w-[124px] h-[124px] rounded-xl border-2"
-                  src="./images/logo.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="mt-[25px]">
-                <h2>designer</h2>
-              </div>
-              <div className="w-full mt-[25px]">
-                <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
-                  Behzad pashei
-                </button>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
