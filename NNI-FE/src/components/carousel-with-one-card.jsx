@@ -29,7 +29,7 @@ function One() {
   }, []);
   console.log(news);
 
-  const url = "https://saurav.tech/NewsAPI/everything/cnn.json";
+  const url = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
   let [data, setData] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {

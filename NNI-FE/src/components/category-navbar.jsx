@@ -58,7 +58,7 @@ function Category() {
           { name: "#Technology", Ref: "/technology", image:"/images/technology.png"},
           { name: "#Top Headlines", Ref: "/headlines", image:"/images/car.png"},
           { name: "#Apple Articles from yesterday", Ref: "/apple-articles-from-yesterday", image:"/images/music3.png"},
-          { name: "#Articles from NNI", Ref: "/articles-from-us", image:"/images/sports.png"},
+          { name: "#Articles from Us", Ref: "/articles-from-us", image:"/images/sports.png"},
         ].map((items, index) => (
           
           <Link

@@ -3,7 +3,20 @@ import { useTheme } from "../utils/ThemeContext";
 
 export default function Footer() {
   const { theme } = useTheme();
+  const categories = [
+    { name: "Sports", Ref: "/sports"},
+    { name: "Entertainment", Ref: "/entertainment"},
+    { name: "General", Ref: "/general"},
+    { name: "Health", Ref: "/health"},
+    { name: "Science", Ref: "/science"},
+    { name: "Business", Ref: "/business"},
+    { name: "Technology", Ref: "/technology"}
+  ]
+
   return (
+
+    
+    
     <>
       <footer>
         <div className="w-full flex dark:text-white xl:pt-5">
@@ -19,7 +32,7 @@ export default function Footer() {
                         className="pr-2"
                       />
                       <h1 className="text-xl font-semibold">
-                        News Network India
+                        Global News
                       </h1>
                     </div>
 
@@ -68,13 +81,12 @@ export default function Footer() {
                       />
                       Categories
                     </h1>
-                    <ul className="flex xl:flex-col gap-2 text-[12px]">
-                      <li>Culture</li>
-                      <li>Fashion</li>
-                      <li>Featured</li>
-                      <li>Food</li>
-                      <li>Healthy Living</li>
-                      <li>Technology</li>
+                    <ul className="flex xl:flex-col gap-2 text-[12px]">   
+                      {categories.map((category)=>{
+                        return(
+                          <li><a href={category.Ref}>{category.name}</a></li>
+                        )
+                      })}
                     </ul>
                   </div>
                   <div>
@@ -94,7 +106,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between xl:p-5 xl:gap-5 xl:bg-[rgba(62,50,50,0.05)] xl:w-[92%] w-full xl:rounded-e-[12px] xl:pl-32 py-[16px] text-nowrap">
+              <div className="flex justify-between xl:p-5 xl:gap-5 xl:bg-[rgba(62,50,50,0.05)] xl:w-[92%] w-full xl:rounded-e-[12px] xl:pl-32 py-[16px] mt-5 text-nowrap">
                 <div className="flex">
                   <h1 className="xl:text-[14px] text-[11px] border-r-[1px] pr-1 border-black">Privacy Policy</h1>
                   <h1 className="xl:text-[14px] text-[11px] pl-1">Terms & Conditions</h1>
@@ -152,18 +164,22 @@ export default function Footer() {
                 </h1>
               </div>
               <div className="flex flex-col gap-5">
+
                 <div className="flex gap-5">
-                  <div>
-                    <img className="rounded-xl" src="./images/car1.png" alt="" />
+                <div>
+                   <a target="_blank" href="https://www.instagram.com/_kumar_aman_1120/"><img className="rounded-xl h-[104px] w-[104px]" src="./images/aman.jpeg" alt="" /></a> 
                   </div>
                   <div>
-                    <img className="rounded-xl" src="./images/dance1.png" alt="" />
+                    <a target="_blank" href="https://www.instagram.com/_thisgaurav/">
+                    <img className="rounded-xl h-[104px] w-[104px]" src="./images/gaurav.jpeg" alt="" />
+                    </a>
                   </div>
-                  <div>
+                 
+                  {/* <div>
                     <img className="rounded-xl" src="./images/dog1.png" alt="" />
-                  </div>
+                  </div> */}
                 </div>
-                <div className="flex gap-5">
+                {/* <div className="flex gap-5">
                   <div>
                     <img className="rounded-xl" src="./images/dance2.png" alt="" />
                   </div>
@@ -184,7 +200,7 @@ export default function Footer() {
                   <div>
                     <img className="rounded-xl" src="./images/music1.png" alt="" />
                   </div>
-                </div>
+                </div> */}
               </div>
 
             </div>
