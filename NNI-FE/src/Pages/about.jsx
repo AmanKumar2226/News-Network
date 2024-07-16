@@ -146,7 +146,7 @@ export default function AboutUs() {
                 <h2>MERN Stack Developer</h2>
               </div>
               <div className="w-full mt-[25px]">
-                <a target="_blank" href="https://www.instagram.com/_kumar_aman_1120/">
+                <a target="_blank" href="https://kumar-aman-portfolio.netlify.app/">
                 <button className="rounded-xl py-[14px] w-full bg-[#F5F5F5] dark:bg-[#2A2C38] text-md font-semibold">
                  Aman Kumar
                 </button>
