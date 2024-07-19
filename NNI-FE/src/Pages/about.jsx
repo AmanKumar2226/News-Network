@@ -132,7 +132,7 @@ export default function AboutUs() {
             <img className="py-3" src="./images/red-icon.png" alt="" />
             <h1 className="text-xl font-semibold">Global News Team</h1>
           </div>
-          <div className="flex max-[769px]:flex-wrap gap-10 mb-20">
+          <div className="flex max-[769px]:flex-wrap max-[769px]:justify-center gap-10 mb-20">
             
           <div className="min-[769px]:w-[232px] max-[796px]:w-[171px] pt-[20px] p-[10px] flex flex-col items-center rounded-xl shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] dark:bg-[#1F1F1F]">
               <div>
