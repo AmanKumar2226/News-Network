@@ -59,7 +59,7 @@ function App(){
           <Route path="forgot-password" element={<ForgotPassword  />}/>
           <Route path="articles-from-us" element={<NNIArticles/>}/>
           <Route path="weather-today" element={<Weather/>}/>
-          <Route path="news-description" element={<NewsDescription/>}/>
+          <Route path="news-description/:id" element={<NewsDescription/>}/>
           <Route path="update-profile" element={<UpdateProfile/>}/>
       </Routes> 
           <ThemeSwitcher/>
