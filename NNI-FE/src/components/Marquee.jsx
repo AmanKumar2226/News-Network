@@ -27,7 +27,7 @@ const [news, setNews] = useState([])
 
 
   return (
-    <div className="w-full bg-[#004D43] h-[50px] sticky top-0 z-[999]">
+    <div className="w-full bg-[#004D43] h-[50px] sticky top-0 z-[999] max-[769px]:hidden">
       <div className="w-[15%] bg-[yellow] h-[50px] absolute z-[999] flex overflow-hidden">
         <h1
           className='text-[34px] leading-none flex items-center justify-center ml-16 mt-3  text-nowrap font-["Founders_Grotesk_X"] font-semibold'
