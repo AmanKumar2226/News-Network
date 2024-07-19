@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="flex gap-5">
           <div className="flex flex-row items-center ml-11 text-xl max-[768px]:hidden gap-3 font-semibold">
             <a href="/">
-              <img className="logo w-[100px] h-[50px]" src="./images/logo-new.png" alt="logo" />
+              <img className="logo w-[100px] h-[50px]" src="/images/logo-new.png" alt="logo" />
             </a>
           </div>
           <div className="flex items-center max-[769px]:hidden">
@@ -111,13 +111,13 @@ export default function Navbar() {
               id="menu"
               className="bg-[#F5F5F5] p-3 focus:outline-none focus:ring-2 dark:bg-[#1F1F1F] rounded-xl"
             >
-               <img className="dark:h-[25px] dark:w-[25px]" src={theme === "light" ? "././images/dialog-btn.png" : "./images/Menu-Button.png"} alt="logo" />
+               <img className="dark:h-[25px] dark:w-[25px]" src={theme === "light" ? ".//images/dialog-btn.png" : "/images/Menu-Button.png"} alt="logo" />
               
             </button>
             {isMenuOpen && (
               <div className={`top-0 left-0 h-screen z-[9999] fixed py-4 px-2 ${menuClass} dark:bg-[#2A2C38] bg-white w-[390px]`}>
                 <div className="mb-5 flex justify-between mr-10">
-                <img className="logo dark:mix-blend-screen h-[50px] w-[100px]" src="./images/logo-new.png" alt="logo" />
+                <img className="logo dark:mix-blend-screen h-[50px] w-[100px]" src="/images/logo-new.png" alt="logo" />
                 <div className="flex items-center mr-10">
             <p className="text-md dark:text-white text-[#1F1F1F]">Today is <br/> <span className="font-semibold">{Date().slice(0,16)}</span></p>
           </div>
@@ -129,7 +129,7 @@ export default function Navbar() {
                 <div className="flex flex-col justify-between h-[90%] ">
                   <div>
                     <button className="block flex gap-2 items-center py-2 mb-2 text-center font-semibold text-xl" onClick={() => { toggleSubDialog(), toggleMenu() }}>
-                      <img src="./images/red-icon.png" alt="" />
+                      <img src="/images/red-icon.png" alt="" />
                       Categories
                     </button>
                     <NavLink to="/" className="block py-2 mb-2 text-center" onClick={toggleMenu}>Home</NavLink>
@@ -163,9 +163,9 @@ export default function Navbar() {
         <div class="flex w-[]">
 
           <div class="relative w-[399px] max-[769px]:w-[300px] ">
-            <button type="submit" class="absolute dark:bg-[#1F1F1F] top-0 -left-8 p-2.5 h-full text-sm font-medium bg-[#F5F5F5] text-white rounded-s-lg border-[#1F1F1F] border-r-0 max-[769px]:ml-24"><img src={theme === "light" ? "./images/3dots.png" : "./images/3dot-white.png"} alt="" /></button>
+            <button type="submit" class="absolute dark:bg-[#1F1F1F] top-0 -left-8 p-2.5 h-full text-sm font-medium bg-[#F5F5F5] text-white rounded-s-lg border-[#1F1F1F] border-r-0 max-[769px]:ml-24"><img src={theme === "light" ? "/images/3dots.png" : "/images/3dot-white.png"} alt="" /></button>
             <input type="search" id="search-dropdown" class="block p-2.5 w-[400px] z-20 text-sm bg-[#F5F5F5] dark:bg-[#1F1F1F] rounded-e-lg rounded-s-2 border-[#1F1F1F] border-l-none max-[768px]:w-[190px] max-[769px]:ml-24" placeholder="Search Anything" required />
-            <button type="submit" class="absolute top-0 rounded-e-lg end-0 p-2.5 h-full text-sm font-medium text-white max-[768px]"><img src={theme === "light" ? "./images/icon.png" : "./images/search-white.png"} alt="" /></button>
+            <button type="submit" class="absolute top-0 rounded-e-lg end-0 p-2.5 h-full text-sm font-medium text-white max-[768px]"><img src={theme === "light" ? "/images/icon.png" : "/images/search-white.png"} alt="" /></button>
           </div>
         </div>
 

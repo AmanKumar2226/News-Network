@@ -27,7 +27,7 @@ export default function Footer() {
                   <div className="w-[385px] text-justify xl:pl-14 mb-5">
                     <div className="flex items-center mb-5">
                       <img
-                        src="./images/red-icon.png"
+                        src="/images/red-icon.png"
                         alt=""
                         className="pr-2"
                       />
@@ -44,7 +44,7 @@ export default function Footer() {
                     <h1 className="flex items-center text-xl font-semibold mb-3 mt-2">
                       <img
                         className="py-2 pr-2"
-                        src="./images/red-icon.png"
+                        src="/images/red-icon.png"
                         alt=""
                       />
                       Newsletters
@@ -66,7 +66,7 @@ export default function Footer() {
                         >
                           <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                           <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                        </svg> : <img src="./images/mail-dark.png" />}
+                        </svg> : <img src="/images/mail-dark.png" />}
                       </div>
                     </div>
                   </div>
@@ -76,7 +76,7 @@ export default function Footer() {
                     <h1 className="text-xl font-semibold flex">
                       <img
                         className="py-2 pr-2"
-                        src="./images/red-icon.png"
+                        src="/images/red-icon.png"
                         alt=""
                       />
                       Categories
@@ -91,16 +91,16 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="flex gap-2 mb-2 xl:mt-16 mt-2">
-                      <img src="./images/red-icon.png" alt="" className="py-2" />
+                      <img src="/images/red-icon.png" alt="" className="py-2" />
                       <h1 className="text-xl font-semibold">Social Network</h1>
                     </div>
                     <div className="flex gap-5">
                       <button className="bg-[linear-gradient(263deg,#F45C9F_5.57%,#FF7563_73.65%)] text-white flex gap-5 items-center justify-center py-[10px] pl-[16px] pr-[24px] rounded-xl">
-                        <img src="./images/instagram.png" alt="" />
+                        <img src="/images/instagram.png" alt="" />
                         <p>Instagram</p>
                       </button>
                       <button>
-                        <img src="./images/twitter.png" alt="" />
+                        <img src="/images/twitter.png" alt="" />
                       </button>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ export default function Footer() {
           <div className="w-1/2 hidden xl:flex py-10 px-6 gap-5">
             <div className="w-1/2">
               <h1 className="flex text-xl font-semibold">
-                <img src="./images/red-icon.png" alt="" className="py-2 pr-2" />
+                <img src="/images/red-icon.png" alt="" className="py-2 pr-2" />
                 New Comments
               </h1>
               <div className="p-4 bg-[#F5F5F5] dark:bg-[#1F1F1F] rounded-xl my-5">
@@ -159,7 +159,7 @@ export default function Footer() {
             <div className="w-1/2">
               <div className="mb-5">
                 <h1 className="flex text-xl font-semibold">
-                  <img src="./images/red-icon.png" alt="" className="py-2 pr-2" />
+                  <img src="/images/red-icon.png" alt="" className="py-2 pr-2" />
                   Follow our instagram
                 </h1>
               </div>
@@ -167,11 +167,11 @@ export default function Footer() {
 
                 <div className="flex gap-5">
                 <div>
-                   <a target="_blank" href="https://www.instagram.com/_kumar_aman_1120/"><img className="rounded-xl h-[104px] w-[104px]" src="./images/aman.jpeg" alt="" /></a> 
+                   <a target="_blank" href="https://www.instagram.com/_kumar_aman_1120/"><img className="rounded-xl h-[104px] w-[104px]" src="/images/aman.jpeg" alt="" /></a> 
                   </div>
                   <div>
                     <a target="_blank" href="https://www.instagram.com/_thisgaurav/">
-                    <img className="rounded-xl h-[104px] w-[104px]" src="./images/gaurav.jpeg" alt="" />
+                    <img className="rounded-xl h-[104px] w-[104px]" src="/images/gaurav.jpeg" alt="" />
                     </a>
                   </div>
                  

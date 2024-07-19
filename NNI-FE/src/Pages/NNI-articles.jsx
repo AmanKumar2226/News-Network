@@ -3,8 +3,10 @@
   import { useTheme } from '../utils/ThemeContext';
   import Category from '../components/category-navbar';
   import Breadcrumb from '../components/breadcrumb';
+import { useParams } from 'react-router-dom';
 
   function NNIArticles() {
+    const {id} = useParams()
     const {theme} = useTheme();
   let [data, setData] = useState([])
 
@@ -52,7 +54,7 @@
                   className="w-[360px] h-[400px] text-black dark:text-white dark:bg-[#1F1F1F] rounded-xl p-2 shadow-lg my-5"
                 >
                   <div className="flex justify-center items-center h-[190px] w-[340px]">
-                    <a href={dataObj.url} target='_blank'>
+                    <a href={`/news-description/${dataObj._id}`} target='_blank'>
                       <img
                         className=" h-[190px] w-[340px] ml-1 p-2 rounded-2xl"
                         src={`http://localhost:8080/${dataObj.image}`}
@@ -61,7 +63,7 @@
                     </a>
                   </div>
                   <div className="flex flex-col pt-4 px-2 dark:text-white">
-                    <a href={dataObj.url}><p className="line-clamp-1 font-semibold">{dataObj.title}</p></a>
+                    <a href={`/news-description/${dataObj._id}`}><p className="line-clamp-1 font-semibold">{dataObj.title}</p></a>
                     <p className="line-clamp-2">{dataObj.description}</p>
                     <div className={`w-full rounded-xl bg-[#F5F5F5] dark:bg-[#2A2C38] p-2 flex justify-between items-center px-4 ${dataObj.description == null ? 'mt-20 ' : "mt-5"}`}>
                       <div className="h-[54px] flex justify-center flex-col ">

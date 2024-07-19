@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import News from "../models/News.js";
 
 export const addNews = async (req, res) => {
@@ -21,6 +22,26 @@ export const getNews = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
+  }
+};
+
+export const newsDescription = async (req, res) => {
+  const { id } = req.params;
+
+  // Validate ObjectId
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: 'Invalid ID format' });
+  }
+
+  try {
+    const news = await News.findById(id);
+    if (!news) {
+      return res.status(404).json({ error: 'News not found' });
+    }
+    res.json(news);
+  } catch (error) {
+    console.error('Error fetching news:', error);
+    res.status(500).json({ error: 'Server error' });
   }
 };
 
