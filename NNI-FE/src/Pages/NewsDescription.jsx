@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Four from "../components/carousel-with-four-cards";
 import { useParams } from "react-router-dom";
 import axios from 'axios'
+import Breadcrumb from "../components/breadcrumb";
 function NewsDescription() {
   const { id } = useParams();  // Extract the id from the URL
   const [news, setNews] = useState({
@@ -27,20 +28,21 @@ function NewsDescription() {
   }, [id]);
   return (
     <>
-      <section className="mx-44 mb-32 dark:text-white">
-        <div className="w-full flex gap-6">
-          <div className="w-[70%] flex flex-col">
-            <div className="rounded-xl bg-[#F5F5F5] p-8 h-[598px] mt-11">
-              <h1 className="text-[32px] font-semibold font-['Roboto_Flex']">
+    {/* <Breadcrumb /> */}
+      <section className="min-[769px]:mx-44 mb-32 dark:text-white">
+        <div className="w-full flex max-[769px]:flex-col gap-6">
+          <div className="min-[769px]:w-[70%]  flex flex-col">
+            <div className="rounded-xl bg-[#F5F5F5] dark:bg-[#1F1F1F] min-[769px]:p-8 p-5 min-[769px]:h-[598px] mt-11">
+              <h1 className="text-[32px] max-[769px]:text-[20px] font-semibold font-['Roboto_Flex']">
                 {news.title}
               </h1>
               <img
-                className="w-[1072px] h-[598px] my-8 rounded-xl"
+                className="min-[769px]:w-[1072px] min-[769px]:h-[598px] my-8 rounded-xl"
                 src={`http://localhost:8080/${news.image}`}
                 alt=""
               />
             </div>
-            <div className="font-['Roboto_Flex'] text-[14px] font-medium capitalize flex gap-[79px] mx-[250px] pb-[50px] pt-[130px]">
+            <div className="font-['Roboto_Flex'] text-[14px] font-medium capitalize flex min-[769px]:gap-[79px] min-[769px]:mx-[250px] mx-[16px] pb-[50px] pt-[30px] min-[769px]:pt-[130px]">
               <div className="flex gap-2 items-center">
                 <img src="../images/date.png" alt="" />
                 <h1>{news.publishedAt}</h1>
@@ -56,14 +58,14 @@ function NewsDescription() {
                 </h1>
               </div> */}
             </div>
-            <div className="flex flex-col gap-[15px] font-['Roboto_Flex'] px-8">
+            <div className="flex flex-col gap-[15px] font-['Roboto_Flex'] max-[769px]:mx-5 min-[768px]:px-8">
               {/* <div>
                 <h1 className="text-[20px] font-semibold capitalize">
                   Don’t wait. The purpose of our lives is to be happy!
                 </h1>
               </div> */}
               <div>
-                <p className="text-[18px] font-normal lowercase leading-[34px] mb-10">
+                <p className="text-[18px] font-normal lowercase leading-[34px] mb-10 text-justify">
                   <div className="flex gap-2 items-center">
                     <img className="py-2" src="/images/red-icon.png" alt="" />
                   <h1 className="font-semibold text-xl uppercase">Description</h1>
@@ -80,7 +82,7 @@ function NewsDescription() {
                 alt=""
               />
             </div> */}
-            <div className="flex flex-col gap-[15px] font-['Roboto_Flex'] pb-[70px] px-8">
+            <div className="flex flex-col gap-[15px] font-['Roboto_Flex'] pb-[70px] max-[769px]:mx-5 text-justify min-[769px]:px-8">
               <div className="flex gap-2 items-center">
                 <img className="py-1" src="/images/red-icon.png" alt="" />
                 <h1 className="text-[20px] font-semibold uppercase">
@@ -93,12 +95,12 @@ function NewsDescription() {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative max-[769px]:mx-5">
               <div className="flex gap-2 pb-[30px]">
                 <img src="../images/red-icon.png" alt="" className="py-3" />
                 <h1 className="text-2xl font-semibold">Comments</h1>
               </div>
-              <div className="px-[20px] pt-[15px] pb-[140px] rounded-xl bg-[#F5F5F5] flex gap-[15px] flex-col mb-[330px]">
+              <div className="px-[20px] pt-[15px] pb-[140px] rounded-xl bg-[#F5F5F5] dark:bg-[#1F1F1F] dark:text-[white] flex gap-[15px] flex-col max-[769px]:mb-[700px]  mb-[330px]">
                 <div className="flex justify-between">
                   <div className="flex gap-[10px] items-center">
                     <img
@@ -107,7 +109,7 @@ function NewsDescription() {
                       alt=""
                     />
                     <div className="flex flex-col gap-[4px] font-['Roboto_Flex']">
-                      <h1 className="text-[16px] text-[#3E3232] font-semibold">
+                      <h1 className="text-[16px] text-[#3E3232] dark:text-white font-semibold">
                         Jon Kantner
                       </h1>
                       <div className="flex gap-[8px] items-center">
@@ -131,7 +133,7 @@ function NewsDescription() {
                   </p>
                 </div>
               </div>
-              <div className="px-[20px] pt-[15px] rounded-xl bg-[#fff] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] flex gap-[35px] mx-[128px]  flex-col absolute top-[28%]">
+              <div className="px-[20px] pt-[15px] rounded-xl bg-[#fff] dark:bg-[#1F1F1F] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.07)] flex gap-[35px] min-[769px]:mx-[128px] mx-[30px] flex-col absolute top-[28%] max-[769px]:top-[23%]">
                 <div className=" flex-col flex gap-[15px]">
                   <div className="flex justify-between">
                     <div className="flex gap-[10px] items-center">
@@ -141,7 +143,7 @@ function NewsDescription() {
                         alt=""
                       />
                       <div className="flex flex-col gap-[4px] font-['Roboto_Flex']">
-                        <h1 className="text-[16px] text-[#3E3232] font-semibold">
+                        <h1 className="text-[16px] dark:text-white text-[#3E3232] font-semibold">
                           Cassie Evans
                         </h1>
                         <div className="flex gap-[8px] items-center">
@@ -171,7 +173,7 @@ function NewsDescription() {
                         alt=""
                       />
                       <div className="flex flex-col gap-[4px] font-['Roboto_Flex']">
-                        <h1 className="text-[16px] text-[#3E3232] capitalize font-semibold">
+                        <h1 className="text-[16px] dark:text-white text-[#3E3232] capitalize font-semibold">
                           behzad pashaei
                         </h1>
                         <div className="flex gap-[8px] items-center">
@@ -193,7 +195,7 @@ function NewsDescription() {
                   </div>
                 </div>
               </div>
-              <div className="px-[20px] pt-[15px] pb-[20px] mb-[62px] rounded-xl bg-[#F5F5F5] flex gap-[15px] flex-col ">
+              <div className="px-[20px] pt-[15px] pb-[20px] mb-[62px] rounded-xl bg-[#F5F5F5] dark:bg-[#1F1F1F] flex gap-[15px] flex-col ">
                 <div className="flex justify-between">
                   <div className="flex gap-[10px] items-center">
                     <img
@@ -224,12 +226,12 @@ function NewsDescription() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-[30px]">
+            <div className="flex flex-col gap-[30px] max-[769px]:mx-5">
               <div className="flex gap-2">
                 <img src="../images/red-icon.png" alt="" className="py-3" />
                 <h1 className="text-2xl font-semibold">Add a comment</h1>
               </div>
-              <div className="font-['Roboto_Flex'] text-[16px] flex gap-[24px]">
+              <div className="font-['Roboto_Flex'] text-[16px] flex max-[769px]:flex-col gap-[24px]">
                 <div className="flex flex-col gap-[20px]">
                   <div className="flex flex-col gap-[15px]">
                     <label className="font-semibold" htmlFor="">Name</label>
@@ -252,31 +254,31 @@ function NewsDescription() {
             </div>
           </div>
 
-          <aside className="w-[30%] mt-11 gap-6 flex flex-col">
+          <aside className="min-[769px]:w-[30%] mt-11 gap-6 flex flex-col">
             <div className="flex justify-between">
-              <div className="bg-[#F5F5F5] flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
+              <div className="bg-[#F5F5F5] dark:bg-[#1F1F1F] dark:text-white flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
                 <img src="../images/send-icon.png" className="" alt="" />
                 Share
               </div>
-              <div className="bg-[#F5F5F5] flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
+              <div className="bg-[#F5F5F5] dark:bg-[#1F1F1F]  dark:text-white flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
                 <img src="../images/saved-icon.png" alt="" />
                 Marking
               </div>
-              <div className="bg-[#F5F5F5] flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
+              <div className="bg-[#F5F5F5] dark:bg-[#1F1F1F]  dark:text-white flex items-center py-3 pl-4 pr-6 gap-2 rounded-xl text-[#3E3232BF] font-medium">
                 <img src="../images/comment-icon.png" alt="" />
                 Comment
               </div>
             </div>
-            <div className="bg-[#F5F5F5] flex gap-3 p-4 rounded-xl">
-              <div>
+            <div className="bg-[#F5F5F5] dark:bg-[#1F1F1F] flex gap-3 p-4 rounded-xl">
+              {/* <div>
                 <img className="rounded-xl" src="../images/dog2.png" alt="" />
-              </div>
+              </div> */}
               <div className="">
                 <div className="flex gap-28">
                   <h1 className="text-[16px] font-medium py-3">
 {news.author}          
         </h1>
-                  <h1 className="py-3 text-[#3E3232BF]">27 post</h1>
+                  <h1 className="py-3 text-[#3E3232BF] dark:text-white">27 post</h1>
                 </div>
                 <button className="flex gap-2 bg-[#F81539BF] text-white items-center py-3 pl-4 pr-6 rounded-xl">
                   <img src="../images/plus-icon.png" alt="" />
@@ -284,14 +286,14 @@ function NewsDescription() {
                 </button>
               </div>
             </div>
-            <div className="bg-[#f5f5f5] rounded-xl">
+            <div className="bg-[#f5f5f5] dark:bg-[#1F1F1F] dark:text-white rounded-xl">
               <div className="flex gap-2 py-5 pl-4">
                 <img src="../images/red-icon.png" className="py-3" alt="" />
-                <h1 className="capitalize text-[20px] font-semibold text-[#3E3232]">
+                <h1 className="capitalize text-[20px] font-semibold dark:text-white text-[#3E3232]">
                   tags
                 </h1>
               </div>
-              <div className="flex flex-wrap text-[#3E3232BF] font-medium gap-4 pl-4 pb-3">
+              <div className="flex flex-wrap dark:text-white text-[#3E3232BF] font-medium gap-4 pl-4 pb-3">
                 <h1>Montenegro</h1>
                 <h1>Visit Croatia</h1>
                 <h1>Luxury Travel</h1>
@@ -300,10 +302,10 @@ function NewsDescription() {
                 <h1>Travel Info</h1>
               </div>
             </div>
-            <div className="bg-[#f5f5f5] rounded-xl pb-[20px]">
-              <div className="flex gap-2 py-5 pl-4">
+            <div className="bg-[#f5f5f5] dark:bg-[#1F1F1F] rounded-xl pb-[20px] max-[769px]:hidden">
+              <div className="flex  gap-2 py-5 pl-4 ">
                 <img src="../images/red-icon.png" className="py-3" alt="" />
-                <h1 className="capitalize text-[20px] font-semibold text-[#3E3232]">
+                <h1 className="capitalize text-[20px] font-semibold dark:text-white text-[#3E3232]">
                   top post
                 </h1>
               </div>
@@ -312,11 +314,11 @@ function NewsDescription() {
                   <img src="../images/05.png" className="rounded-xl " alt="" />
                 </div>
                 <div>
-                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] pr-6">
+                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] dark:text-white pr-6">
                     How to Spend the Perfect Day on Croatia’s Most Magical
                     Island
                   </h1>
-                  <h1 className="capitalize text-[12px] font-medium text-[#3E3232]">
+                  <h1 className="capitalize text-[12px] font-medium dark:text-white text-[#3E3232]">
                     Subhead
                   </h1>
                 </div>
@@ -326,11 +328,11 @@ function NewsDescription() {
                   <img src="../images/04.png" className="rounded-xl " alt="" />
                 </div>
                 <div>
-                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] pr-6">
+                  <h1 className="capitalize text-[16px] font-semibold dark:text-white text-[#3E3232] pr-6">
                     How to Spend the Perfect Day on Croatia’s Most Magical
                     Island
                   </h1>
-                  <h1 className="capitalize text-[12px] font-medium text-[#3E3232]">
+                  <h1 className="capitalize text-[12px] font-medium dark:text-white text-[#3E3232]">
                     Subhead
                   </h1>
                 </div>
@@ -340,11 +342,11 @@ function NewsDescription() {
                   <img src="../images/03.png" className="rounded-xl " alt="" />
                 </div>
                 <div>
-                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] pr-6">
+                  <h1 className="capitalize text-[16px] font-semibold dark:text-white text-[#3E3232] pr-6">
                     How to Spend the Perfect Day on Croatia’s Most Magical
                     Island
                   </h1>
-                  <h1 className="capitalize text-[12px] font-medium text-[#3E3232]">
+                  <h1 className="capitalize text-[12px] font-medium dark:text-white text-[#3E3232]">
                     Subhead
                   </h1>
                 </div>
@@ -354,11 +356,11 @@ function NewsDescription() {
                   <img src="../images/02.png" className="rounded-xl " alt="" />
                 </div>
                 <div>
-                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] pr-6">
+                  <h1 className="capitalize text-[16px] font-semibold dark:text-white text-[#3E3232] pr-6">
                     How to Spend the Perfect Day on Croatia’s Most Magical
                     Island
                   </h1>
-                  <h1 className="capitalize text-[12px] font-medium text-[#3E3232]">
+                  <h1 className="capitalize text-[12px] font-medium dark:text-white text-[#3E3232]">
                     Subhead
                   </h1>
                 </div>
@@ -368,11 +370,11 @@ function NewsDescription() {
                   <img src="../images/01.png" className="rounded-xl " alt="" />
                 </div>
                 <div>
-                  <h1 className="capitalize text-[16px] font-semibold text-[#3E3232] pr-6">
+                  <h1 className="capitalize text-[16px] font-semibold dark:text-white text-[#3E3232] pr-6">
                     How to Spend the Perfect Day on Croatia’s Most Magical
                     Island
                   </h1>
-                  <h1 className="capitalize text-[12px] font-medium text-[#3E3232]">
+                  <h1 className="capitalize text-[12px] font-medium dark:text-white text-[#3E3232]">
                     Subhead
                   </h1>
                 </div>

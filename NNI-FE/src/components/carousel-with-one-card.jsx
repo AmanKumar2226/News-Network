@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Spinner from './spinner';
 
 function One() {
-
   let [news, setNews] = useState([]);
   useEffect(() => {
     let config = {
@@ -25,7 +24,6 @@ function One() {
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
   console.log(news);
 
@@ -112,12 +110,15 @@ function One() {
                 : `http://localhost:8080/${sanitizeUrl(newsObj.image)}`
               : '';
             return (
-              <div className='relative w-1/2 h-[50vh] rounded-xl' key={index} style={{background: `url(${imageUrl})`, backgroundSize: "cover", backgroundPosition:"center"}}>
-                <div className='p-4 rounded-xl absolute bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none border-[2px] w-[80%] right-[45px] bottom-5 flex flex-col gap-3'>
-                  <h1 className='line-clamp-1 text-xl font-semibold'>{newsObj.title}</h1>
-                  <p className='line-clamp-2'>{newsObj.description}</p>
+              <a href={`/news-description/${newsObj._id}`}>
+                <div className='relative rounded-xl' key={index} >
+                <img className='h-[50vh] rounded-xl object-cover' src={imageUrl} alt="" />
+                  <div className='p-4 rounded-xl absolute bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none border-[2px] w-[80%] right-[45px] bottom-5 flex flex-col gap-3'>
+                    <h1 className='line-clamp-1 text-xl font-semibold'>{newsObj.title}</h1>
+                    <p className='line-clamp-2'>{newsObj.description}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
@@ -129,14 +130,25 @@ function One() {
           <Slider {...settings}>
             {data.map((dataObj, index) => (
               <div className="w-[50%] h-full bg-white dark:bg-[#2A2C38] dark:text-white text-black rounded-xl" key={index}>
-                <div className="rounded-xl h-[50vh] flex justify-center items-end bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${dataObj.urlToImage})` }}>
-                  <div className="flex flex-col bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none gap-4  w-[95%] p-5 rounded-xl mb-6">
+                {dataObj.urlToImage ? (
+                  <div className="rounded-xl h-[50vh] flex justify-center items-end bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${dataObj.urlToImage})` }}>
+                    <div className="flex flex-col bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none gap-4 w-[95%] p-5 rounded-xl mb-6">
+                      <a href={dataObj.url} target='_blank'>
+                        <p className="line-clamp-1 text-xl font-semibold">{dataObj.title}</p>
+                      </a>
+                      <p className='line-clamp-2'>{dataObj.description}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="rounded-xl h-[50vh] flex justify-center items-end bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(/images/logo-new.png)`, backgroundSize:"contain" }}>
+                  <div className="flex flex-col bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none gap-4 w-[95%] p-5 rounded-xl mb-6">
                     <a href={dataObj.url} target='_blank'>
                       <p className="line-clamp-1 text-xl font-semibold">{dataObj.title}</p>
                     </a>
                     <p className='line-clamp-2'>{dataObj.description}</p>
                   </div>
                 </div>
+                )}
               </div>
             ))}
           </Slider>
