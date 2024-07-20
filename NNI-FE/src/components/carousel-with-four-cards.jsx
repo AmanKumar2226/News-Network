@@ -83,15 +83,21 @@ function Four({ url, title }) {
                   key={index}
                   className="w-[360px] h-[400px] text-black dark:text-white dark:bg-[#1F1F1F] rounded-xl p-2 shadow-lg my-5"
                 >
-                  <div className="flex justify-center items-center h-[190px] w-[340px]">
-                    <a href={dataObj.url} target="_blank">
-                    <img
-                      className=" h-[190px] w-[340px] min-[769px]:ml-1 p-2 rounded-2xl"
-                      src={dataObj.urlToImage}
-                      alt="image"
-                    />
-                    </a>
-                  </div>
+                   {dataObj.urlToImage ? (
+                                        <div className="flex justify-center items-center h-[190px] w-[340px]">
+                                            <a href={dataObj.url} target="_blank">
+                                                <img
+                                                    className="h-[190px] w-[340px] min-[769px]:ml-1 p-2 rounded-2xl"
+                                                    src={dataObj.urlToImage}
+                                                    alt="image"
+                                                />
+                                            </a>
+                                        </div>
+                                    ) : (
+                                        <div className="flex justify-center items-center h-[190px] w-[340px]">
+                                              <img src="/images/logo-new.png" alt="logo" />
+                                        </div>
+                                    )}
                   <div className="flex flex-col pt-4 px-2">
                     <a href={dataObj.url}><p className="line-clamp-1 font-semibold">{dataObj.title}</p></a>
                     <p className="line-clamp-2">{dataObj.description}</p>
