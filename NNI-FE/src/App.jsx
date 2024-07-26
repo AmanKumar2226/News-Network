@@ -29,6 +29,7 @@ import Account from './Pages/Account'
 import BackToTopButton from './utils/BackToTop'
 import ThemeSwitcher from './utils/ThemeSwitcher'
 import UpdateProfile from './Pages/forms/UpdateProfile'
+import SearchWeather from './components/SearchWeather'
 
 function App(){
  
@@ -61,6 +62,7 @@ function App(){
           <Route path="weather-today" element={<Weather/>}/>
           <Route path="news-description/:id" element={<NewsDescription/>}/>
           <Route path="update-profile" element={<UpdateProfile/>}/>
+          <Route path="se" element={<SearchWeather/>}/>
       </Routes> 
           <ThemeSwitcher/>
           <BackToTopButton/>

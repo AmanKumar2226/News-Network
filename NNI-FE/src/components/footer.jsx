@@ -20,7 +20,7 @@ export default function Footer() {
     <>
       <footer>
         <div className="w-full flex dark:text-white xl:pt-5">
-          <div className="xl:w-1/2 w-full bg-[#F5F5F5] dark:bg-[#1F1F1F] xl:rounded-e-[50px] xl:py-10 px-[16px] xl:px-0 xl:pr-10">
+          <div className="xl:w-1/2 w-full bg-[#F5F5F5] dark:bg-[#1F1F1F] xl:rounded-e-[50px] py-10  px-[16px] xl:px-0 xl:pr-10">
             <div className="flex flex-col">
               <div className="flex flex-col xl:flex-row justify-around">
                 <div className="flex flex-col">
