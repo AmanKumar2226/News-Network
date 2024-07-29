@@ -6,8 +6,10 @@ import LatestVideos from "../components/LatestVideos";
 import Marquee from "../components/Marquee";
 import Category from "../components/category-navbar";
 import Breadcrumb from "../components/breadcrumb";
+import { useTheme } from "../utils/ThemeContext";
 
 export default function Home() {
+  const {theme} = useTheme()
   return (
     <div>
       <Marquee/>
@@ -40,9 +42,15 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
       </div>
       <div className="bg-[#F5F5F5] dark:bg-[#1F1F1F] dark:text-white">
         <div className="min-[769px]:mx-44 max-[769px]:mx-2 py-10">
-        <div className="flex gap-2">
+        <div className="flex justify-between">
+          <div className="flex gap-2">
           <img src="./images/red-icon.png" className="py-3" alt="" />
           <h1 className="text-2xl font-semibold">Weather Today</h1>
+          </div>
+          
+          <a href="/search-weather" target="_blank" className="font-semibold text-xl text-[#9F9999] dark:text-white flex items-center gap-1 justify-center mr-7">Search your own places forecast
+          <img className="h-[30px] w-[30px] mt-[3px]" src={theme==="light"? "/images/forward-chevron.png":"/images/forward-chevron-white.svg"} alt="" />
+          </a>    
         </div>
         <div className="flex my-10">
           <div className="w-1/2 max-[769px]:hidden">
@@ -70,6 +78,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
                 <img src="./images/Vector.png" alt="" />
               </div>
               <div className="flex mt-16 justify-between">
+              
                 <div className="p-2 flex items-center flex-col w-[81px] h-[118px] rounded-lg bg-[#F5F5F5] dark:bg-[#1F1F1F]">
                   <p className="font-semibold">
                     Tue
