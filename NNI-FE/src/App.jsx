@@ -62,7 +62,7 @@ function App(){
           <Route path="weather-today" element={<Weather/>}/>
           <Route path="news-description/:id" element={<NewsDescription/>}/>
           <Route path="update-profile" element={<UpdateProfile/>}/>
-          <Route path="se" element={<SearchWeather/>}/>
+          <Route path="search-weather" element={<SearchWeather/>}/>
       </Routes> 
           <ThemeSwitcher/>
           <BackToTopButton/>
