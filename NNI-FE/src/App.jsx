@@ -30,6 +30,7 @@ import BackToTopButton from './utils/BackToTop'
 import ThemeSwitcher from './utils/ThemeSwitcher'
 import UpdateProfile from './Pages/forms/UpdateProfile'
 import SearchWeather from './components/SearchWeather'
+import Horoscope from './Pages/Horoscope'
 
 function App(){
  
@@ -63,6 +64,8 @@ function App(){
           <Route path="news-description/:id" element={<NewsDescription/>}/>
           <Route path="update-profile" element={<UpdateProfile/>}/>
           <Route path="search-weather" element={<SearchWeather/>}/>
+          <Route path="horoscope" element={<Horoscope/>}/>
+
       </Routes> 
           <ThemeSwitcher/>
           <BackToTopButton/>
