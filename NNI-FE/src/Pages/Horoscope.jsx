@@ -31,26 +31,26 @@ function Horoscope() {
   );
 
   return (
-    <div className='my-20 mx-44 overflow-x-hidden dark:text-white'>
+    <div className='my-20 min-[769px]:mx-44 mx-2 overflow-x-hidden dark:text-white'>
       <section className='py-28 rounded-xl bg-[url("./images/HoroscopeBg.png")] bg-no-repeat bg-cover flex justify-center items-center'>
         <div className='flex flex-col gap-2 text-white'>
-          <h1 className='text-[100px] font-semibold text-center uppercase'>Horoscope</h1>
+          <h1 className='min-[769px]:text-[100px] text-[50px] font-semibold text-center uppercase'>Horoscope</h1>
           <p className='text-center font-semibold'>Select the zodiac sign for which you want to check the horoscope for today</p>
         </div>
       </section>
       <section className='my-10'>
         <div className='mb-20'>
-          <p className='text-xl uppercase text-center text-red-600 font-semibold'>Horoscope</p>
-          <h1 className='text-[84px] font-semibold text-center uppercase'>Understanding Science of Astrology</h1>
+          <p className='min-[769px]:text-xl uppercase text-center text-red-600 font-semibold'>Horoscope</p>
+          <h1 className='min-[769px]:text-[84px] text-[30px] font-semibold text-center uppercase'>Understanding Science of Astrology</h1>
         </div>
-        <div className='flex text-[54px] font-[700] flex-wrap gap-20'>
+        <div className='flex min-[769px]:text-[54px] text-[30px] font-[700] flex-wrap gap-20'>
           {zodiacSigns.map((signObj, index) => (
             <React.Fragment key={signObj.id}>
               <div
-                className={`flex items-center gap-10 cursor-pointer ${index === 3 && "ml-32"} ${index === 9 && "ml-[85px]"}`}
+                className={`flex items-center gap-10 cursor-pointer ${index === 3 && "min-[769px]:ml-32"} ${index === 9 && "min-[769px]:ml-[85px]"}`}
                 onClick={() => handleSignClick(signObj.name)}
               >
-                <img className='w-[160px] h-[170px]' src={theme === "light" ? signObj.icon : signObj.iconDark} alt={signObj.name} />
+                <img className='min-[769px]:w-[160px] min-[769px]:h-[170px] h-[100px] w-[100px]' src={theme === "light" ? signObj.icon : signObj.iconDark} alt={signObj.name} />
                 <div className='flex-col'>
                   <p>{signObj.name}</p>
                   <p className='text-[16px]'>See today's horoscope for <br />{signObj.name} sign</p>
