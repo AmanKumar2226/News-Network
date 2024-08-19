@@ -66,7 +66,7 @@ function App(){
           <Route path="update-profile" element={<UpdateProfile/>}/>
           <Route path="search-weather" element={<SearchWeather/>}/>
           <Route path="horoscope" element={<Horoscope/>}/>
-          <Route path="horoscope-details" element={<HoroscopeDetails/>}/>
+          <Route path="horoscope-details/:sign" element={<HoroscopeDetails/>}/>
 
       </Routes> 
           <ThemeSwitcher/>
