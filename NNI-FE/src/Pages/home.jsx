@@ -28,6 +28,18 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
           title="Popular Posts"
         />
       </div>
+
+         
+      <div className="bg-[url('./images/Astrology-bg.jpg')] h-[600px] bg-no-repeat bg-cover flex justify-start items-center ">
+      <div className="min-[769px]:ml-10 flex flex-col items-center gap-6">
+        <div className="flex flex-col gap-2">
+        <h1 className="text-white font-semibold max-[769px]:text-3xl  text-6xl text-center"> GET TODAY'S HOROSCOPE </h1>
+        <p className="text-white text-xl max-[769px]:text-lg max-[769px]:text-center">Unlock the Secrets of the Stars with our Personalized Astrology Readings</p>
+        </div>
+        <a href="/horoscope" target='_blank' className="p-4 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 w-[150px] rounded-xl text-white text-center font-semibold text-xl">Read More</a>
+      </div>
+      
+      </div>
       <div className="">
         <CardHome />
       </div>
@@ -176,6 +188,14 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
         </div>
         
       </div>
+      <div className="mt-10">
+        <Four
+          url="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c"
+          title="Top posts"
+        />
+      </div> 
+       
+      
     </div>
     </div>
     

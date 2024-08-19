@@ -16,4 +16,6 @@ router.get("/get-users", fetchUser, getUsers);
 router.put("/update-user",fetchUser, updateUser);
 
 router.delete("/delete-user",fetchUser, deleteUser);
+
+
 export default router;
