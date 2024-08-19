@@ -31,6 +31,7 @@ import ThemeSwitcher from './utils/ThemeSwitcher'
 import UpdateProfile from './Pages/forms/UpdateProfile'
 import SearchWeather from './components/SearchWeather'
 import Horoscope from './Pages/Horoscope'
+import HoroscopeDetails from './Pages/HoroscopeDetails'
 
 function App(){
  
@@ -65,6 +66,7 @@ function App(){
           <Route path="update-profile" element={<UpdateProfile/>}/>
           <Route path="search-weather" element={<SearchWeather/>}/>
           <Route path="horoscope" element={<Horoscope/>}/>
+          <Route path="horoscope-details" element={<HoroscopeDetails/>}/>
 
       </Routes> 
           <ThemeSwitcher/>

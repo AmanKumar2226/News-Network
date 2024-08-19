@@ -1,8 +1,10 @@
-import React from 'react'
+import React , {useState} from 'react'
 import {useTheme} from '../utils/ThemeContext'
 function Horoscope() {
 
     const {theme} = useTheme()
+
+    const [selectedSign, setSelectedSign] = useState("")
 
     const zodiacSigns = [{
         id: 0,
@@ -79,12 +81,6 @@ function Horoscope() {
 
 ]
 
-const groups = [
-    zodiacSigns.slice(0, 3),
-    zodiacSigns.slice(3, 6),
-    zodiacSigns.slice(6, 9),
-    zodiacSigns.slice(9, 12),
-  ];
 
 const AdditionalImage = () => (
     <div className="w-full text-center my-10">
@@ -94,8 +90,8 @@ const AdditionalImage = () => (
   return (
     <>
     <div className='my-20 mx-44 overflow-x-hidden dark:text-white'>
-    <section className='border-b-[2px] pb-44'>
-        <div className='flex flex-col gap-2'>
+    <section className='py-28 rounded-xl bg-[url("./images/HoroscopeBg.png")] bg-no-repeat bg-cover flex justify-center items-center'>
+        <div className='flex flex-col gap-2 text-white'>
             <h1 className='text-[100px] font-semibold text-center uppercase'>
                 Horoscope
             </h1>
@@ -111,12 +107,15 @@ const AdditionalImage = () => (
         </div>
         <div className='flex text-[54px] font-[700] flex-wrap gap-20'>
             {zodiacSigns.map((signObj,index)=>(<React.Fragment key={signObj.id}>
-              <a href="" key={signObj.id} className='flex items-center gap-10'>
-                <img
+              <a href="/horoscope-details" key={signObj.id} className={`flex items-center gap-10 ${index===3 && "ml-48"} ${index===9 && "ml-[134px]"}`} onClick={()=>{setSelectedSign(signObj.name)}}>
+                <img className='w-[160px] h-[170px]'
                   src={theme === "light" ? signObj.icon : signObj.iconDark}
                   alt={signObj.name}
                 />
+                <div className='flex-col'>
                 <p>{signObj.name}</p>
+                <p className='text-[16px]'>See today's horoscope for <br />{signObj.name} sign</p>
+                </div>
               </a>
               {signObj.id === 6 && <AdditionalImage />}
             </React.Fragment>
