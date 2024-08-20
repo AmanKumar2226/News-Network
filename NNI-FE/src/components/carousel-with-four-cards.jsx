@@ -95,7 +95,9 @@ function Four({ url, title }) {
                                         </div>
                                     ) : (
                                         <div className="flex justify-center items-center h-[190px] w-[340px]">
+                                          <a href={dataObj.url} target="_blank">
                                               <img src="/images/logo-new.png" alt="logo" />
+                                              </a>
                                         </div>
                                     )}
                   <div className="flex flex-col pt-4 px-2">
