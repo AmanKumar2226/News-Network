@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Spinner from './spinner';
+import { KEY } from '../Config/config';
 
 function One() {
   let [news, setNews] = useState([]);
@@ -27,7 +28,7 @@ function One() {
   }, []);
   console.log(news);
 
-  const url = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
+  const url =`https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=${KEY}`;
   let [data, setData] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {

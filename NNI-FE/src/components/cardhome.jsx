@@ -4,9 +4,10 @@ import axios from "axios";
 import Spinner from "./spinner";
 import { Link } from "react-router-dom";
 import { useTheme } from '../utils/ThemeContext';
+import { KEY } from "../Config/config";
 
 function CardHome() {
-  const url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c";
+  const url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${KEY}`;
   const { theme } = useTheme();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { KEY } from "../Config/config";
 
 function Marquee() {
 
@@ -10,7 +11,7 @@ const [news, setNews] = useState([])
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c',
+      url: `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${KEY}`,
       headers: { }
     };
     
