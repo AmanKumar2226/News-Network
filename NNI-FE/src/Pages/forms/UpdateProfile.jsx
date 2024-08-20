@@ -103,7 +103,7 @@ function UpdateProfile() {
               className="absolute top-12 right-3 w-5 cursor-pointer"
               onClick={togglePasswordVisibility}
             />
-          </div>y
+          </div>
           
         </div>
         <div className='flex max-[769px]:flex-col justify-between'>

@@ -7,6 +7,7 @@ import Marquee from "../components/Marquee";
 import Category from "../components/category-navbar";
 import Breadcrumb from "../components/breadcrumb";
 import { useTheme } from "../utils/ThemeContext";
+import { KEY } from "../Config/config";
 
 export default function Home() {
   const {theme} = useTheme()
@@ -23,8 +24,8 @@ export default function Home() {
       <One />
       <div>
         <Four
-          url="
-https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c"
+          url={`
+https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=${KEY}`}
           title="Popular Posts"
         />
       </div>
@@ -48,7 +49,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
       </div>
       <div className="mt-10">
         <Four
-          url="https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c"
+          url={`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${KEY}`}
           title="Trendy posts"
         />
       </div>
@@ -190,7 +191,7 @@ https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=01
       </div>
       <div className="mt-10">
         <Four
-          url="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=01ef4ed41f254070bcf6f7ba22ad5d3c"
+          url={`https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${KEY}`}
           title="Top posts"
         />
       </div> 
