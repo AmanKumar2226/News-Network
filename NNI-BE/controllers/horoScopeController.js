@@ -1,7 +1,4 @@
 
-
-
-
 export const getHoroscope = async (req, res) => {
     
 

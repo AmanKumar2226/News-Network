@@ -25,7 +25,7 @@ function Horoscope() {
   };
 
   const AdditionalImage = () => (
-    <div className="w-full text-center my-10">
+    <div className="w-full text-center my-10 hidden xl:block">
       <img src={theme === "light" ? '/images/BlackArrow.png' : '/images/WhiteArrow.png'} alt="Additional Image" className="mx-auto" />
     </div>
   );
