@@ -9,7 +9,7 @@ function General() {
     <>
     <Category/>
     <Breadcrumb/>
-      <div className="min-w[769px]:px-10 xl:pl-10 pl-0 max-[769px]:mx-2 min-[769px]-gap-5  min-[769px]-flex-wrap justify-center py-10 flex-col min-[769px]:mx-40 flex dark:text-white">
+      <div className="min-w[769px]:px-10 max-[769px]:mx-2 min-[769px]-gap-5  min-[769px]-flex-wrap justify-center py-10 flex-col min-[769px]:mx-40 flex dark:text-white">
         <div className="flex gap-2">
           <img className="py-3" src="./images/red-icon.png" alt="" />
           <h1 className="text-3xl font-semibold ">

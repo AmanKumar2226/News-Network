@@ -146,7 +146,7 @@ function Account() {
 
           </div>
         </div>
-        <div className='xl:w-[50%] w-full xl:ml-[430px] gap-5 flex flex-col xl:flex-row justify-center items-center xl:my-10 mt-10'>
+        <div className='xl:w-[50%] w-full xl:ml-[410px] gap-5 flex flex-col xl:flex-row justify-center items-center xl:my-10 mt-10'>
           <button onClick={()=>{navigate('/update-profile')}} className='border-[1px]  bg-[#8DD3BB] dark:bg-[#1F1F1F] hover:border-[#8DD3BB] hover:bg-white py-2 px-4 flex justify-center w-[50%] items-center gap-2 rounded'>
             Edit Profile
           </button>

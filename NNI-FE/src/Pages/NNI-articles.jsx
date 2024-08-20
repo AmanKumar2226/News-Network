@@ -33,7 +33,7 @@ import { useParams } from 'react-router-dom';
         
   <Category/>
   <Breadcrumb/>
-        <div className="flex flex-col xl:pl-10 pl-0 min-[769px]:gap-5 min-[769px]:mx-44 max-[769px]:mx-2  flex-wrap my-10 dark:text-white">
+        <div className="flex flex-col min-[769px]:gap-5 min-[769px]:mx-44 max-[769px]:mx-2  flex-wrap my-10 dark:text-white">
           <div className="flex gap-2 items-center">
             <img className='py-3' src="./images/red-icon.png" alt="" />
             <h1 className="text-3xl font-semibold ">
