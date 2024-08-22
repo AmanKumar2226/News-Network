@@ -178,7 +178,7 @@ export default function Navbar() {
               </MenuHandler>
               <MenuList className="w-52 text-xl pt-2">
                 <MenuItem onClick={() => { navigate("/account") }}>My Account</MenuItem>
-                <MenuItem onClick={() => { navigate("/articles-from-us") }}>My Articles</MenuItem>
+                <MenuItem onClick={() => { navigate("/favorites") }}>Saved Articles</MenuItem>
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </MenuList>
             </Menu>
