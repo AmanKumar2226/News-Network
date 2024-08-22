@@ -1,5 +1,7 @@
   import {useState, useEffect } from 'react';
   import axios from 'axios';
+  import 'react-toastify/dist/ReactToastify.css'; 
+  import { ToastContainer, toast } from 'react-toastify';
   import { useTheme } from '../utils/ThemeContext';
   import Category from '../components/category-navbar';
   import Breadcrumb from '../components/breadcrumb';
@@ -9,6 +11,10 @@ import { useParams } from 'react-router-dom';
     const {id} = useParams()
     const {theme} = useTheme();
   let [data, setData] = useState([])
+
+  let userid = localStorage.getItem('id');
+  userid = userid ? userid.replace(/"/g, '') : ''; // Ensure id is not null
+
 
   useEffect(()=>{
     let config = {
@@ -27,13 +33,41 @@ import { useParams } from 'react-router-dom';
     });
   },[])
 
+  const handleAddFavorite =(newsid)=>{
+    
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'http://localhost:8080/api/nni/add-favorite',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data : {
+        "userId": userid,
+        "newsId": newsid
+      }
+    };
+    
+    axios.request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+      toast.success("Article added to favorites")
+    })
+    .catch((error) => {
+      console.log(error);
+      toast.error(error.response.data.message);
+    });
+    
+  }
 
     return (
       <>
         
   <Category/>
   <Breadcrumb/>
+  
         <div className="flex flex-col min-[769px]:gap-5 min-[769px]:mx-44 max-[769px]:mx-2  flex-wrap my-10 dark:text-white">
+        <ToastContainer/>
           <div className="flex gap-2 items-center">
             <img className='py-3' src="./images/red-icon.png" alt="" />
             <h1 className="text-3xl font-semibold ">
@@ -73,7 +107,8 @@ import { useParams } from 'react-router-dom';
                         </p>
                       </div>
                       <div>
-                        <img src={theme === "light" ? "./images/save-icon.png" : "./images/save-dark.png"} alt="" />
+                        <button onClick={()=>{handleAddFavorite(dataObj._id)}}><img src={theme === "light" ? "./images/save-icon.png" : "./images/save-dark.png"} alt="" />
+                        </button>
                       </div>
                     </div>
                   </div>

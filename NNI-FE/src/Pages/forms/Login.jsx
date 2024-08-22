@@ -61,8 +61,19 @@ function Login() {
     
     axios.request(config)
     .then((response) => {
-      localStorage.setItem('token', JSON.stringify(response.data.token))
-      console.log(response.data.token);
+      if (response.data.token) {
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+        console.log('Token saved:', response.data.token);
+      } else {
+        console.error('Token not found in response.');
+      }
+
+      if (response.data.user && response.data.user._id) {
+        localStorage.setItem('id', JSON.stringify(response.data.user._id));
+        console.log('User ID saved:', response.data.user._id);
+      } else {
+        console.error('User ID not found in response.');
+      }
       if(response.data.message == "user not found") {
         toast.error(response.data.message)
       }

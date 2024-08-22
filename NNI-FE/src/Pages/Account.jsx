@@ -9,9 +9,11 @@ function Account() {
   token = token.replace(/"/g, '')
 
   const [details, setDetails] = useState({})
+  
 
   const handleLogout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('id');
     navigate('/login')
   }
 
