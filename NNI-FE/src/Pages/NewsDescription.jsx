@@ -3,6 +3,7 @@ import Four from "../components/carousel-with-four-cards";
 import { useParams } from "react-router-dom";
 import axios from 'axios'
 import Breadcrumb from "../components/breadcrumb";
+import { KEY } from "../Config/config";
 function NewsDescription() {
   const { id } = useParams();  // Extract the id from the URL
   const [news, setNews] = useState({
@@ -383,7 +384,7 @@ function NewsDescription() {
           </aside>
         </div>
       </section>
-      <Four title="Related Posts" />
+      <Four title="Related Posts" url={`https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=${KEY}`}/>
     </>
   );
 }

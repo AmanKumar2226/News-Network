@@ -33,11 +33,13 @@ import SearchWeather from './components/SearchWeather'
 import Horoscope from './Pages/Horoscope'
 import HoroscopeDetails from './Pages/HoroscopeDetails'
 import SavedNews from './Pages/SavedNews'
+  
 
 function App(){
  
   return (
     <>
+   
     <Navbar />
   
     
