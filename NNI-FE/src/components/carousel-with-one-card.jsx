@@ -111,8 +111,8 @@ function One() {
                 : `http://localhost:8080/${sanitizeUrl(newsObj.image)}`
               : '';
             return (
-              <a href={`/news-description/${newsObj._id}`} target="_blank">
-                <div className='relative rounded-xl' key={index} >
+              <a href={`/news-description/${newsObj._id}`} target="_blank" className='w-1/2'>
+                <div className='relative rounded-xl ' key={index} >
                 <img className='h-[50vh] rounded-xl object-cover' src={imageUrl} alt="" />
                   <div className='p-4 rounded-xl absolute bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(42,44,56,0.75)] dark:border-none border-[2px] w-[80%] right-[45px] bottom-5 flex flex-col gap-3'>
                     <h1 className='line-clamp-1 text-xl font-semibold'>{newsObj.title}</h1>
